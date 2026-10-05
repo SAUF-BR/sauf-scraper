@@ -1,0 +1,35 @@
+[project]
+name = "sauf-scraper"
+version = "0.1.0"
+description = "Motor de extração de dados de cursos e instituições do SAUF-BR"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.15.0",
+    "pydantic>=2.13.5",
+    "pydantic-settings>=2.15.0",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+sauf-scraper = "sauf_scraper.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.8.17,<0.9.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "responses>=0.26.3",
+    "ruff>=0.16.10",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

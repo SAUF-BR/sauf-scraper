@@ -3,9 +3,11 @@
 Motor de extração de dados de cursos do SAUF-BR. Coleta dos sites das universidades
 e envia um lote por instituição para a API Java (`POST /api/v1/ingestao/lotes`).
 
-Os dados cadastrais das instituições (nome, tipo, UF...) não vêm daqui: são importados
-do cadastro e-MEC (dados abertos), só para as instituições que têm spider. O lote leva
-apenas o código e-MEC da instituição.
+Os dados das instituições vêm do Censo da Educação Superior (INEP), importados só para as
+instituições que têm spider. O site de cada instituição é a fonte principal dos cursos:
+o scraper envia todos os cursos que encontrar, com o link da página de cada um. O Censo
+completa o que o site não mostra e liga o curso ao código e-MEC, quando ele existe.
+Detalhes em [docs/MAPEAMENTO_CENSO.md](docs/MAPEAMENTO_CENSO.md).
 
 ## Rodando (Windows / PowerShell)
 

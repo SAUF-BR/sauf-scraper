@@ -14,7 +14,6 @@ class JsonFormatter(logging.Formatter):
             "logger": record.name,
             "msg": record.getMessage(),
         }
-        # Campos extras passados com logger.info("...", extra={"dados": {...}})
         payload.update(getattr(record, "dados", {}))
         if record.exc_info:
             payload["erro"] = self.formatException(record.exc_info)

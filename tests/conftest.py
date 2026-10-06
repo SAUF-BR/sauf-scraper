@@ -1,7 +1,7 @@
 import pytest
 
 from sauf_scraper.core.config import Settings
-from sauf_scraper.core.models import Curso, Fonte, LoteIngestao
+from sauf_scraper.core.models import Curso, Fonte, Grau, LoteIngestao
 
 
 @pytest.fixture
@@ -20,5 +20,20 @@ def lote() -> LoteIngestao:
         execucao_id="teste",
         fonte=Fonte(url="https://www.exemplo.br/cursos"),
         codigo_emec_instituicao=57,
-        cursos=[Curso(chave="exemplo:engenharia-civil", nome="Engenharia Civil")],
+        cursos=[
+            # Curso que existe no Censo: tem código e-MEC.
+            Curso(
+                chave="uem:engenharia-civil:maringa:integral",
+                codigo_emec=3402,
+                url_origem="https://www.exemplo.br/curso/abc123",
+                nome="Engenharia Civil",
+                grau=Grau.BACHARELADO,
+            ),
+            # Curso novo, ainda fora do Censo: sem código e-MEC, mas aceito.
+            Curso(
+                chave="uem:engenharia-de-software:maringa:noturno",
+                url_origem="https://www.exemplo.br/curso/def456",
+                nome="Engenharia de Software",
+            ),
+        ],
     )

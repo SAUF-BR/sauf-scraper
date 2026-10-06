@@ -98,13 +98,22 @@ Os imports usam o caminho completo do pacote, como `from sauf_scraper.core.model
     Python), e no JSON sai `areaConhecimento` (camelCase, padrão do Jackson no Spring).
   - `extra="forbid"`: se alguém passar um campo que não existe, dá erro em vez de ignorar.
   - `str_strip_whitespace=True`: tira espaços das pontas dos textos, comum em HTML raspado.
-- `Modalidade` é um enum (`StrEnum` = enum cujo valor é texto). Ele mapeia direto para
-  `enum` em Java.
 - `Fonte`: de onde e quando o dado veio, para rastreabilidade.
-- `Curso`: campos do DER, mais a `chave` (chave natural para o upsert).
+- `Curso`: campos do DER, mais três campos de identidade:
+  - `chave`: texto obrigatório gerado com `montar_chave_curso()`, ex.:
+    `uem:engenharia-de-software:maringa:noturno`;
+  - `codigo_emec`: código e-MEC do curso (`CO_CURSO` no Censo), **opcional**, porque cursos
+    novos ainda não estão no Censo;
+  - `url_origem`: link da página do curso, obrigatório (o botão "acessar o site").
+  O site da instituição é a fonte principal; o Censo só completa o que o site não mostra.
+- `montar_chave_curso(*partes)`: tira acentos, deixa minúsculo e junta as partes com `:`.
+  Os spiders devem usá-la sempre, para a mesma página gerar sempre a mesma chave.
+- `Grau` e `Modalidade` são enums (`StrEnum` = enum cujo valor é texto). Eles mapeiam direto
+  para `enum` em Java.
+  Veja como cada código do Censo vira um valor em [MAPEAMENTO_CENSO.md](MAPEAMENTO_CENSO.md).
 - `LoteIngestao`: o pacote enviado em cada POST, com o `codigoEmecInstituicao` e todos os
   cursos da instituição. Os dados da instituição (nome, tipo, UF...) **não** vêm do scraper:
-  eles são importados do cadastro e-MEC (dados abertos) em um fluxo separado, só para as
+  eles são importados do Censo da Educação Superior em um fluxo separado, só para as
   instituições que têm spider. Se a instituição ainda não estiver cadastrada, a API recusa
   o lote e registra no log.
 - `RespostaIngestao`: o que esperamos que a API devolva. Ela usa `extra="ignore"` porque, se
@@ -170,7 +179,7 @@ Os imports usam o caminho completo do pacote, como `from sauf_scraper.core.model
 - Todo spider recebe `self.http` (o `HttpEducado`) e `self.execucao_id`.
 - No corpo da classe, cada spider define dois atributos:
   - `chave: str`: apelido curto, por exemplo `chave = "uel"`. É o que você digita em
-    `--ies uel` e o prefixo da chave dos cursos.
+    `--ies uel` e que aparece nos logs.
   - `codigo_emec: int`: código da instituição no e-MEC, por exemplo `codigo_emec = 57`. É ele
     que liga os cursos à instituição no backend.
 

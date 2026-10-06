@@ -33,7 +33,7 @@ class SpiderComDadoInvalido(Spider):
     chave = "invalido"
 
     def coletar(self):
-        Curso(chave="x:y", nome="")  # nome vazio -> ValidationError
+        Curso(chave="x", url_origem="https://x.br", nome="")  # nome vazio -> ValidationError
 
 
 def test_falha_em_um_spider_nao_derruba_os_outros(settings, lote):

@@ -13,8 +13,8 @@ from sauf_scraper.core.models import LoteIngestao
 
 
 class Spider(ABC):
-    #: Apelido curto do spider, ex.: "uel". Usado no CLI (--ies uel) e no prefixo
-    #: da chave dos cursos. Não vai para o backend como identificador da instituição.
+    #: Apelido curto do spider, ex.: "uel". Usado só no CLI (--ies uel) e nos logs.
+    #: Não vai para o backend como identificador da instituição.
     chave: str
     #: Código da instituição no cadastro e-MEC (ex.: 57). É o que liga os cursos à
     #: instituição no backend e define quais IES o import do CSV do e-MEC deve trazer.

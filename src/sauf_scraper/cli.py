@@ -4,7 +4,7 @@ import argparse
 import logging
 import sys
 
-from sauf_scraper.client.destinos import ApiSauf, ArquivoJson
+from sauf_scraper.client.destinos import ApiSauf, ArquivoJson, Terminal
 from sauf_scraper.client.http import HttpEducado
 from sauf_scraper.core.config import Settings
 from sauf_scraper.core.logging import configurar_logging
@@ -21,6 +21,11 @@ def main(argv: list[str] | None = None) -> int:
     )
     parser.add_argument(
         "--dry-run", action="store_true", help="grava os lotes em JSON em vez de enviar para a API"
+    )
+    parser.add_argument(
+        "--mostrar",
+        action="store_true",
+        help="imprime os cursos coletados na tela em vez de gravar ou enviar",
     )
     parser.add_argument("--listar", action="store_true", help="lista os spiders e sai")
     args = parser.parse_args(argv)
@@ -41,7 +46,12 @@ def main(argv: list[str] | None = None) -> int:
         logger.warning("nenhum spider registrado em sauf_scraper/spiders/__init__.py")
         return 0
 
-    destino = ArquivoJson(settings.output_dir) if args.dry_run else ApiSauf(settings)
+    if args.mostrar:
+        destino = Terminal()
+    elif args.dry_run:
+        destino = ArquivoJson(settings.output_dir)
+    else:
+        destino = ApiSauf(settings)
     resumo = executar([SPIDERS[c] for c in chaves], HttpEducado(settings), destino)
 
     logger.info(

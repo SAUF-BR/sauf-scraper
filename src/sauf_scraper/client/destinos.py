@@ -1,6 +1,7 @@
-"""Para onde vai cada lote coletado: API do SAUF (produção) ou arquivo JSON (dry-run).
+"""Para onde vai cada lote coletado: API do SAUF (produção), arquivo JSON (dry-run)
+ou a tela do terminal (--mostrar).
 
-As duas classes têm o mesmo método `enviar(lote)`. O pipeline não sabe qual está
+As classes têm o mesmo método `enviar(lote)`. O pipeline não sabe qual está
 usando, igual a injetar uma interface no Spring e trocar a implementação.
 """
 
@@ -47,6 +48,28 @@ class ApiSauf:
         if not resposta.ok:
             raise ApiRecusouLoteError(resposta.status_code, resposta.text)
         return RespostaIngestao.model_validate(resposta.json())
+
+
+class Terminal:
+    """Modo --mostrar: imprime os cursos coletados de forma legível, sem gravar nem enviar."""
+
+    def enviar(self, lote: LoteIngestao) -> None:
+        print()
+        print(f"=== Instituição e-MEC {lote.codigo_emec_instituicao}: {len(lote.cursos)} curso(s)")
+        for curso in lote.cursos:
+            print()
+            print(curso.nome)
+            campos = {
+                "chave": curso.chave,
+                "código e-MEC": curso.codigo_emec,
+                "grau": curso.grau,
+                "duração": curso.duracao,
+                "link": curso.url_origem,
+            }
+            for rotulo, valor in campos.items():
+                print(f"  {rotulo + ':':<14}{valor or '-'}")
+        print()
+        return None
 
 
 class ArquivoJson:

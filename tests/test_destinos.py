@@ -3,7 +3,16 @@ import json
 import pytest
 import responses
 
-from sauf_scraper.client.destinos import ApiRecusouLoteError, ApiSauf, ArquivoJson
+from sauf_scraper.client.destinos import ApiRecusouLoteError, ApiSauf, ArquivoJson, Terminal
+
+
+def test_terminal_imprime_os_cursos(lote, capsys):
+    Terminal().enviar(lote)
+
+    saida = capsys.readouterr().out
+    assert "2 curso(s)" in saida
+    assert "Engenharia de Software" in saida
+    assert "uem:engenharia-de-software:maringa:noturno" in saida
 
 
 @responses.activate

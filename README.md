@@ -23,7 +23,11 @@ copy .env.example .env      # ajuste os valores
 # 3. Comandos do dia a dia
 uv run sauf-scraper --listar          # spiders registrados
 uv run sauf-scraper --dry-run         # coleta e grava em output/*.json (não precisa do backend)
-uv run sauf-scraper --ies uel         # coleta só uma instituição e envia para a API
+uv run sauf-scraper --ies uem --mostrar   # coleta só uma instituição e mostra na tela
+uv run sauf-scraper --ies uem         # coleta só uma instituição e envia para a API
+uv run sauf-scraper censo --mostrar   # lê o Censo (INEP) das IES com spider e mostra na tela
+uv run sauf-scraper censo             # envia instituições e ofertas do Censo para a API
+uv run sauf-scraper casar --ies uem   # gera a tabela site -> código e-MEC (depois do --dry-run)
 uv run pytest                         # testes
 uv run ruff check . ; uv run ruff format .   # lint e formatação
 ```

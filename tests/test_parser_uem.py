@@ -7,9 +7,21 @@ from pathlib import Path
 
 import pytest
 
-from sauf_scraper.core.models import Grau
-from sauf_scraper.parsers.uem import CursoListado, extrair_detalhes, extrair_lista
-from sauf_scraper.spiders.uem import cidade_do_campus, grau_da_habilitacao, montar_curso
+from sauf_scraper.core.models import Grau, Modalidade, Opcao
+from sauf_scraper.parsers.uem import (
+    CursoListado,
+    DetalhesCurso,
+    extrair_detalhes,
+    extrair_lista,
+    turnos_por_grau,
+)
+from sauf_scraper.spiders.uem import (
+    cidade_do_campus,
+    graus_da_habilitacao,
+    montar_curso,
+    opcoes_da_pagina,
+    uf_do_campus,
+)
 
 FIXTURES = Path(__file__).parent / "fixtures" / "uem"
 
@@ -75,10 +87,106 @@ def test_dados_da_coordenacao_nao_sao_coletados(arquivo):
     assert "coordenador@" not in texto
 
 
+@pytest.mark.parametrize(
+    ("habilitacao", "turno", "esperado"),
+    [
+        (
+            "Licenciatura (Integral ou Noturno) ou Bacharelado (Integral)",
+            "Integral ou Noturno",
+            {"licenciatura": "Integral ou Noturno", "bacharelado": "Integral"},
+        ),
+        (
+            "Licenciatura (noturno) ou Bacharelado (vespertino / noturno)",
+            None,
+            {"licenciatura": "Noturno", "bacharelado": "Vespertino/Noturno"},
+        ),
+        (
+            "Licenciatura em Química (Noturno) e Bacharelado em Química (Integral)",
+            "Noturno e Integral.",
+            {"licenciatura": "Noturno", "bacharelado": "Integral"},
+        ),
+        (
+            "Licenciatura ou Bacharelado",
+            "Noturno (Licenciatura) ou Vespertino/Noturno (Bacharelado)",
+            {"licenciatura": "Noturno", "bacharelado": "Vespertino/Noturno"},
+        ),
+        ("Bacharelado e/ou Licenciatura", "Noturno", {}),
+        (None, None, {}),
+    ],
+)
+def test_turnos_por_grau(habilitacao, turno, esperado):
+    assert turnos_por_grau(habilitacao, turno) == esperado
+
+
+def test_rotulos_em_maiusculas_e_no_plural():
+    html = (
+        "<p><strong>TURNOS:</strong> Noturno e Integral.<br/>"
+        "<strong>HABILITAÇÃO :</strong> Licenciatura em Química (Noturno) e Bacharelado</p>"
+    )
+    detalhes = extrair_detalhes(html)
+    assert detalhes.turno == "Noturno e Integral."
+    assert detalhes.habilitacao.startswith("Licenciatura em Química")
+
+
+def test_dois_pontos_fora_do_rotulo():
+    detalhes = extrair_detalhes("<p><b>Turno</b>: Noturno<br/><b>Habilitação</b>:Bacharelado</p>")
+    assert detalhes.turno == "Noturno"
+    assert detalhes.habilitacao == "Bacharelado"
+
+
 def test_pagina_sem_os_campos_devolve_none():
     detalhes = extrair_detalhes("<html><body><p>Nada aqui</p></body></html>")
     assert detalhes.turno is None
     assert detalhes.habilitacao is None
+    assert detalhes.sobre is None
+
+
+# --- Seção "Sobre o Curso" ---------------------------------------------------------
+
+
+def test_sobre_o_curso_para_antes_de_mercado_de_trabalho():
+    # Na página de Eng. de Software, "Mercado de Trabalho" fica no mesmo <p> do texto.
+    sobre = extrair_detalhes(ler("curso_engenharia_software.html")).sobre
+
+    assert sobre.startswith(
+        "O objetivo principal do curso de Bacharelado em Engenharia de Software"
+    )
+    assert sobre.endswith("para o trabalho coletivo e interdisciplinar.")
+    assert "Mercado de Trabalho" not in sobre
+    assert "Sobre o Curso" not in sobre
+
+
+def test_sobre_o_curso_com_rotulo_em_b_para_antes_de_mais_informacoes():
+    # Na página de Arquitetura o rótulo é <b> e não há "Mercado de Trabalho".
+    sobre = extrair_detalhes(ler("curso_arquitetura_urbanismo.html")).sobre
+
+    assert sobre.startswith("O ensino de graduação em Arquitetura e Urbanismo")
+    assert "Mais informações" not in sobre
+    assert "Projeto Pedagógico" not in sobre
+
+
+@pytest.mark.parametrize(
+    "arquivo", ["curso_engenharia_software.html", "curso_arquitetura_urbanismo.html"]
+)
+def test_sobre_o_curso_e_texto_puro_com_quebras_de_linha(arquivo):
+    sobre = extrair_detalhes(ler(arquivo)).sobre
+
+    assert "<" not in sobre and "&nbsp;" not in sobre and "\xa0" not in sobre
+    assert "\n- Formar profissionais" in sobre or "\n- A qualidade de vida" in sobre
+    assert all(linha == linha.strip() and "  " not in linha for linha in sobre.split("\n"))
+    assert "Fulano" not in sobre and "coordenador@" not in sobre
+
+
+def test_sobre_o_curso_separa_paragrafos_com_linha_em_branco():
+    html = """<div><p><strong>Sobre o Curso:</strong></p>
+        <p>Primeiro parágrafo
+           com quebra no código-fonte.<br/>Linha seguinte.</p>
+        <p>Segundo parágrafo.</p>
+        <p><b>Mercado de Trabalho</b> Não entra.</p></div>"""
+
+    assert extrair_detalhes(html).sobre == (
+        "Primeiro parágrafo com quebra no código-fonte.\nLinha seguinte.\n\nSegundo parágrafo."
+    )
 
 
 # --- Montagem do Curso -------------------------------------------------------------
@@ -94,9 +202,14 @@ def test_montar_curso_de_engenharia_de_software():
 
     assert curso.chave == "uem:engenharia-de-software:maringa:noturno"
     assert str(curso.url_origem) == item.url
-    assert curso.grau == Grau.BACHARELADO
-    assert curso.duracao == "5 anos"
-    assert curso.codigo_emec is None
+    assert curso.opcoes == [Opcao(grau=Grau.BACHARELADO, turno="Noturno")]
+    assert curso.duracao_texto == "5 anos"
+    assert curso.duracao_semestres == 10
+    assert curso.turno == "Noturno"
+    assert curso.modalidade == Modalidade.PRESENCIAL
+    assert (curso.cidade, curso.uf) == ("Maringá", "PR")
+    assert curso.codigos_emec == []
+    assert curso.sobre.startswith("O objetivo principal do curso")
 
 
 @pytest.mark.parametrize(
@@ -112,15 +225,44 @@ def test_cidade_do_campus(campus, cidade):
 
 
 @pytest.mark.parametrize(
-    ("habilitacao", "grau"),
+    ("campus", "uf"),
+    [("Campus Sede - Maringá/PR", "PR"), ("Campus Sede - Maringá", None), ("x/Paraná", None)],
+)
+def test_uf_do_campus(campus, uf):
+    assert uf_do_campus(campus) == uf
+
+
+@pytest.mark.parametrize(
+    ("habilitacao", "graus"),
     [
-        ("Bacharelado", Grau.BACHARELADO),
-        ("Licenciatura", Grau.LICENCIATURA),
-        ("Bacharelado e Licenciatura", Grau.BACHARELADO_E_LICENCIATURA),
-        ("Tecnologia", Grau.TECNOLOGICO),
-        ("", None),
-        (None, None),
+        ("Bacharelado", [Grau.BACHARELADO]),
+        ("Licenciatura", [Grau.LICENCIATURA]),
+        ("Bacharelado e/ou Licenciatura", [Grau.BACHARELADO, Grau.LICENCIATURA]),
+        (
+            "Licenciatura (Integral ou Noturno) ou Bacharelado (Integral)",
+            [Grau.LICENCIATURA, Grau.BACHARELADO],
+        ),
+        ("Tecnologia", [Grau.TECNOLOGICO]),
+        ("Nutricionista", []),
+        ("", []),
+        (None, []),
     ],
 )
-def test_grau_da_habilitacao(habilitacao, grau):
-    assert grau_da_habilitacao(habilitacao) == grau
+def test_graus_da_habilitacao(habilitacao, graus):
+    assert graus_da_habilitacao(habilitacao) == graus
+
+
+def test_opcoes_trazem_o_turno_de_cada_grau():
+    detalhes = DetalhesCurso(
+        turno="Integral ou Noturno",
+        habilitacao="Licenciatura (Integral ou Noturno) ou Bacharelado (Integral)",
+    )
+    assert opcoes_da_pagina(detalhes) == [
+        Opcao(grau=Grau.LICENCIATURA, turno="Integral ou Noturno"),
+        Opcao(grau=Grau.BACHARELADO, turno="Integral"),
+    ]
+
+
+def test_opcoes_sem_turno_por_grau_usam_o_turno_da_pagina():
+    detalhes = DetalhesCurso(turno="Noturno", habilitacao="Bacharelado e/ou Licenciatura")
+    assert {o.turno for o in opcoes_da_pagina(detalhes)} == {"Noturno"}

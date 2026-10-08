@@ -76,7 +76,7 @@ def executar(
                 exc_info=True,
                 extra={"dados": {"spider": classe.chave}},
             )
-        except Exception as e:  # noqa: BLE001 - isolamento de falhas é intencional
+        except Exception as e:  # isolamento de falhas é intencional!!!
             resultado = ResultadoSpider(
                 classe.chave, sucesso=False, erro=f"{type(e).__name__}: {e}"
             )

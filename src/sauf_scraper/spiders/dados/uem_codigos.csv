@@ -1,0 +1,84 @@
+chave;nome_site;cidade;turno_site;grau_site;status;codigo_emec;nome_censo;grau_censo;vagas_diurno;vagas_noturno;sugestao;confirmado
+uem:administracao:maringa:matutino-ou-noturno;Administração;Maringá;matutino ou noturno;bacharelado;direto;3393;Administração;bacharelado;199;96;;sim
+uem:agronomia:maringa:integral;Agronomia;Maringá;integral;bacharelado;direto;3413;Agronomia;bacharelado;119;0;;sim
+uem:agronomia:umuarama:integral;Agronomia;Umuarama;Integral;bacharelado;direto;58188;Agronomia;bacharelado;63;0;;sim
+uem:arquitetura-e-urbanismo:maringa:integral;Arquitetura e Urbanismo;Maringá;integral;bacharelado;direto;21627;Arquitetura E Urbanismo;bacharelado;45;0;;sim
+uem:artes-cenicas:maringa:matutino;Artes Cênicas;Maringá;Matutino;licenciatura;direto;5000538;Artes Cênicas;licenciatura;73;0;;sim
+uem:artes-visuais:maringa:vespertino;Artes Visuais;Maringá;Vespertino;licenciatura;direto;5000539;Artes Visuais;licenciatura;44;0;;sim
+uem:biomedicina:maringa:integral;Biomedicina;Maringá;Integral;bacharelado;direto;5000540;Biomedicina;bacharelado;44;0;;sim
+uem:bioquimica:maringa:integral;Bioquímica;Maringá;Integral;bacharelado;direto;1148343;Bioquímica;bacharelado;69;0;;sim
+uem:biotecnologia:maringa:noturno;Biotecnologia;Maringá;Noturno;bacharelado;direto;1595788;Biotecnologia;bacharelado;0;46;;sim
+uem:ciencia-da-computacao:maringa:integral;Ciência da Computação;Maringá;Integral;bacharelado;direto;3419;Ciência Da Computação;bacharelado;44;0;;sim
+uem:ciencias-biologicas:maringa:noturno;Ciências Biológicas;Maringá;Noturno;licenciatura;direto;99370;Ciências Biológicas;licenciatura;0;66;;sim
+uem:ciencias-contabeis:cianorte:noturno;Ciências Contábeis;Cianorte;Noturno;bacharelado;direto;3415;Ciências Contábeis;bacharelado;0;61;;sim
+uem:ciencias-contabeis:maringa:matutino-ou-noturno;Ciências Contábeis;Maringá;Matutino ou Noturno;bacharelado;direto;3394;Ciências Contábeis;bacharelado;52;100;;sim
+uem:comunicacao-e-multimeios:maringa:noturno;Comunicação e Multimeios;Maringá;Noturno;bacharelado;direto;5000542;Comunicação E Multimeios;bacharelado;0;40;;sim
+uem:design:cianorte:integral;Design;Cianorte;Integral;bacharelado;direto;58187;Design;bacharelado;82;0;;sim
+uem:direito:maringa:matutino-ou-noturno;Direito;Maringá;Matutino ou Noturno;bacharelado;direto;3395;Direito;bacharelado;80;87;;sim
+uem:educacao-fisica:ivaipora:noturno;Educação Física;Ivaiporã;Noturno;bacharelado_e_licenciatura;direto;1630929;Educação Física;bacharelado;0;2;;sim
+uem:enfermagem:maringa:integral;Enfermagem;Maringá;Integral;bacharelado;direto;46742;Enfermagem;bacharelado;47;0;;sim
+uem:engenharia-agricola:cidade-gaucha:integral;Engenharia Agrícola;Cidade Gaúcha;Integral;licenciatura;direto;58200;Engenharia Agrícola;bacharelado;212;0;;sim
+uem:engenharia-ambiental:umuarama:integral;Engenharia Ambiental;Umuarama;Integral;bacharelado;direto;1148389;Engenharia Ambiental;bacharelado;171;0;;sim
+uem:engenharia-civil:maringa:integral;Engenharia Civil;Maringá;Integral;bacharelado;direto;3402;Engenharia Civil;bacharelado;98;0;;sim
+uem:engenharia-civil:umuarama:integral;Engenharia Civil;Umuarama;Integral;bacharelado;direto;150159;Engenharia Civil;bacharelado;112;0;;sim
+uem:engenharia-de-alimentos:maringa:integral;Engenharia de Alimentos;Maringá;Integral;bacharelado;direto;21628;Engenharia De Alimentos;bacharelado;99;0;;sim
+uem:engenharia-de-alimentos:umuarama:noturno;Engenharia de Alimentos;Umuarama;Noturno;bacharelado;direto;1147332;Engenharia De Alimentos;bacharelado;155;0;;sim
+uem:engenharia-de-producao:goioere:noturno;Engenharia de Produção;Goioerê;Noturno;bacharelado;direto;150157;Engenharia De Produção;bacharelado;0;157;;sim
+uem:engenharia-eletrica:maringa:integral;Engenharia Elétrica;Maringá;Integral;bacharelado;direto;150158;Engenharia Elétrica;bacharelado;42;0;;sim
+uem:engenharia-mecanica:maringa:integral;Engenharia Mecânica;Maringá;Integral;bacharelado;direto;21630;Engenharia Mecânica;bacharelado;51;0;;sim
+uem:engenharia-quimica:maringa:integral;Engenharia Química;Maringá;Integral;bacharelado;direto;3403;Engenharia Química;bacharelado;102;0;;sim
+uem:engenharia-textil:goioere:noturno;Engenharia Têxtil;Goioerê;Noturno;bacharelado;direto;3421;Engenharia Têxtil;bacharelado;0;177;;sim
+uem:estatistica:maringa:integral;Estatística;Maringá;Integral;;direto;21623;Estatística;bacharelado;63;0;;sim
+uem:farmacia:maringa:integral;Farmácia;Maringá;Integral;bacharelado;direto;3411;Farmácia;bacharelado;93;0;;sim
+uem:filosofia:maringa:noturno;Filosofia;Maringá;Noturno;licenciatura;direto;21625;Filosofia;licenciatura;0;93;;sim
+uem:fisica-medica:goioere:vespertino-e-noturno;Física Médica;Goioerê;Vespertino e Noturno;bacharelado;direto;1595645;Física Médica;bacharelado;145;0;;sim
+uem:fisica:goioere:noturno;Física;Goioerê;Noturno;licenciatura;direto;5000544;Física;licenciatura;0;153;;sim
+uem:historia:ivaipora:noturno;História;Ivaiporã;Noturno;licenciatura;direto;5000547;História;licenciatura;0;140;;sim
+uem:historia:maringa:matutino-ou-noturno;História;Maringá;Matutino ou Noturno;licenciatura;direto;3399;História;licenciatura;75;77;;sim
+uem:medicina-veterinaria:umuarama:integral;Medicina Veterinária;Umuarama;Integral;;direto;58202;Medicina Veterinária;bacharelado;47;0;;sim
+uem:medicina:maringa:integral;Medicina;Maringá;Integral;;direto;3418;Medicina;bacharelado;42;0;;sim
+uem:moda:cianorte:matutino;Moda;Cianorte;Matutino;bacharelado;direto;58242;Moda;bacharelado;76;0;;sim
+uem:odontologia:maringa:integral;Odontologia;Maringá;Integral;bacharelado;direto;3417;Odontologia;bacharelado;42;0;;sim
+uem:pedagogia:cianorte:noturno;Pedagogia;Cianorte;Noturno;licenciatura;direto;3397;Pedagogia;licenciatura;0;66;;sim
+uem:pedagogia:maringa:matutino-ou-noturno;Pedagogia;Maringá;Matutino ou Noturno;licenciatura;direto;3416;Pedagogia;licenciatura;108;201;;sim
+uem:psicologia:maringa:integral;Psicologia;Maringá;Integral;;direto;3401;Psicologia;bacharelado;80;0;;sim
+uem:secretariado-executivo-trilingue:maringa:noturno;Secretariado Executivo Trilíngue;Maringá;Noturno;bacharelado;direto;21626;Secretariado Executivo Trilíngue;bacharelado;0;64;;sim
+uem:servico-social:ivaipora:noturno;Serviço Social;Ivaiporã;Noturno;bacharelado;direto;5000548;Serviço Social;bacharelado;0;128;;sim
+uem:zootecnia:maringa:integral;Zootecnia;Maringá;Integral;;direto;3412;Zootecnia;bacharelado;260;0;;sim
+uem:ciencias-economicas:maringa:integral-ou-noturno;Ciências Econômicas;Maringá;Integral ou Noturno;bacharelado;ambiguo;1153285;Ciências Econômicas;bacharelado;82;0;site: Bacharelado, Integral ou Noturno;sim
+uem:ciencias-economicas:maringa:integral-ou-noturno;Ciências Econômicas;Maringá;Integral ou Noturno;bacharelado;ambiguo;3392;Ciências Econômicas;bacharelado;0;112;site: Bacharelado, Integral ou Noturno;sim
+uem:ciencias-sociais:maringa:noturno;Ciências Sociais;Maringá;Noturno;bacharelado_e_licenciatura;ambiguo;21624;Ciências Sociais;licenciatura;0;28;site: Bacharelado e/ou Licenciatura, Noturno;sim
+uem:ciencias-sociais:maringa:noturno;Ciências Sociais;Maringá;Noturno;bacharelado_e_licenciatura;ambiguo;321624;Ciências Sociais;bacharelado;0;30;site: Bacharelado e/ou Licenciatura, Noturno;sim
+uem:educacao-fisica:maringa:integral-ou-noturno;Educação Física;Maringá;Integral ou Noturno;;ambiguo;303410;Educação Física;bacharelado;20;0;site: Bacharelado (Integral);sim
+uem:educacao-fisica:maringa:integral-ou-noturno;Educação Física;Maringá;Integral ou Noturno;;ambiguo;3410;Educação Física;licenciatura;10;0;site: Licenciatura (Integral ou Noturno);sim
+uem:educacao-fisica:maringa:integral-ou-noturno;Educação Física;Maringá;Integral ou Noturno;;ambiguo;399397;Educação Física;bacharelado;0;0;"fora: site só oferece Bacharelado no Integral; no Censo é noturno (0 vagas)";nao
+uem:educacao-fisica:maringa:integral-ou-noturno;Educação Física;Maringá;Integral ou Noturno;;ambiguo;99397;Educação Física;licenciatura;0;15;site: Licenciatura (Integral ou Noturno);sim
+uem:engenharia-de-producao:maringa:integral;Engenharia de Produção;Maringá;Integral;bacharelado;ambiguo;21629;Engenharia De Produção;bacharelado;66;0;"pendente: a página não lista habilitações; conferir no e-MEC qual código é o curso do site";nao
+uem:engenharia-de-producao:maringa:integral;Engenharia de Produção;Maringá;Integral;bacharelado;ambiguo;22005;Engenharia De Produção;bacharelado;63;0;"pendente: a página não lista habilitações; conferir no e-MEC qual código é o curso do site";nao
+uem:engenharia-de-producao:maringa:integral;Engenharia de Produção;Maringá;Integral;bacharelado;ambiguo;22006;Engenharia De Produção;bacharelado;57;0;"pendente: a página não lista habilitações; conferir no e-MEC qual código é o curso do site";nao
+uem:engenharia-de-producao:maringa:integral;Engenharia de Produção;Maringá;Integral;bacharelado;ambiguo;22007;Engenharia De Produção;bacharelado;31;0;"pendente: a página não lista habilitações; conferir no e-MEC qual código é o curso do site";nao
+uem:fisica:maringa;Física;Maringá;;bacharelado_e_licenciatura;ambiguo;303405;Física;bacharelado;30;15;site: Bacharelado (vespertino / noturno);sim
+uem:fisica:maringa;Física;Maringá;;bacharelado_e_licenciatura;ambiguo;3405;Física;licenciatura;0;53;site: Licenciatura (noturno);sim
+uem:geografia:maringa:matutino-ou-noturno;Geografia;Maringá;Matutino ou Noturno;bacharelado_e_licenciatura;ambiguo;303400;Geografia;bacharelado;30;31;site: Bacharelado e/ou Licenciatura, Matutino ou Noturno;sim
+uem:geografia:maringa:matutino-ou-noturno;Geografia;Maringá;Matutino ou Noturno;bacharelado_e_licenciatura;ambiguo;3400;Geografia;licenciatura;71;46;site: Bacharelado e/ou Licenciatura, Matutino ou Noturno;sim
+uem:matematica:maringa:noturno-licenciatura-ou-vespertino-noturno-bacharelado;Matemática;Maringá;Noturno (Licenciatura) ou Vespertino/Noturno (Bacharelado);bacharelado_e_licenciatura;ambiguo;303407;Matemática;bacharelado;144;0;site: Bacharelado (Vespertino/Noturno);sim
+uem:matematica:maringa:noturno-licenciatura-ou-vespertino-noturno-bacharelado;Matemática;Maringá;Noturno (Licenciatura) ou Vespertino/Noturno (Bacharelado);bacharelado_e_licenciatura;ambiguo;3407;Matemática;licenciatura;0;224;site: Licenciatura (Noturno);sim
+uem:musica:maringa:integral;Música;Maringá;Integral;;ambiguo;358246;Música;bacharelado;29;0;site: página cobre todas as habilitações de Música;sim
+uem:musica:maringa:integral;Música;Maringá;Integral;;ambiguo;92099;Música;bacharelado;17;0;site: página cobre todas as habilitações de Música;sim
+uem:musica:maringa:integral;Música;Maringá;Integral;;ambiguo;92107;Música;bacharelado;5;0;site: página cobre todas as habilitações de Música;sim
+uem:quimica:maringa:noturno-e-integral;Química;Maringá;Noturno e Integral.;;ambiguo;3406;Química;bacharelado;100;0;site: Bacharelado em Química (Integral);sim
+uem:quimica:maringa:noturno-e-integral;Química;Maringá;Noturno e Integral.;;ambiguo;99368;Química;licenciatura;0;156;site: Licenciatura em Química (Noturno);sim
+uem:arquitetura-e-urbanismo-cau:umuarama:noturno;Arquitetura e Urbanismo (CAU);Umuarama;: Noturno;bacharelado;sem_par;;;;;;;nao
+uem:engenharia-de-computacao:umuarama:integral;Engenharia de Computação;Umuarama;Integral;bacharelado;sem_par;;;;;;;nao
+uem:engenharia-de-controle-e-automacao-inteligencia-artificial:maringa:integral;Engenharia de Controle e Automação - Inteligência Artificial;Maringá;Integral;bacharelado;sem_par;;;;;;;nao
+uem:engenharia-de-software:maringa:noturno;Engenharia de Software;Maringá;Noturno;bacharelado;sem_par;;;;;;;nao
+uem:engenharia-textil:maringa:noturno;Engenharia Têxtil;Maringá;Noturno;bacharelado;sem_par;;;;;;;nao
+uem:letras:maringa;Letras;Maringá;;;sem_par;;;;;;;nao
+uem:nutricao:maringa:noturno;Nutrição;Maringá;Noturno;;sem_par;;;;;;;nao
+uem:servico-social:maringa:noturno;Serviço Social;Maringá;Noturno;bacharelado;sem_par;;;;;;;nao
+uem:tecnologia-em-alimentos:umuarama:noturno;Tecnologia em Alimentos;Umuarama;Noturno;tecnologo;sem_par;58232;Alimentos;tecnologo;;;"nome diferente no Censo; confirmado pelo Carlos (08/10/2026)";sim
+uem:tecnologia-em-construcao-civil:umuarama:noturno;Tecnologia em Construção Civil;Umuarama;Noturno;tecnologo;sem_par;58207;Construção Civil;tecnologo;;;"nome diferente no Censo; confirmado pelo Carlos (08/10/2026)";sim
+uem:tecnologia-em-gastronomia:umuarama:matutino;Tecnologia em Gastronomia;Umuarama;Matutino;tecnologo;sem_par;;;;;;;nao
+uem:tecnologia-em-meio-ambiente:umuarama:noturno;Tecnologia em Meio Ambiente;Umuarama;Noturno;tecnologo;sem_par;58238;Meio Ambiente;tecnologo;;;"nome diferente no Censo; confirmado pelo Carlos (08/10/2026)";sim
+uem:musica:maringa:integral;Música;Maringá;Integral;;ambiguo;92105;Música - Regência Coral;bacharelado;;;adicionado à mão: habilitação citada na página de Música;sim
+uem:musica:maringa:integral;Música;Maringá;Integral;;ambiguo;122892;Música Com Habilitação Em Licenciatura Em Educação Musical;licenciatura;;;adicionado à mão: habilitação citada na página de Música;sim

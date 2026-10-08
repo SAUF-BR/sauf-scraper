@@ -94,8 +94,8 @@ Os imports usam o caminho completo do pacote, como `from sauf_scraper.core.model
 **`core/models.py`: o contrato com o backend Java**
 - **É o arquivo mais importante para a integração.** O JSON que o Java vai receber sai daqui.
 - `SaufModel` é a classe base de todos os modelos e define três regras:
-  - `alias_generator=to_camel`: no Python o campo é `area_conhecimento` (snake_case, padrão
-    Python), e no JSON sai `areaConhecimento` (camelCase, padrão do Jackson no Spring).
+  - `alias_generator=to_camel`: no Python o campo é `duracao_texto` (snake_case, padrão
+    Python), e no JSON sai `duracaoTexto` (camelCase, padrão do Jackson no Spring).
   - `extra="forbid"`: se alguém passar um campo que não existe, dá erro em vez de ignorar.
   - `str_strip_whitespace=True`: tira espaços das pontas dos textos, comum em HTML raspado.
 - `Fonte`: de onde e quando o dado veio, para rastreabilidade.
@@ -105,11 +105,13 @@ Os imports usam o caminho completo do pacote, como `from sauf_scraper.core.model
   - `codigo_emec`: código e-MEC do curso (`CO_CURSO` no Censo), **opcional**, porque cursos
     novos ainda não estão no Censo;
   - `url_origem`: link da página do curso, obrigatório (o botão "acessar o site").
+  Além disso: `grau`, `modalidade`, `turno`, `duracao_texto` + `duracao_semestres` e `cidade`
+  + `uf` do campus. A área **não** vai no lote: vem do rótulo Cine do Censo, no backend.
   O site da instituição é a fonte principal; o Censo só completa o que o site não mostra.
 - `montar_chave_curso(*partes)`: tira acentos, deixa minúsculo e junta as partes com `:`.
   Os spiders devem usá-la sempre, para a mesma página gerar sempre a mesma chave.
-- `Grau` e `Modalidade` são enums (`StrEnum` = enum cujo valor é texto). Eles mapeiam direto
-  para `enum` em Java.
+- `Grau` e `Modalidade` são enums (`StrEnum` = enum cujo valor é texto). Os valores ficam em
+  **minúsculas** (`presencial`, `tecnologo`), iguais aos do JSON da API.
   Veja como cada código do Censo vira um valor em [MAPEAMENTO_CENSO.md](MAPEAMENTO_CENSO.md).
 - `LoteIngestao`: o pacote enviado em cada POST, com o `codigoEmecInstituicao` e todos os
   cursos da instituição. Os dados da instituição (nome, tipo, UF...) **não** vêm do scraper:

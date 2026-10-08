@@ -13,6 +13,7 @@ import re
 import unicodedata
 from datetime import UTC, datetime
 from enum import StrEnum
+from typing import Annotated
 
 from pydantic import BaseModel, ConfigDict, Field, HttpUrl
 from pydantic.alias_generators import to_camel
@@ -30,18 +31,20 @@ class SaufModel(BaseModel):
 
 
 class Modalidade(StrEnum):
-    PRESENCIAL = "PRESENCIAL"
-    EAD = "EAD"
-    SEMIPRESENCIAL = "SEMIPRESENCIAL"
+    """Valores em minúsculas, iguais ao contrato da API (D-30 em sauf-api/docs/DECISOES.md)."""
+
+    PRESENCIAL = "presencial"
+    EAD = "ead"
+    SEMIPRESENCIAL = "semipresencial"
 
 
 class Grau(StrEnum):
     """Grau acadêmico, conforme TP_GRAU_ACADEMICO do Censo da Educação Superior."""
 
-    BACHARELADO = "BACHARELADO"  # 1
-    LICENCIATURA = "LICENCIATURA"  # 2
-    TECNOLOGICO = "TECNOLOGICO"  # 3
-    BACHARELADO_E_LICENCIATURA = "BACHARELADO_E_LICENCIATURA"  # 4
+    BACHARELADO = "bacharelado"  # 1
+    LICENCIATURA = "licenciatura"  # 2
+    TECNOLOGICO = "tecnologo"  # 3
+    BACHARELADO_E_LICENCIATURA = "bacharelado_e_licenciatura"  # 4
 
 
 class Fonte(SaufModel):
@@ -72,23 +75,53 @@ def montar_chave_curso(*partes: str) -> str:
     return ":".join(normalizadas)
 
 
-class Curso(SaufModel):
-    """Dados de UM curso coletados no site da instituição.
+_DURACAO = re.compile(r"^\s*(\d+(?:[.,]\d+)?)\s*(anos?|semestres?)\s*$", re.IGNORECASE)
 
-    O site da instituição é a fonte principal: o curso é aceito mesmo que não exista no
-    Censo da Educação Superior. Quando existe, o código e-MEC liga os dois, e o Censo só
-    completa o que o site não mostra (vagas, área Cine, gratuidade). Se site e Censo
-    discordarem, vale o site. Mapeamento: docs/MAPEAMENTO_CENSO.md.
+
+def semestres_de_texto(texto: str | None) -> int | None:
+    """Converte a duração escrita no site em semestres, quando ela é simples.
+
+    "5 anos" -> 10, "3,5 anos" -> 7, "8 semestres" -> 8,
+    "Bacharelado: 4 anos / Licenciatura: 5 anos" -> None.
+    """
+    if not texto:
+        return None
+    encontrado = _DURACAO.match(texto)
+    if not encontrado:
+        return None
+    numero = float(encontrado.group(1).replace(",", "."))
+    semestres = numero * 2 if encontrado.group(2).lower().startswith("ano") else numero
+    return int(semestres) if semestres > 0 and semestres.is_integer() else None
+
+
+class Opcao(SaufModel):
+    """Um grau que a página oferece, com o turno que a página dá para ele (se der)."""
+
+    grau: Grau
+    turno: str | None = None
+
+
+class Curso(SaufModel):
+    """UM curso como aparece no site da instituição: uma página = um curso (D-34).
+
+    O site da instituição é a fonte principal (D-33): o curso é aceito mesmo que não exista
+    no Censo da Educação Superior. Os códigos e-MEC confirmados da página (D-35, uso interno)
+    ligam o curso ao Censo, que só completa o que o site não mostra (área, vagas,
+    gratuidade). Mapeamento: docs/MAPEAMENTO_CENSO.md.
     """
 
     chave: str = Field(pattern=rf"^{_PARTE_CHAVE}(?::{_PARTE_CHAVE})*$")
-    codigo_emec: int | None = Field(default=None, gt=0)
+    codigos_emec: list[Annotated[int, Field(gt=0)]] = Field(default_factory=list)
     url_origem: HttpUrl
     nome: str = Field(min_length=1)
-    grau: Grau | None = None
-    area_conhecimento: str | None = None
+    opcoes: list[Opcao] = Field(default_factory=list)
     modalidade: Modalidade | None = None
-    duracao: str | None = None
+    turno: str | None = None
+    sobre: str | None = None
+    duracao_texto: str | None = None
+    duracao_semestres: int | None = Field(default=None, gt=0)
+    cidade: str | None = None
+    uf: str | None = Field(default=None, pattern=r"^[A-Z]{2}$")
 
 
 class LoteIngestao(SaufModel):

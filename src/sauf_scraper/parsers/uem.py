@@ -4,16 +4,18 @@ Funções puras: recebem o HTML (texto) e devolvem dados. Nenhuma faz requisiç�
 isso dá para testar tudo com os HTMLs salvos em tests/fixtures/uem/.
 """
 
+import re
 from dataclasses import dataclass
 
 from bs4 import BeautifulSoup, NavigableString
 
-# Rótulo na página do curso -> atributo do DetalhesCurso.
 _ROTULOS = {
-    "Turno": "turno",
-    "Habilitação": "habilitacao",
-    "Prazo Mínimo de Conclusão": "prazo_minimo",
-    "Prazo Máximo de Conclusão": "prazo_maximo",
+    "turno": "turno",
+    "turnos": "turno",
+    "habilitação": "habilitacao",
+    "habilitações": "habilitacao",
+    "prazo mínimo de conclusão": "prazo_minimo",
+    "prazo máximo de conclusão": "prazo_maximo",
 }
 
 
@@ -34,6 +36,7 @@ class DetalhesCurso:
     habilitacao: str | None = None  # Bacharelado, etc...
     prazo_minimo: str | None = None
     prazo_maximo: str | None = None
+    sobre: str | None = None  # texto da seção "Sobre o Curso"
 
 
 def extrair_lista(html: str) -> list[CursoListado]:
@@ -59,6 +62,36 @@ def extrair_lista(html: str) -> list[CursoListado]:
     return cursos
 
 
+_GRAU_E_TURNO = re.compile(r"(licenciatura|bacharelado)[^()]*?\(([^)]+)\)", re.IGNORECASE)
+_TURNO_E_GRAU = re.compile(r"^\s*(.+?)\s*\((licenciatura|bacharelado)\)\s*$", re.IGNORECASE)
+
+
+def turnos_por_grau(habilitacao: str | None, turno: str | None) -> dict[str, str]:
+    """Turno de cada grau quando a página especifica, ex.:
+
+    "Licenciatura (Integral ou Noturno) ou Bacharelado (Integral)"
+        -> {"licenciatura": "Integral ou Noturno", "bacharelado": "Integral"}
+    "Noturno (Licenciatura) ou Vespertino/Noturno (Bacharelado)"  (no campo Turno)
+        -> {"licenciatura": "Noturno", "bacharelado": "Vespertino/Noturno"}
+    """
+    turnos: dict[str, str] = {}
+    for grau, texto in _GRAU_E_TURNO.findall(habilitacao or ""):
+        turnos[grau.lower()] = _formatar_turno(texto)
+    for parte in re.split(r"\s+ou\s+", turno or "", flags=re.IGNORECASE):
+        encontrado = _TURNO_E_GRAU.match(parte)
+        if encontrado:
+            turnos.setdefault(encontrado.group(2).lower(), _formatar_turno(encontrado.group(1)))
+    return turnos
+
+
+def _formatar_turno(texto: str) -> str:
+    """'vespertino / noturno' -> 'Vespertino/Noturno' ("ou" e "e" ficam em minúsculas)."""
+    texto = re.sub(r"\s*/\s*", "/", " ".join(texto.split()))
+    return re.sub(
+        r"[^\W\d_]+", lambda p: p[0] if p[0].lower() in ("ou", "e") else p[0].capitalize(), texto
+    )
+
+
 def extrair_detalhes(html: str) -> DetalhesCurso:
     """Lê os campos rotulados da página de um curso.
 
@@ -71,10 +104,62 @@ def extrair_detalhes(html: str) -> DetalhesCurso:
 
     detalhes = DetalhesCurso()
     for rotulo in soup.find_all(["strong", "b"]):
-        atributo = _ROTULOS.get(rotulo.get_text(strip=True).rstrip(":").strip())
+        atributo = _ROTULOS.get(_nome_rotulo(rotulo))
         if atributo is None:
             continue
         valor = rotulo.next_sibling
-        if isinstance(valor, NavigableString) and valor.strip():
-            setattr(detalhes, atributo, valor.strip())
+        if not isinstance(valor, NavigableString):
+            continue
+        texto = valor.strip().lstrip(":").strip()
+        if texto:
+            setattr(detalhes, atributo, texto)
+
+    detalhes.sobre = extrair_secao(soup, "sobre o curso")
     return detalhes
+
+
+_SECOES = {"sobre o curso", "mercado de trabalho", "mais informações", "coordenação"}
+
+
+def extrair_secao(soup: BeautifulSoup, titulo: str) -> str | None:
+    """Texto puro de uma seção da página, ex.: "Sobre o Curso", sem HTML.
+
+    A seção começa depois do rótulo (<strong> ou <b>) e vai até o próximo rótulo de
+    seção (`_SECOES`) ou até o fim do bloco de conteúdo. <br> vira quebra de linha e cada
+    parágrafo novo vira linha em branco. Para outra seção (ex.: "Mercado de Trabalho"),
+    basta chamar com o outro título.
+    """
+    rotulo = next((r for r in soup.find_all(["strong", "b"]) if _nome_rotulo(r) == titulo), None)
+    if rotulo is None:
+        return None
+    bloco = rotulo.find_parent("div") or soup
+    dentro_do_bloco = {id(elemento) for elemento in bloco.descendants}
+
+    partes: list[str] = []
+    for elemento in rotulo.next_elements:
+        if id(elemento) not in dentro_do_bloco:
+            break
+        if isinstance(elemento, NavigableString):
+            if not any(p is rotulo for p in elemento.parents):
+                partes.append(re.sub(r"\s+", " ", str(elemento)))
+        elif elemento.name in ("strong", "b") and _nome_rotulo(elemento) in _SECOES:
+            break
+        elif elemento.name == "br":
+            partes.append("\n")
+        elif elemento.name in ("p", "div", "li"):
+            partes.append("\n\n")
+    return _limpar_texto("".join(partes))
+
+
+def _nome_rotulo(rotulo) -> str:
+    return " ".join(rotulo.get_text(" ", strip=True).rstrip(":").split()).lower()
+
+
+def _limpar_texto(texto: str) -> str | None:
+    paragrafos = []
+    for bloco in re.split(r"\n\s*\n", texto):
+        linhas = [" ".join(linha.split()) for linha in bloco.split("\n")]
+        linhas = [linha for linha in linhas if linha and linha != ":"]
+        if linhas:
+            paragrafos.append("\n".join(linhas))
+    return "\n\n".join(paragrafos) or None

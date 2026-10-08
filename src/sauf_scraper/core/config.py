@@ -17,8 +17,11 @@ class Settings(BaseSettings):
     api_key: SecretStr | None = None
     api_timeout_seconds: float = 30.0
 
-    user_agent: str = "SAUF-BR-Bot/0.1 (+https://saufbr.com.br)"
+    user_agent: str = "SAUF-BR-Bot/0.1"
     request_delay_seconds: float = 2.0
     request_timeout_seconds: float = 20.0
 
     output_dir: Path = Path("output")
+
+    # Pasta extraída do .zip dos microdados do Censo da Educação Superior (INEP).
+    censo_dir: Path = Path("microdados_censo_da_educacao_superior_2024")

@@ -153,6 +153,7 @@ Por isso o lote do scraper **não** manda área: ela vem do Censo, no backend.
 | `modalidade` | site | enum **em minúsculas**, igual ao da API (D-30 do `sauf-api`) |
 | `turno` | site | texto da página, ex.: "Integral ou Noturno" |
 | `sobre` | site | texto da seção "Sobre o Curso", **sem HTML**: `\n` entre linhas, `\n\n` entre parágrafos; `null` se a página não tiver a seção (D-37 no `sauf-api`, provisório) |
+| `mercadoTrabalho` | site | texto da seção "Mercado de Trabalho", no mesmo formato do `sobre`; `null` se a página não tiver a seção (D-46 no `sauf-api`) |
 | `duracaoTexto` | site | ex.: `"5 anos"` |
 | `duracaoSemestres` | site | inteiro > 0, quando der para converter |
 | `cidade`, `uf` | site | campus da oferta; `uf` com 2 letras maiúsculas |

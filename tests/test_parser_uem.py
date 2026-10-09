@@ -13,6 +13,7 @@ from sauf_scraper.parsers.uem import (
     DetalhesCurso,
     extrair_detalhes,
     extrair_lista,
+    separar_mercado,
     turnos_por_grau,
 )
 from sauf_scraper.spiders.uem import (
@@ -139,6 +140,7 @@ def test_pagina_sem_os_campos_devolve_none():
     assert detalhes.turno is None
     assert detalhes.habilitacao is None
     assert detalhes.sobre is None
+    assert detalhes.mercado_trabalho is None
 
 
 # --- Seção "Sobre o Curso" ---------------------------------------------------------
@@ -157,7 +159,7 @@ def test_sobre_o_curso_para_antes_de_mercado_de_trabalho():
 
 
 def test_sobre_o_curso_com_rotulo_em_b_para_antes_de_mais_informacoes():
-    # Na página de Arquitetura o rótulo é <b> e não há "Mercado de Trabalho".
+    # Na página de Arquitetura o rótulo é <b> e o "Mercado de trabalho" vem sem negrito.
     sobre = extrair_detalhes(ler("curso_arquitetura_urbanismo.html")).sobre
 
     assert sobre.startswith("O ensino de graduação em Arquitetura e Urbanismo")
@@ -189,6 +191,77 @@ def test_sobre_o_curso_separa_paragrafos_com_linha_em_branco():
     )
 
 
+# --- Seção "Mercado de Trabalho" ----------------------------------------------------
+
+
+def test_mercado_de_trabalho_para_antes_de_mais_informacoes():
+    mercado = extrair_detalhes(ler("curso_engenharia_software.html")).mercado_trabalho
+
+    assert mercado.startswith("O curso de graduação em Engenharia de Software forma profissionais")
+    assert mercado.endswith("tanto no Brasil quanto no exterior.")
+    assert "Mais informações" not in mercado
+    assert "Projeto Pedagógico" not in mercado
+    assert "Mercado de Trabalho" not in mercado
+
+
+def test_mercado_de_trabalho_nao_traz_dados_da_coordenacao():
+    mercado = extrair_detalhes(ler("curso_engenharia_software.html")).mercado_trabalho
+
+    assert "Fulano" not in mercado and "coordenador@" not in mercado
+    assert "<" not in mercado and " " not in mercado
+
+
+def test_mercado_de_trabalho_sem_negrito_na_pagina_de_arquitetura():
+    detalhes = extrair_detalhes(ler("curso_arquitetura_urbanismo.html"))
+
+    assert detalhes.mercado_trabalho.startswith("De acordo com o Conselho de Arquitetura")
+    assert "Mercado de trabalho" not in detalhes.sobre
+    assert "Mais informações" not in detalhes.mercado_trabalho
+
+
+def test_pagina_sem_mercado_de_trabalho_devolve_none():
+    html = "<div><p><strong>Sobre o Curso:</strong><br/>Só o texto do curso.</p></div>"
+    detalhes = extrair_detalhes(html)
+
+    assert detalhes.sobre == "Só o texto do curso."
+    assert detalhes.mercado_trabalho is None
+
+
+def test_mercado_de_trabalho_para_antes_da_coordenacao():
+    html = """<div><p><b>Mercado de Trabalho</b><br/>Atua em empresas.</p>
+        <p><b>Coordenação</b></p><p>Coordenador: Fulano - fulano@exemplo.br</p></div>"""
+
+    assert extrair_detalhes(html).mercado_trabalho == "Atua em empresas."
+
+
+def test_mercado_de_trabalho_sem_negrito_sai_do_sobre():
+    # Trecho real de Administração na UEM, encurtado: o título é texto puro no <p>.
+    html = """<div><p><strong>Sobre o Curso:</strong><br/>Forma administradores.</p>
+        <p style="text-align:justify">&nbsp;</p>
+        <p style="text-align:justify">Mercado de trabalho<br/>
+        No contexto atual, o administrador é altamente demandado.</p>
+        <p>&nbsp;</p><p><strong>Mais informações:</strong>&nbsp;</p>
+        <p><a href="x.pdf">Projeto Pedagógico do Curso</a></p></div>"""
+
+    detalhes = extrair_detalhes(html)
+
+    assert detalhes.sobre == "Forma administradores."
+    assert detalhes.mercado_trabalho == "No contexto atual, o administrador é altamente demandado."
+
+
+def test_titulo_de_mercado_na_mesma_quebra_de_linha_do_sobre():
+    # Arquitetura: o título vem logo depois de um <br/>, sem parágrafo novo.
+    sobre, mercado = separar_mercado("Primeiro.\nMercado de trabalho\nAtua no CAU.")
+
+    assert (sobre, mercado) == ("Primeiro.", "Atua no CAU.")
+
+
+def test_frase_que_comeca_com_mercado_de_trabalho_nao_e_titulo():
+    texto = "O mercado de trabalho do economista é amplo.\nMercado de trabalho em alta."
+
+    assert separar_mercado(texto) == (texto, None)
+
+
 # --- Montagem do Curso -------------------------------------------------------------
 
 
@@ -210,6 +283,7 @@ def test_montar_curso_de_engenharia_de_software():
     assert (curso.cidade, curso.uf) == ("Maringá", "PR")
     assert curso.codigos_emec == []
     assert curso.sobre.startswith("O objetivo principal do curso")
+    assert curso.mercado_trabalho.startswith("O curso de graduação em Engenharia de Software")
 
 
 @pytest.mark.parametrize(

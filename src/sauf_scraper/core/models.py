@@ -118,6 +118,7 @@ class Curso(SaufModel):
     modalidade: Modalidade | None = None
     turno: str | None = None
     sobre: str | None = None
+    mercado_trabalho: str | None = None
     duracao_texto: str | None = None
     duracao_semestres: int | None = Field(default=None, gt=0)
     cidade: str | None = None

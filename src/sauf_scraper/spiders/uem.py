@@ -65,6 +65,7 @@ def montar_curso(item: CursoListado, detalhes: DetalhesCurso) -> Curso:
         modalidade=Modalidade.PRESENCIAL,
         turno=detalhes.turno,
         sobre=detalhes.sobre,
+        mercado_trabalho=detalhes.mercado_trabalho,
         duracao_texto=detalhes.prazo_minimo,
         duracao_semestres=semestres_de_texto(detalhes.prazo_minimo),
         cidade=cidade,

@@ -37,6 +37,7 @@ class DetalhesCurso:
     prazo_minimo: str | None = None
     prazo_maximo: str | None = None
     sobre: str | None = None  # texto da seção "Sobre o Curso"
+    mercado_trabalho: str | None = None  # texto da seção "Mercado de Trabalho"
 
 
 def extrair_lista(html: str) -> list[CursoListado]:
@@ -115,7 +116,25 @@ def extrair_detalhes(html: str) -> DetalhesCurso:
             setattr(detalhes, atributo, texto)
 
     detalhes.sobre = extrair_secao(soup, "sobre o curso")
+    detalhes.mercado_trabalho = extrair_secao(soup, "mercado de trabalho")
+    if detalhes.mercado_trabalho is None and detalhes.sobre:
+        detalhes.sobre, detalhes.mercado_trabalho = separar_mercado(detalhes.sobre)
     return detalhes
+
+
+_TITULO_MERCADO = re.compile(r"^mercado de trabalho:?$", re.IGNORECASE | re.MULTILINE)
+
+
+def separar_mercado(sobre: str) -> tuple[str | None, str | None]:
+    """Separa o "Mercado de trabalho" escrito sem negrito, como linha solta dentro do "Sobre".
+
+    Na maioria das páginas da UEM o título é texto puro no começo de um parágrafo, então
+    `extrair_secao` não o reconhece como rótulo e ele fica dentro do `sobre`.
+    """
+    titulo = _TITULO_MERCADO.search(sobre)
+    if titulo is None:
+        return sobre, None
+    return sobre[: titulo.start()].strip() or None, sobre[titulo.end() :].strip() or None
 
 
 _SECOES = {"sobre o curso", "mercado de trabalho", "mais informações", "coordenação"}
@@ -126,8 +145,7 @@ def extrair_secao(soup: BeautifulSoup, titulo: str) -> str | None:
 
     A seção começa depois do rótulo (<strong> ou <b>) e vai até o próximo rótulo de
     seção (`_SECOES`) ou até o fim do bloco de conteúdo. <br> vira quebra de linha e cada
-    parágrafo novo vira linha em branco. Para outra seção (ex.: "Mercado de Trabalho"),
-    basta chamar com o outro título.
+    parágrafo novo vira linha em branco.
     """
     rotulo = next((r for r in soup.find_all(["strong", "b"]) if _nome_rotulo(r) == titulo), None)
     if rotulo is None:

@@ -14,6 +14,7 @@ def test_json_sai_em_camel_case(lote):
     curso = dados["cursos"][0]
     assert "duracaoTexto" in curso
     assert curso["sobre"] is None
+    assert curso["mercadoTrabalho"] is None
     assert "duracaoSemestres" in curso
     assert "areaConhecimento" not in curso
     assert curso["codigosEmec"] == [3402]

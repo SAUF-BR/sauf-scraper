@@ -77,6 +77,7 @@ class Terminal:
                 "modalidade": curso.modalidade,
                 "turno": curso.turno,
                 "sobre": _resumo(curso.sobre),
+                "mercado": _resumo(curso.mercado_trabalho),
                 "duração": curso.duracao_texto,
                 "semestres": curso.duracao_semestres,
                 "cidade": f"{curso.cidade}/{curso.uf}" if curso.cidade else None,

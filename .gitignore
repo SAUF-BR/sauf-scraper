@@ -16,5 +16,3 @@ output/
 .ruff_cache/
 
 microdados_censo_da_educacao_superior_2024/
-# HTML salvo do site da UEM, só local (removido do Git no TR-260)
-tests/fixtures/

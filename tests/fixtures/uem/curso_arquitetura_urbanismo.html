@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arquitetura e Urbanismo</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <!-- Scripts -->
+    <script src="https://www.pen.uem.br/site/public/js/app.js" defer></script>
+    
+    <!-- Styles -->
+    <link href="https://www.pen.uem.br/site/public/css/app.css" rel="stylesheet">  
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="Gb09Xo4RBpJ2700es00v0AyeHe7RL8v2FFK723iR">      
+</head>
+<body class="bg-cool-gray-100 h-screen antialiased leading-none" style="font-family: Arial, Helvetica, sans-serif;">
+    <div id="app">
+        <div class="mt-0 fixed w-full z-10 top-0">
+    <header class="w-full flex items-center bg-white py-2 px-2 shadow">
+        <!-- component -->
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <div class="w-full text-indigo-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+            <div x-data="{ open: false }"
+                class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+
+                <div class="p-4 flex flex-row items-center justify-between">
+                    <a href="https://www.pen.uem.br/site/public"
+                        class="text-xl font-semibold text-indigo-700 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline">PEN</a>
+                    <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                        <i class="fas fa-align-justify fa-lg"></i>
+                    </button>
+                </div>
+
+                <nav :class="{ 'flex': open, 'hidden': !open }"
+                    class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+                    <div class="p-2 mr-2">
+                        <a class="block text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-800 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            href="https://www.pen.uem.br/site/public"><i class="fas fa-home fa-lg mr-1"></i> Início</a>
+                    </div>
+
+                    <div x-data="{ dropdownOpen: false }" class="relative">
+                        <button @click="dropdownOpen = !dropdownOpen"
+                            class="relative z-10 block rounded p-2 hover:bg-gray-200 hover:text-gray-800 focus:outline-none focus:bg-gray-200 text-sm font-semibold text-left">
+                            <span><i class="fas fa-graduation-cap fa-lg mr-1"></i> Graduação</span>
+                            <svg fill="currentColor" viewBox="0 0 20 20"
+                                class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+
+                        <div x-show="dropdownOpen" @click="dropdownOpen = false"
+                            class="fixed inset-0 h-full w-full z-10" id="btn_graduacao"></div>
+
+                        <div x-show="dropdownOpen"
+                            class="absolute right-0 mt-2 bg-white rounded-md overflow-hidden shadow-xl z-20"
+                            style="width: 18rem">
+                            <a href="https://www.pen.uem.br/site/public/cursos"
+                                class="block px-4 py-3 text-sm text-indigo-800 border-b hover:bg-gray-200">
+                                <i class="fas fa-list fa-lg mr-1"></i> Cursos de Graduação</a>
+                            <a href="https://www.pen.uem.br/site/public/normas"
+                                class="block px-4 py-3 text-sm text-indigo-800 border-b hover:bg-gray-200">
+                                <i class="fas fa-book fa-lg mr-1"></i> Normas e Legislação</a>
+                            <a href="https://www.pen.uem.br/site/public/regulamentos"
+                                class="block px-4 py-3 text-sm text-indigo-800 border-b hover:bg-gray-200">
+                                <i class="fas fa-book fa-lg mr-1"></i> Regulamentos Estágio e TCC</a>
+                            <a href="https://www.pen.uem.br/site/public/conteudo/644e5ae98851d8e1d99e8d7d828ae7b4edafdbc8"
+                                class="block px-4 py-3 text-sm text-indigo-800 border-b hover:bg-gray-200">
+                                <i class="fas fa-users fa-lg mr-1"></i> Coordenação de Cursos</a>
+                            <a href="https://www.pen.uem.br/site/public/conteudo/dff2c8d07419c1fc04bb9790c55ee8912f33e02b"
+                                class="block px-4 py-3 text-sm text-indigo-800 border-b hover:bg-gray-200">
+                                <i class="fas fa-hands-helping fa-lg mr-1"></i> Apoio aos Conselhos Acadêmicos</a>
+                            <a href="https://www.pen.uem.br/site/public/conteudo/65e710fee0abe1b3b3b0175da036ed91c2cf71d7#estagio"
+                                class="block px-4 py-3 text-sm text-indigo-800 border-b hover:bg-gray-200">
+                                <i class="fas fa-edit fa-lg mr-1"></i> Formulários de Estágio</a>
+                        </div>
+
+
+                    </div>
+
+                    <div x-data="{ dropdownOpen: false }" class="relative" onclick="btnGraduacao()">
+                        <button @click="dropdownOpen = !dropdownOpen"
+                            class="relative z-10 block rounded p-2 hover:bg-gray-200 hover:text-gray-800 focus:outline-none focus:bg-gray-200 text-sm font-semibold text-left"
+                            id="btn_pen">
+                            <span><i class="fas fa-university fa-lg mr-1"></i> Sobre a PEN</span>
+                            <svg fill="currentColor" viewBox="0 0 20 20"
+                                class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                <path fill-rule="evenodd"
+                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+
+                        <div x-show="dropdownOpen" @click="dropdownOpen = false"
+                            class="fixed inset-0 h-full w-full z-10"></div>
+
+                        <div x-show="dropdownOpen"
+                            class="absolute right-0 mt-2 w-64 bg-white rounded-md overflow-hidden shadow-xl z-20">
+                            <a href="https://www.pen.uem.br/site/public/conteudo/0c33aaa9951f94eac65dc6a06845a9d93eca9cfc"
+                                class="block px-4 py-3 text-sm text-indigo-800 border-b hover:bg-gray-200">
+                                <i class="fas fa-sitemap fa-lg mr-1"></i> Organização Administrativa</a>
+                            <a href="https://www.pen.uem.br/site/public/programas"
+                                class="block px-4 py-3 text-sm text-indigo-800 border-b hover:bg-gray-200">
+                                <i class="fas fa-briefcase fa-lg mr-1"></i> Projetos e Programas</a>
+                            <a href="https://www.pen.uem.br/site/public/publicacoes"
+                                class="block px-4 py-3 text-sm text-indigo-800 border-b hover:bg-gray-200">
+                                <i class="fas fa-file fa-lg mr-1"></i> Editais e Portarias</a>
+                            <a href="https://www.pen.uem.br/site/public/lives"
+                                class="block px-4 py-3 text-sm text-indigo-800 border-b hover:bg-gray-200">
+                                <i class="fab fa-youtube fa-lg mr-1"></i> Lives - Conversa PENsada</a>
+                            <a href="https://www.pen.uem.br/site/public/eventos"
+                                class="block px-4 py-3 text-sm text-indigo-800 border-b hover:bg-gray-200">
+                                <i class="fas fa-laptop fa-lg mr-1"></i> Eventos da PEN</a>
+                            <a href="https://www.pen.uem.br/site/public/agenda"
+                                class="block px-4 py-3 text-sm text-indigo-800 border-b hover:bg-gray-200">
+                                <i class="fas fa-calendar-alt fa-lg mr-1"></i> Reserva do Auditório da PEN</a>
+                        </div>
+                    </div>
+
+                    <div class="p-2">
+                        <a class="block text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-800 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            href="https://www.pen.uem.br/site/public/conteudo/80db9b60a364a1d59ebb4ba496301269e5278d3e">
+                            <i class="fas fa-envelope fa-lg mr-1"></i> Contato</a>
+                    </div>
+
+                </nav>
+
+            </div>
+        </div>
+    </header>
+</div>
+
+<div class="mt-16 pt-10 pb-6 bg-cool-gray-100">
+    <div class="container mx-auto w-full px-10">
+
+        <div class="px-6 h-48">
+
+            <img src="https://www.pen.uem.br/site/public/images/pen-positivo.png" alt="Pró-Reitoria de Ensino"
+                class="object-scale-down h-44 sm:mx-auto lg:float-left md:float-left" />
+
+            <a href="http://www.uem.br" target="_blank" title="Acessar site da UEM"><img
+                    src="https://www.pen.uem.br/site/public/images/uem-logo-b.png" alt="UEM"
+                    class="object-scale-down h-40 mt-4 float-right hidden lg:block md:block" /></a>
+
+        </div>
+
+    </div>
+</div>
+
+        
+<div class="bg-cool-gray-200 border-b border-t border-cool-gray-300 mb-8">
+    <div class="container mx-auto px-10 pt-2 pb-0 rounded-sm mt-0">
+
+        <div class="flex flex-wrap">
+
+            <div class="my-2 w-full md:w-1/2 lg:w-1/2 sm:w-full text-center md:text-left lg:text-left xl:text-left">
+                <p class="text-cool-gray-500">
+                    <!-- <span class=" text-xl font-semibold mr-3">Siga-nos</span> -->
+
+                    <a href="https://www.facebook.com/PEN-UEM-100768215114206" title="Facebook" target="_blank"><i
+                            class="fab fa-facebook-square fa-2x mr-3 hover:text-blue-700"></i></a>
+                    <a href="https://www.instagram.com/pen_uem/?igshid=dm2xhwfco17y" title="Instagram"
+                        target="_blank"><i class="fab fa-instagram fa-2x mr-3 hover:text-pink-700"></i></a>
+                    <a href="https://www.youtube.com/channel/UCvtRVaqjX_dIKIL7w6iUSEw" title="Youtube"
+                        target="_blank"><i class="fab fa-youtube fa-2x mr-3 hover:text-red-700"></i></a>
+                </p>
+            </div>
+
+            <div class="mb-2 w-full md:w-1/2 lg:w-1/2 sm:w-full text-center md:text-right lg:text-right xl:text-right">
+                <form class="mt-0 md:float-right lg:float-right xl:float-right" method="GET"
+                    action="https://www.pen.uem.br/site/public/pesquisa">
+                    <input type="hidden" name="_token" value="Gb09Xo4RBpJ2700es00v0AyeHe7RL8v2FFK723iR">
+                    <div class="mx-auto">
+                        <div class="relative pr-12">
+                            <input name="termo" value=""
+                                class="rounded-l-lg p-3 border-t mr-0 border-b border-l text-cool-gray-800 border-cool-gray-300 bg-white w-52"
+                                placeholder="Pesquisar no site ..." required />
+
+                            <button
+                                class="absolute inset-y-0 rounded-r-lg bg-cool-gray-200 text-cool-gray-500 hover:bg-cool-gray-400 hover:text-white font-bold p-3 border-cool-gray-300 border-l border-t border-b border-r">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                                    </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="clear-both"> </div>
+<div class="container mx-auto mb-15">
+
+    <div class="my-6 mx-auto">
+        <div class="p-3 md:p-10 lg:p-10 bg-white text-gray-700 md:flex md:flex-wrap shadow rounded-lg border leading-normal">
+
+            <div class="flex flex-col w-full">
+                <h3 class="text-2xl md:text-3xl lg:text-3xl font-extrabold text-indigo-700">
+                    Arquitetura e Urbanismo
+                </h3>
+                <hr>
+                <div class="mt-1 text-sm text-gray-500 hover:text-indigo-700">
+                    <a href="https://www.pen.uem.br/site/public/cursos">Graduação - Campus Sede</a>                  
+                </div>                
+            </div>
+            <div class="flex flex-col w-full my-6">
+                <div class="mt-1">
+                    <p><b>Turno:</b>&nbsp;integral<br />
+<b>Habilita&ccedil;&atilde;o:</b>&nbsp;Bacharelado<br />
+<b>Grau Acad&ecirc;mico:</b>&nbsp;Arquiteto e Urbanista<br />
+<b>Prazo M&iacute;nimo de Conclus&atilde;o:</b>&nbsp;5 anos<br />
+<b>Prazo M&aacute;ximo de Conclus&atilde;o:</b>&nbsp;9 anos</p>
+
+<p>&nbsp;</p>
+
+<p><b>Coordena&ccedil;&atilde;o</b></p>
+
+<p>Fulano de Tal -&nbsp;coordenador@exemplo.br</p>
+
+<p>&nbsp;
+<p>&nbsp;
+<p>&nbsp;</p>
+</p>
+</p>
+
+<p>&nbsp;<br />
+<b>Sobre o Curso:</b><br />
+O ensino de gradua&ccedil;&atilde;o em Arquitetura e Urbanismo tem por objetivo a capacita&ccedil;&atilde;o profissional em habilita&ccedil;&atilde;o &uacute;nica e &eacute; ministrado com observ&acirc;ncia dos seguintes princ&iacute;pios:<br />
+- A qualidade de vida dos habitantes dos assentamentos humanos e a qualidade material do ambiente constru&iacute;do e sua durabilidade;<br />
+- O uso da tecnologia em respeito &agrave;s necessidades sociais, culturais, est&eacute;ticas e econ&ocirc;micas das comunidades;<br />
+- O equil&iacute;brio ecol&oacute;gico e o desenvolvimento sustent&aacute;vel do ambiente natural e constru&iacute;do;<br />
+- A valoriza&ccedil;&atilde;o e preserva&ccedil;&atilde;o da Arquitetura, do Urbanismo e da Paisagem como patrim&ocirc;nio e responsabilidade coletiva.<br />
+O curso visa a forma&ccedil;&atilde;o de profissionais generalistas, aptos a compreender e traduzir as necessidade de indiv&iacute;duos, grupos sociais e comunidades, com rela&ccedil;&atilde;o &agrave; concep&ccedil;&atilde;o, organiza&ccedil;&atilde;o e constru&ccedil;&atilde;o do espa&ccedil;o exterior e interior, abrangendo o Urbanismo, a Edifica&ccedil;&atilde;o, o Paisagismo, bem como a conserva&ccedil;&atilde;o e a valoriza&ccedil;&atilde;o do patrim&ocirc;nio constru&iacute;do, prote&ccedil;&atilde;o do equil&iacute;brio do ambiente e &agrave; utiliza&ccedil;&atilde;o racional dos recursos dispon&iacute;veis.<br />
+Mercado de trabalho<br />
+De acordo com o Conselho de Arquitetura e Urbanismo (CAU/PR), o Arquiteto e Urbanista est&aacute; habilitado para atuar nas seguintes &aacute;reas:<br />
+- Arquitetura e urbanismo, concep&ccedil;&atilde;o e execu&ccedil;&atilde;o de projetos;<br />
+- Arquitetura de Interiores, concep&ccedil;&atilde;o e execu&ccedil;&atilde;o de projeto de ambientes;<br />
+- Arquitetura paisag&iacute;stica, concep&ccedil;&atilde;o e execu&ccedil;&atilde;o de projetos para espa&ccedil;os externos, livres e abertos, privados ou p&uacute;blicos, como parques e pra&ccedil;as, dentro de v&aacute;rias escalas;<br />
+- Patrim&ocirc;nio Hist&oacute;rico Cultural e Art&iacute;stico, arquitet&ocirc;nico, urban&iacute;stico, paisag&iacute;stico, monumentos, restauro, pr&aacute;ticas de projeto e solu&ccedil;&otilde;es tecnol&oacute;gicas para reutiliza&ccedil;&atilde;o, reabilita&ccedil;&atilde;o, reconstru&ccedil;&atilde;o, preserva&ccedil;&atilde;o, conserva&ccedil;&atilde;o e valoriza&ccedil;&atilde;o de edifica&ccedil;&otilde;es, conjuntos e cidades;<br />
+- Planejamento Urbano e Regional, planejamento f&iacute;sico- territorial, planos de interven&ccedil;&atilde;o no espa&ccedil;o urbano, metropolitano e regional fundamentados nos sistemas de infraestrutura, saneamento b&aacute;sico e ambiental, sistema vi&aacute;rio, sinaliza&ccedil;&atilde;o, tr&aacute;fego e tr&acirc;nsito urbano e rural, acessibilidade, gest&atilde;o territorial e ambiental, parcelamento do solo, loteamento, desmembramento, remembramento, arruamento, planejamento urbano, plano diretor, tra&ccedil;ado de cidades, desenho urbano, sistema vi&aacute;rio, tr&aacute;fego e tr&acirc;nsito urbano e rural, invent&aacute;rio urbano e regional, assentamentos humanos e requalifica&ccedil;&atilde;o em &aacute;reas urbanas e rurais;<br />
+- Topografia, elabora&ccedil;&atilde;o e interpreta&ccedil;&atilde;o de levantamentos topogr&aacute;ficos cadastrais para a realiza&ccedil;&atilde;o de projetos de Arquitetura e Urbanismo e de Paisagismo, foto-interpreta&ccedil;&atilde;o, leitura, interpreta&ccedil;&atilde;o e an&aacute;lise de informa&ccedil;&otilde;es topogr&aacute;ficas e sensoriamento remoto;<br />
+- Tecnologia e resist&ecirc;ncia dos materiais, dos elementos e produtos de constru&ccedil;&atilde;o, patologias e recupera&ccedil;&otilde;es;<br />
+- Sistemas construtivos e estruturais, estruturas;<br />
+- Instala&ccedil;&otilde;es e equipamentos referentes &agrave; arquitetura de urbanismo;<br />
+- Conforto Ambiental, t&eacute;cnicas referentes ao estabelecimento de condi&ccedil;&otilde;es clim&aacute;ticas, ac&uacute;sticas, lum&iacute;nicas e ergon&ocirc;micas;<br />
+- Meio Ambiente, Estudo e Avalia&ccedil;&atilde;o dos Impactos Ambientais, Licenciamento Ambiental, etc.<br />
+<br />
+<b>Mais informa&ccedil;&otilde;es:</b>&nbsp;</p>
+
+<p><a class="text-indigo-700 hover:text-gray-600 font-bold" href="https://www.pen.uem.br/site/public/assets/files/19944F3D475A0C509C267FE117F4A9F8/20230524_135721-arquitetura.pdf" target="_blank">Projeto Pedag&oacute;gico do Curso</a></p>
+                </div>
+            </div>
+
+            <div class="mt-3">
+                <div class="block">
+                    <a href="">
+                        <button type="button"
+                            class="bg-transparent hover:bg-gray-400 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded">
+                            <span class="pt-1"><i class="fas fa-backward fa-lg mr-2"></i> Voltar</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">   
+    <div class="text-center mt-2 font-sm">
+            <span class="my-3 text-normal text-gray-700 font-normal mr-3">Compartilhar</span>
+
+            <a href="" id="icone-whatsapp" rel="nofollow" target="_blank" title="Compartilhar no Whatsapp"><i
+                    class="fab fa-whatsapp fa-2x mr-2 text-green-600 hover:text-green-800"></i></a>
+            <a href="" id="icone-facebook" rel="nofollow" target="_blank" title="Compartilhar no Facebook"><i
+                    class="fab fa-facebook-square fa-2x mr-2 text-blue-600 hover:text-blue-800"></i></a>
+
+    </div>
+</div>
+  
+
+    </div>
+</div>
+
+
+        <div class="w-full bg-cool-gray-300">
+    <div class="container mx-auto px-10 pt-2">
+        <div class="flex flex-wrap text-left text-cool-gray-700">
+
+            <!-- ABOUT COLUMN -->
+
+            <div class="w-full md:w-1/3 p-3 md:text-left">
+                <div class="my-3 ml-0 text-xl font-semibold">Siga-nos</div>
+                <p>
+                    <a href="https://www.facebook.com/PEN-UEM-100768215114206" title="Facebook" target="_blank"><i
+                            class="fab fa-facebook-square fa-2x mr-3 hover:text-blue-700"></i></a>
+                    <a href="https://www.instagram.com/pen_uem/?igshid=dm2xhwfco17y" title="Instagram"
+                        target="_blank"><i class="fab fa-instagram fa-2x mr-3 hover:text-pink-700"></i></a>
+                    <a href="https://www.youtube.com/channel/UCvtRVaqjX_dIKIL7w6iUSEw" title="Youtube"
+                        target="_blank"><i class="fab fa-youtube fa-2x mr-3 hover:text-red-700"></i></a>
+                </p>
+                <div class="mt-6 my-3 ml-0 text-xl font-semibold">Serviços</div>
+
+                <p class="hover:text-indigo-700 mb-3"><i class="fa fa-edit mr-2"></i><a href="http://sisav.uem.br"
+                        target="_blank">DAA - Secretaria Virtual</a></p>
+                <p class="hover:text-indigo-700 mb-3"><i class="fa fa-list-alt mr-2"></i><a
+                        href="http://www.npd.uem.br/menuAluno/Acesso" target="_blank">DAA - Menu do Aluno</a></p>
+                <p class="hover:text-indigo-700 mb-3"><i class="fa fa-envelope mr-2"></i><a href="http://webmail.uem.br"
+                        target="_blank">E-mail da UEM</a></p>
+            </div>
+
+            <!-- CONTACTS COLUMN -->
+
+            <div class="w-full md:w-1/3 p-3 md:text-left">
+                <div class="my-3 ml-0 text-xl font-semibold">Links Importantes</div>
+                <p class="leading-normal hover:text-indigo-700 mb-3"><i class="fa fa-university mr-2"></i> <a href="http://www.uem.br"
+                        target="_blank">Portal da UEM</a></p>
+                <p class="leading-normal hover:text-indigo-700 mb-3"><i class="fa fa-users mr-2"></i> <a href="http://www.daa.uem.br"
+                        target="_blank">Diretoria Assuntos Acadêmicos</a></p>
+                <p class="leading-normal hover:text-indigo-700 mb-3"><i class="fa fa-book mr-2"></i> <a href="http://www.bce.uem.br"
+                        target="_blank">Biblioteca Central da UEM</a></p>
+                <p class="leading-normal hover:text-indigo-700 mb-3"><i class="fa fa-edit mr-2"></i> <a
+                        href="http://www.vestibular.uem.br" target="_blank">Vestibular da UEM</a></p>
+                <p class="leading-normal hover:text-indigo-700 mb-3"><i class="fa fa-laptop mr-2"></i> <a
+                        href="https://portal.nead.uem.br/site/web/artigo/capacitacao" target="_blank">Núcleo de Educação
+                        a Distância</a></p>
+            </div>
+
+            <!-- FORM COLUMN -->
+
+            <div class="w-full md:w-1/3 p-3 md:text-left">
+                <div class="my-3 ml-0 text-xl font-semibold">Pró-Reitoria de Ensino</div>
+                <p class="mt-3">
+                    Av. Colombo, 5790<br><br>
+                    Jardim Universitário - Bloco B33<br><br>
+                    CEP 87020-900 - Maringá/PR<br><br>
+                </p>
+                <p class="mb-1">
+                    <i class="fa fa-phone mr-2 mb-3"></i> (44) 3011-4240
+                </p>
+                <p class="hover:text-indigo-700 mb-3">
+                    <i class="fa fa-envelope mr-2"></i><a href="mailto:sec-pen@uem.br">sec-pen@uem.br</a>
+                </p>
+            </div>
+
+            <div class="w-full pt-0 pb-10 text-center">
+                <hr style="border-bottom: 1px solid #bbb" class="mb-6">
+                © 2026 UEM - <span class="hover:text-indigo-700"><a href="https://www.pen.uem.br/site/public">Pró-Reitoria de Ensino</a></span>
+            </div>
+        </div>
+    </div>
+
+</div>        
+    </div>
+<script type="text/javascript">
+    //Constrói a URL depois que o DOM estiver pronto
+    document.addEventListener("DOMContentLoaded", function() {
+        //conteúdo que será compartilhado: Título da página + URL
+        var titulo = document.title;
+        var conteudo = encodeURIComponent(titulo  + "  " + window.location.href);
+        //altera a URL do botão
+        document.getElementById("icone-whatsapp").href = "https://api.whatsapp.com/send?text=" + conteudo;
+        document.getElementById("icone-facebook").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href);
+    }, false);
+
+
+    function btnGraduacao() {
+        document.getElementById("btn_graduacao").click();
+    }
+
+</script>
+    
+</body>
+</html>

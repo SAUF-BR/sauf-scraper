@@ -9,6 +9,10 @@ o scraper envia todos os cursos que encontrar, com o link da página de cada um.
 completa o que o site não mostra e liga o curso ao código e-MEC, quando ele existe.
 Detalhes em [docs/MAPEAMENTO_CENSO.md](docs/MAPEAMENTO_CENSO.md).
 
+Vai colaborar? Leia o [CONTRIBUTING.md](CONTRIBUTING.md) (como funciona, setup, como criar
+um spider, testes e regras do time) e o [docs/CHECKLIST_SCRAPERS.md](docs/CHECKLIST_SCRAPERS.md)
+(scrapers que já existem e os que faltam).
+
 ## Rodando (Windows / PowerShell)
 
 ```powershell

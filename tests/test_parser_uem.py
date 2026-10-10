@@ -253,13 +253,74 @@ def test_titulo_de_mercado_na_mesma_quebra_de_linha_do_sobre():
     # Arquitetura: o título vem logo depois de um <br/>, sem parágrafo novo.
     sobre, mercado = separar_mercado("Primeiro.\nMercado de trabalho\nAtua no CAU.")
 
-    assert (sobre, mercado) == ("Primeiro.", "Atua no CAU.")
+    assert (sobre, mercado) == ("Primeiro.", ["Atua no CAU."])
 
 
 def test_frase_que_comeca_com_mercado_de_trabalho_nao_e_titulo():
     texto = "O mercado de trabalho do economista é amplo.\nMercado de trabalho em alta."
 
-    assert separar_mercado(texto) == (texto, None)
+    assert separar_mercado(texto) == (texto, [])
+
+
+# --- "Campo de atuação" também é mercado de trabalho --------------------------------
+
+
+def test_campo_de_atuacao_sem_negrito_vira_mercado():
+    # Trecho real de Tecnologia em Gastronomia na UEM, encurtado.
+    html = """<div><p><strong>Sobre o Curso:</strong></p>
+        <p>O Tecnólogo em Gastronomia pode atuar na prestação de serviços de alimentação.</p>
+        <p>Campo de Atuação:</p>
+        <p>O profissional pode atuar em restaurantes de hotéis e cruzeiros.</p>
+        <p><strong>Mais informações:</strong></p></div>"""
+
+    detalhes = extrair_detalhes(html)
+
+    assert detalhes.sobre == (
+        "O Tecnólogo em Gastronomia pode atuar na prestação de serviços de alimentação."
+    )
+    assert (
+        detalhes.mercado_trabalho
+        == "O profissional pode atuar em restaurantes de hotéis e cruzeiros."
+    )
+
+
+@pytest.mark.parametrize("titulo", ["CAMPO DE ATUAÇÃO", "Campo de atuacao", "Campo de Atuação :"])
+def test_campo_de_atuacao_em_maiusculas_ou_sem_acento(titulo):
+    # Eng. de Produção (Goioerê) usa o título todo em maiúsculas.
+    sobre, mercado = separar_mercado(f"Forma engenheiros.\n{titulo}\nIndústrias e serviços.")
+
+    assert (sobre, mercado) == ("Forma engenheiros.", ["Indústrias e serviços."])
+
+
+def test_campo_de_atuacao_em_negrito_vira_mercado():
+    html = """<div><p><strong>Sobre o Curso:</strong> Forma biomédicos.</p>
+        <p><b>Campo de Atuação</b><br/>Laboratórios clínicos.</p>
+        <p><b>Coordenação</b></p><p>Coordenador: Fulano - fulano@exemplo.br</p></div>"""
+
+    detalhes = extrair_detalhes(html)
+
+    assert detalhes.sobre == "Forma biomédicos."
+    assert detalhes.mercado_trabalho == "Laboratórios clínicos."
+
+
+def test_frase_com_campo_de_atuacao_nao_e_cortada():
+    # Física Médica: a frase começa com "O campo de atuação" e não é título.
+    texto = "O campo de atuação de um Físico Médico é bastante amplo.\nHospitais e clínicas."
+
+    assert separar_mercado(texto) == (texto, [])
+
+
+def test_pagina_com_as_duas_secoes_junta_na_ordem():
+    html = """<div><p><strong>Sobre o Curso:</strong><br/>Forma profissionais.</p>
+        <p>Campo de atuação<br/>Indústria e serviços.</p>
+        <p>Perfil do egresso<br/>Generalista.</p>
+        <p><b>Mercado de Trabalho</b><br/>Alta demanda no Paraná.</p>
+        <p><strong>Mais informações:</strong></p></div>"""
+
+    detalhes = extrair_detalhes(html)
+
+    assert detalhes.sobre == "Forma profissionais.\n\nPerfil do egresso\nGeneralista."
+    assert detalhes.mercado_trabalho == "Indústria e serviços.\n\nAlta demanda no Paraná."
 
 
 # --- Montagem do Curso -------------------------------------------------------------

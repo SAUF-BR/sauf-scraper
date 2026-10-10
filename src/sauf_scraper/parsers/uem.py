@@ -5,6 +5,7 @@ isso dá para testar tudo com os HTMLs salvos em tests/fixtures/uem/.
 """
 
 import re
+import unicodedata
 from dataclasses import dataclass
 
 from bs4 import BeautifulSoup, NavigableString
@@ -115,29 +116,65 @@ def extrair_detalhes(html: str) -> DetalhesCurso:
         if texto:
             setattr(detalhes, atributo, texto)
 
-    detalhes.sobre = extrair_secao(soup, "sobre o curso")
-    detalhes.mercado_trabalho = extrair_secao(soup, "mercado de trabalho")
-    if detalhes.mercado_trabalho is None and detalhes.sobre:
-        detalhes.sobre, detalhes.mercado_trabalho = separar_mercado(detalhes.sobre)
+    sobre = extrair_secao(soup, "sobre o curso")
+    if sobre:
+        sobre, mercado_no_sobre = separar_mercado(sobre)
+    else:
+        mercado_no_sobre = []
+    mercado_em_negrito = [
+        _texto_da_secao(rotulo)
+        for rotulo in soup.find_all(["strong", "b"])
+        if _sem_acento(_nome_rotulo(rotulo)) in _TITULOS_MERCADO
+    ]
+    detalhes.sobre = sobre
+    detalhes.mercado_trabalho = _juntar(mercado_no_sobre + mercado_em_negrito)
     return detalhes
 
 
-_TITULO_MERCADO = re.compile(r"^mercado de trabalho:?$", re.IGNORECASE | re.MULTILINE)
+# "Campo de atuação" conta como mercado de trabalho (decisão do Carlos, 09/10/2026).
+_TITULOS_MERCADO = {"mercado de trabalho", "campo de atuacao"}
+# Títulos sem negrito que ficam no "Sobre" e encerram um trecho de mercado.
+_LINHA_TITULO = re.compile(
+    r"^(?:(?P<mercado>mercado de trabalho|campo de atua[cç][aã]o)"
+    r"|perfil do egresso|atribui[cç][oõ]es)\s*:?$",
+    re.IGNORECASE | re.MULTILINE,
+)
 
 
-def separar_mercado(sobre: str) -> tuple[str | None, str | None]:
-    """Separa o "Mercado de trabalho" escrito sem negrito, como linha solta dentro do "Sobre".
+def separar_mercado(sobre: str) -> tuple[str | None, list[str]]:
+    """Tira do "Sobre" os trechos de mercado de trabalho escritos sem negrito.
 
-    Na maioria das páginas da UEM o título é texto puro no começo de um parágrafo, então
-    `extrair_secao` não o reconhece como rótulo e ele fica dentro do `sobre`.
+    Na maioria das páginas da UEM o título ("Mercado de trabalho" ou "Campo de atuação") é
+    texto puro numa linha só, então `extrair_secao` não o reconhece como rótulo e ele fica
+    dentro do `sobre`. Só a linha exata conta como título: frases como "O campo de atuação
+    do biomédico é..." continuam no `sobre`. Um trecho de mercado vai até o próximo título;
+    "Perfil do egresso" e "Atribuições" voltam para o `sobre`, com o título.
     """
-    titulo = _TITULO_MERCADO.search(sobre)
-    if titulo is None:
-        return sobre, None
-    return sobre[: titulo.start()].strip() or None, sobre[titulo.end() :].strip() or None
+    titulos = list(_LINHA_TITULO.finditer(sobre))
+    if not any(t["mercado"] for t in titulos):
+        return sobre, []
+    texto_sobre = [sobre[: titulos[0].start()] if titulos else sobre]
+    mercado = []
+    fins = [t.start() for t in titulos[1:]] + [len(sobre)]
+    for titulo, fim in zip(titulos, fins, strict=True):
+        if titulo["mercado"]:
+            mercado.append(sobre[titulo.end() : fim].strip())
+        else:
+            texto_sobre.append(sobre[titulo.start() : fim])
+    return _juntar([t.strip() for t in texto_sobre]), [t for t in mercado if t]
 
 
-_SECOES = {"sobre o curso", "mercado de trabalho", "mais informações", "coordenação"}
+def _juntar(trechos: list[str | None]) -> str | None:
+    return "\n\n".join(t for t in trechos if t) or None
+
+
+_SECOES = {
+    "sobre o curso",
+    "mercado de trabalho",
+    "campo de atuacao",
+    "mais informacoes",
+    "coordenacao",
+}
 
 
 def extrair_secao(soup: BeautifulSoup, titulo: str) -> str | None:
@@ -147,10 +184,17 @@ def extrair_secao(soup: BeautifulSoup, titulo: str) -> str | None:
     seção (`_SECOES`) ou até o fim do bloco de conteúdo. <br> vira quebra de linha e cada
     parágrafo novo vira linha em branco.
     """
-    rotulo = next((r for r in soup.find_all(["strong", "b"]) if _nome_rotulo(r) == titulo), None)
+    alvo = _sem_acento(titulo)
+    rotulo = next(
+        (r for r in soup.find_all(["strong", "b"]) if _sem_acento(_nome_rotulo(r)) == alvo), None
+    )
     if rotulo is None:
         return None
-    bloco = rotulo.find_parent("div") or soup
+    return _texto_da_secao(rotulo)
+
+
+def _texto_da_secao(rotulo) -> str | None:
+    bloco = rotulo.find_parent("div") or list(rotulo.parents)[-1]
     dentro_do_bloco = {id(elemento) for elemento in bloco.descendants}
 
     partes: list[str] = []
@@ -160,13 +204,17 @@ def extrair_secao(soup: BeautifulSoup, titulo: str) -> str | None:
         if isinstance(elemento, NavigableString):
             if not any(p is rotulo for p in elemento.parents):
                 partes.append(re.sub(r"\s+", " ", str(elemento)))
-        elif elemento.name in ("strong", "b") and _nome_rotulo(elemento) in _SECOES:
+        elif elemento.name in ("strong", "b") and _sem_acento(_nome_rotulo(elemento)) in _SECOES:
             break
         elif elemento.name == "br":
             partes.append("\n")
         elif elemento.name in ("p", "div", "li"):
             partes.append("\n\n")
     return _limpar_texto("".join(partes))
+
+
+def _sem_acento(texto: str) -> str:
+    return unicodedata.normalize("NFKD", texto).encode("ascii", "ignore").decode()
 
 
 def _nome_rotulo(rotulo) -> str:

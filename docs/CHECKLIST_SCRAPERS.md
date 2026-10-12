@@ -1,12 +1,9 @@
 # Checklist dos scrapers
 
-O que já existe, o que falta e o que cada scraper precisa entregar para as telas do
-protótipo. Base: análise "protótipo × dados" (09/10/2026) e as decisões D-38 a D-47 do
-`sauf-api/docs/DECISOES.md`. Como criar um spider: [CONTRIBUTING.md](../CONTRIBUTING.md).
+O que existe, o que falta e o que cada scraper entrega (base: análise do protótipo e
+D-38 a D-47). Como criar um spider: [CONTRIBUTING.md](../CONTRIBUTING.md). Atualizado em 10/10/2026.
 
-Legenda: ✅ feito · 🟡 parcial / com pendência · ❌ falta · ⏸️ adiado ou fora do MVP · ➖ não se aplica
-
-Atualizado em 10/10/2026.
+Legenda: ✅ feito · 🟡 com pendência · ❌ falta · ⏸️ adiado/fora do MVP · ➖ não se aplica
 
 ---
 
@@ -49,7 +46,7 @@ muitas IES com poucos dados (P-35, opção c → D-43).
 
 ### 1.2. Scraper de mais 4 universidades (a definir) ❌
 
-IES ainda **a definir**. Cada uma precisa entregar:
+IES, códigos e-MEC e chaves **a definir**. Cada uma precisa entregar:
 
 **Obrigatório para contar como "completa":**
 
@@ -68,13 +65,6 @@ IES ainda **a definir**. Cada uma precisa entregar:
 - [ ] Nota de corte própria (vestibular)
 - [ ] Disciplinas (texto do site, D-41)
 - [ ] Mensalidade (**só privadas**)
-
-| # | IES | e-MEC | Chave | Estado |
-|---|---|---|---|---|
-| 2 | a definir | — | — | ❌ |
-| 3 | a definir | — | — | ❌ |
-| 4 | a definir | — | — | ❌ |
-| 5 | a definir | — | — | ❌ |
 
 ---
 
@@ -103,17 +93,10 @@ IES ainda **a definir**. Cada uma precisa entregar:
 
 ## 4. Definição de pronto: spider novo
 
-Um spider só conta como pronto quando:
-
 - [ ] Está registrado em `spiders/__init__.py` e aparece no `uv run sauf-scraper --listar`.
-- [ ] Tem testes do parser com fixture (`tests/fixtures/<chave>/`, sem dados pessoais) e
-      trechos de regressão para os casos estranhos do site.
-- [ ] `uv run pytest` e `uv run ruff check .` passam.
+- [ ] Testes do parser com fixture sem dados pessoais; `pytest` e `ruff check` passam.
 - [ ] Não coleta dados pessoais (ex.: seção de coordenação).
-- [ ] Casamento com o Censo feito: `casar --ies <chave>` rodado e o CSV revisado à mão
-      (linhas `ambiguo` e `sem_par` resolvidas ou listadas como pendência neste checklist).
-- [ ] `--dry-run` conferido: `output/emec-<código>.json` com os campos obrigatórios da
-      seção 1.2, sem HTML nos textos e com `urlOrigem` em todos os cursos.
+- [ ] `casar` rodado e CSV revisado (`ambiguo`/`sem_par` resolvidos ou listados aqui).
+- [ ] `--dry-run` conferido: campos obrigatórios da seção 1.2, textos sem HTML e `urlOrigem` em todos.
 - [ ] Testado contra a API local (`censo` → spider) sem `rejeitados`.
-- [ ] Regra nova de negócio (se houver) registrada no `sauf-api/docs/DECISOES.md`.
-- [ ] Este checklist atualizado com o estado da IES.
+- [ ] Regra nova registrada no `DECISOES.md` e este checklist atualizado.

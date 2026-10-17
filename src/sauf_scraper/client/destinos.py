@@ -41,12 +41,12 @@ class ApiSauf:
             self._session.headers["X-Api-Key"] = settings.api_key.get_secret_value()
 
     def enviar(self, lote: LoteIngestao) -> RespostaIngestao:
-        return self._post(ENDPOINT_LOTES, lote)
+        return self.postar(ENDPOINT_LOTES, lote)
 
     def enviar_censo(self, lote: LoteCenso) -> RespostaIngestao:
-        return self._post(ENDPOINT_CENSO, lote)
+        return self.postar(ENDPOINT_CENSO, lote)
 
-    def _post(self, endpoint: str, corpo: SaufModel) -> RespostaIngestao:
+    def postar(self, endpoint: str, corpo: SaufModel) -> RespostaIngestao:
         url = self._settings.api_base_url.rstrip("/") + endpoint
         resposta = self._session.post(
             url,
@@ -121,16 +121,16 @@ class ArquivoJson:
         self._pasta = pasta
 
     def enviar(self, lote: LoteIngestao) -> None:
-        self._pasta.mkdir(parents=True, exist_ok=True)
-        self._gravar(self._pasta / f"emec-{lote.codigo_emec_instituicao}.json", lote)
+        self.gravar(f"emec-{lote.codigo_emec_instituicao}.json", lote)
         return None
 
     def enviar_censo(self, lote: LoteCenso) -> None:
-        self._pasta.mkdir(parents=True, exist_ok=True)
-        self._gravar(self._pasta / f"censo-{lote.ano_censo}.json", lote)
+        self.gravar(f"censo-{lote.ano_censo}.json", lote)
         return None
 
-    def _gravar(self, caminho: Path, lote: SaufModel) -> None:
+    def gravar(self, nome_arquivo: str, lote: SaufModel) -> None:
+        self._pasta.mkdir(parents=True, exist_ok=True)
+        caminho = self._pasta / nome_arquivo
         conteudo = lote.model_dump(mode="json", by_alias=True)
         caminho.write_text(json.dumps(conteudo, ensure_ascii=False, indent=2), encoding="utf-8")
         logger.info("lote gravado", extra={"dados": {"arquivo": str(caminho)}})

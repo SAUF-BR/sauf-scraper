@@ -149,3 +149,4 @@ class RespostaIngestao(SaufModel):
     inalterados: int = 0
     inativados: int = 0
     rejeitados: list[str] = Field(default_factory=list)
+    sem_oferta: int = 0  # só no Sisu: linhas cujo código de curso não está em nenhuma oferta

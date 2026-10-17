@@ -6,7 +6,12 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-from sauf_scraper.censo.casamento import caminho_tabela, gerar_tabela, gravar_tabela
+from sauf_scraper.censo.casamento import (
+    caminho_tabela,
+    codigos_confirmados,
+    gerar_tabela,
+    gravar_tabela,
+)
 from sauf_scraper.censo.leitor import ler_censo
 from sauf_scraper.client.destinos import ApiSauf, ArquivoJson, Terminal
 from sauf_scraper.client.http import HttpEducado
@@ -14,6 +19,8 @@ from sauf_scraper.core.config import Settings
 from sauf_scraper.core.logging import configurar_logging
 from sauf_scraper.core.models import LoteIngestao
 from sauf_scraper.core.pipeline import executar
+from sauf_scraper.geral import igc, sisu
+from sauf_scraper.geral.base import entregar
 from sauf_scraper.spiders import SPIDERS, codigos_emec
 
 logger = logging.getLogger("sauf_scraper")
@@ -25,6 +32,10 @@ def main(argv: list[str] | None = None) -> int:
         return main_censo(argv[1:])
     if argv[:1] == ["casar"]:
         return main_casar(argv[1:])
+    if argv[:1] == ["igc"]:
+        return main_igc(argv[1:])
+    if argv[:1] == ["sisu"]:
+        return main_sisu(argv[1:])
 
     parser = argparse.ArgumentParser(
         prog="sauf-scraper", epilog="Import do Censo: sauf-scraper censo --help"
@@ -150,6 +161,59 @@ def main_casar(argv: list[str]) -> int:
     paginas = Counter(dict({linha.chave: linha.status for linha in tabela}).values())
     print(f"{destino}: páginas por status {dict(paginas)}, {len(tabela)} linha(s)")
     return 0
+
+
+def main_igc(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(
+        prog="sauf-scraper igc",
+        description="Lê a planilha do IGC (INEP) e envia a nota MEC das IES do escopo.",
+    )
+    parser.add_argument("--arquivo", type=Path, required=True, help="ex.: fontes/IGC_2023.xlsx")
+    parser.add_argument(
+        "--dry-run", action="store_true", help="grava output/igc-<ano>.json em vez de enviar"
+    )
+    args = parser.parse_args(argv)
+
+    configurar_logging()
+    lote, relatorio = igc.ler_igc(args.arquivo, codigos_emec())
+    relatorio.registrar()
+    resposta = entregar(lote, f"igc-{lote.ano}.json", igc.ENDPOINT, Settings(), args.dry_run)
+    if resposta is not None:
+        logger.info("igc enviado", extra={"dados": {"resposta": resposta.model_dump()}})
+    return 0
+
+
+def main_sisu(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(
+        prog="sauf-scraper sisu",
+        description="Lê a planilha de notas de corte do Sisu (ampla concorrência) e envia.",
+    )
+    parser.add_argument("--arquivo", type=Path, required=True, help="xlsx do Sisu, em fontes/")
+    parser.add_argument(
+        "--dry-run", action="store_true", help="grava output/sisu-<ano>.json em vez de enviar"
+    )
+    args = parser.parse_args(argv)
+
+    configurar_logging()
+    lote, relatorio = sisu.ler_sisu(args.arquivo, codigos_emec())
+    relatorio.registrar()
+    sisu.relatar_codigos(lote, codigos_por_ies())
+    resposta = entregar(lote, f"sisu-{lote.ano}.json", sisu.ENDPOINT, Settings(), args.dry_run)
+    if resposta is not None:
+        logger.info("sisu enviado", extra={"dados": {"resposta": resposta.model_dump()}})
+    return 0
+
+
+def codigos_por_ies() -> dict[int, set[int]]:
+    """Códigos de curso confirmados na tabela de casamento de cada spider."""
+    return {
+        spider.codigo_emec: {
+            codigo.codigo_emec
+            for codigos in codigos_confirmados(spider.chave).values()
+            for codigo in codigos
+        }
+        for spider in SPIDERS.values()
+    }
 
 
 if __name__ == "__main__":

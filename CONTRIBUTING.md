@@ -119,6 +119,16 @@ uv run sauf-scraper --ies xyz             # API: 2º o spider
 `SAUF_API_BASE_URL` sem `/api/v1`. Exemplo completo e erros comuns (422, 401, conexão
 recusada): ["Como popular a API" no README](README.md#como-popular-a-api).
 
+### Fontes oficiais (importadores gerais)
+
+O gov.br bloqueia robôs: baixe a planilha à mão, salve em `fontes/` (fora do Git) e passe com
+`--arquivo` (D-48).
+
+| Fonte | Onde baixar | Comando |
+|---|---|---|
+| IGC (nota MEC) | [INEP: indicadores de qualidade](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/indicadores-educacionais/indicadores-de-qualidade-da-educacao-superior), aba 2023 | `uv run sauf-scraper igc --arquivo fontes/IGC_2023.xlsx [--dry-run]` |
+| Sisu (notas de corte) | [Sisu: documentos](https://www.gov.br/mec/pt-br/sisu/documentos), seção "Inscrições e notas de corte" | `uv run sauf-scraper sisu --arquivo fontes/<planilha>.xlsx [--dry-run]` |
+
 ## 4. Testes e qualidade
 
 ```powershell

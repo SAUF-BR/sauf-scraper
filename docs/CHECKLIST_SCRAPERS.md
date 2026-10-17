@@ -3,7 +3,7 @@
 O que existe, o que falta e o que cada scraper entrega (base: análise do protótipo e
 D-38 a D-47). Como criar um spider: [CONTRIBUTING.md](../CONTRIBUTING.md). Atualizado em 10/10/2026.
 
-Legenda: ✅ feito · 🟡 com pendência · ❌ falta · ⏸️ adiado/fora do MVP · ➖ não se aplica
+Legenda: ✅ feito · 🟡 com pendência · 🔜 próxima · ❌ falta · ⏸️ adiado/fora do MVP · 🚫 fora do plano · ➖ não se aplica
 
 ---
 
@@ -73,10 +73,10 @@ IES, códigos e-MEC e chaves **a definir**. Cada uma precisa entregar:
 | # | Fonte | Para quê | Estado | Observação |
 |---|---|---|---|---|
 | G1 | **Censo da Educação Superior (INEP)** | Instituição (nome, sigla, tipo, cidade/UF); vagas, gratuidade e área Cine de cada curso | ✅ | `uv run sauf-scraper censo`. Só IES com spider registrado (D-43). |
-| G2 | **IGC / nota MEC** (e-MEC/INEP) | "Nota MEC" nos cards e no filtro de universidades | ❌ | |
-| G3 | **SISU: notas de corte** | Nota de corte nos cards, no detalhe, nos favoritos e nos cursos parecidos | ❌ | Prioridade. Aguardando a planilha (xlsx) do MEC que o Carlos vai baixar. Só **ampla concorrência** (P-37 a → D-45). |
-| G4 | **PROUni / FIES** | "Aceita PROUni/FIES" nos favoritos e nas formas de ingresso | ❌ | Baixa prioridade. |
-| G5 | **e-MEC: endereço** | "Onde fica" na página da universidade | ❌ | |
+| G2 | **IGC / nota MEC** (INEP) | "Nota MEC" nos cards e no filtro de universidades | ✅ | `uv run sauf-scraper igc --arquivo fontes/IGC_2023.xlsx`. Faixa 1 a 5 por ano; 'SC' vira null (D-48, D-49). |
+| G3 | **SISU: notas de corte** | Nota de corte nos cards, no detalhe, nos favoritos e nos cursos parecidos | ✅ | `uv run sauf-scraper sisu --arquivo fontes/<planilha do Sisu>.xlsx`. Sisu 2025, só **ampla concorrência**; corte 0 vira null (D-50, D-53). |
+| G4 | **PROUni / FIES** | "Aceita PROUni/FIES" | 🚫 Fora do plano | As 5 IES são públicas (D-51). |
+| G5 | **e-MEC: endereço** | "Onde fica" na página da universidade | 🚫 Fora do plano | O endereço já vem no arquivo de IES do Censo (`DS_ENDERECO_IES` etc.), estendendo o G1 na fase C (D-51). |
 | G6 | **RAIS / CAGED** | Aba "Mercado e salários" | ⏸️ | Fora do MVP (P-31 a → D-40). |
 
 ---

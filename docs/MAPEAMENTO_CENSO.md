@@ -73,6 +73,11 @@ O dicionário de dados fica em `Anexos/ANEXO I - Dicionário de Dados/`.
 | `SG_UF_IES` | UF | da sede/reitoria |
 | `NO_MUNICIPIO_IES` | cidade | da sede/reitoria |
 | `CO_MUNICIPIO_IES` | código IBGE da cidade | opcional, útil para filtros |
+| `DS_ENDERECO_IES` | `endereco.logradouro` | da sede; vazio vira `null` (D-58) |
+| `DS_NUMERO_ENDERECO_IES` | `endereco.numero` | texto (pode ter "s/n") |
+| `DS_COMPLEMENTO_ENDERECO_IES` | `endereco.complemento` | |
+| `NO_BAIRRO_IES` | `endereco.bairro` | |
+| `NU_CEP_IES` | `endereco.cep` | só os 8 dígitos (zeros à esquerda completados) |
 | `TP_REDE` | tipo | 1 = `publica`, 2 = `privada` |
 | `TP_CATEGORIA_ADMINISTRATIVA` | categoria (opcional) | 1 Pública Federal, 2 Pública Estadual, 3 Pública Municipal, 4 Privada com fins lucrativos, 5 Privada sem fins lucrativos, 7 Especial |
 | `TP_ORGANIZACAO_ACADEMICA` | organização acadêmica (opcional) | 1 Universidade, 2 Centro Universitário, 3 Faculdade, 4 Instituto Federal, 5 CEFET |

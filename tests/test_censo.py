@@ -10,7 +10,8 @@ from sauf_scraper.core.models import Grau, Modalidade
 
 COLUNAS_IES = [
     "NU_ANO_CENSO", "SG_UF_IES", "NO_MUNICIPIO_IES", "TP_ORGANIZACAO_ACADEMICA", "TP_REDE",
-    "TP_CATEGORIA_ADMINISTRATIVA", "CO_IES", "NO_IES", "SG_IES",
+    "TP_CATEGORIA_ADMINISTRATIVA", "CO_IES", "NO_IES", "SG_IES", "DS_ENDERECO_IES",
+    "DS_NUMERO_ENDERECO_IES", "DS_COMPLEMENTO_ENDERECO_IES", "NO_BAIRRO_IES", "NU_CEP_IES",
 ]  # fmt: skip
 COLUNAS_CURSOS = [
     "NU_ANO_CENSO", "SG_UF", "NO_MUNICIPIO", "TP_DIMENSAO", "CO_IES", "NO_CURSO", "CO_CURSO",
@@ -19,8 +20,38 @@ COLUNAS_CURSOS = [
 ]  # fmt: skip
 
 IES = [
-    ["2024", "PR", "Maringá", "1", "1", "2", "57", "UNIVERSIDADE ESTADUAL DE MARINGÁ", "UEM"],
-    ["2024", "PR", "Londrina", "1", "1", "2", "9", "UNIVERSIDADE ESTADUAL DE LONDRINA", "UEL"],
+    [
+        "2024",
+        "PR",
+        "Maringá",
+        "1",
+        "1",
+        "2",
+        "57",
+        "UNIVERSIDADE ESTADUAL DE MARINGÁ",
+        "UEM",
+        "Avenida Colombo",
+        "5790",
+        "Campus Universitário",
+        "Zona 7",
+        "87020900",
+    ],
+    [
+        "2024",
+        "PR",
+        "Londrina",
+        "1",
+        "1",
+        "2",
+        "9",
+        "UNIVERSIDADE ESTADUAL DE LONDRINA",
+        "UEL",
+        "",
+        "",
+        "",
+        "",
+        "",
+    ],
 ]
 CURSOS = [
     # Presencial: uma linha.
@@ -70,6 +101,26 @@ def test_le_so_as_instituicoes_pedidas(pasta_censo):
     assert uem.tipo == "publica"
     assert uem.categoria_administrativa == "publica_estadual"
     assert uem.organizacao_academica == "universidade"
+    assert uem.endereco.model_dump() == {
+        "logradouro": "Avenida Colombo",
+        "numero": "5790",
+        "complemento": "Campus Universitário",
+        "bairro": "Zona 7",
+        "cep": "87020900",
+    }
+
+
+def test_ies_sem_endereco_no_censo_vem_null(pasta_censo):
+    uel = ler_censo(pasta_censo, [9]).instituicoes[0]
+
+    assert uel.endereco is None
+
+
+def test_cep_com_mascara_ou_sem_zero_a_esquerda():
+    from sauf_scraper.censo.leitor import endereco
+
+    assert endereco({"NU_CEP_IES": "87020-900"}).cep == "87020900"
+    assert endereco({"NU_CEP_IES": "1310100"}).cep == "01310100"
 
 
 def test_uma_oferta_por_codigo_e_so_graduacao(pasta_censo):

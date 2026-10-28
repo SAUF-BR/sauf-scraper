@@ -10,7 +10,7 @@ import logging
 from collections.abc import Iterable, Iterator
 from pathlib import Path
 
-from sauf_scraper.censo.modelos import InstituicaoCenso, LoteCenso, OfertaCenso
+from sauf_scraper.censo.modelos import EnderecoCenso, InstituicaoCenso, LoteCenso, OfertaCenso
 from sauf_scraper.core.models import Grau, Modalidade
 
 logger = logging.getLogger(__name__)
@@ -80,9 +80,23 @@ def ler_instituicoes(arquivo: Path, codigos: set[str]) -> tuple[list[Instituicao
                 organizacao_academica=_ORGANIZACAO.get(linha["TP_ORGANIZACAO_ACADEMICA"]),
                 uf=linha["SG_UF_IES"],
                 cidade=linha["NO_MUNICIPIO_IES"],
+                endereco=endereco(linha),
             )
         )
     return instituicoes, ano
+
+
+def endereco(linha: dict[str, str]) -> EnderecoCenso | None:
+    """Colunas DS_ENDERECO_IES etc. do arquivo de IES; None se o Censo não trouxer nada."""
+    cep = "".join(c for c in linha.get("NU_CEP_IES", "") if c.isdigit())
+    campos = {
+        "logradouro": linha.get("DS_ENDERECO_IES", "").strip() or None,
+        "numero": linha.get("DS_NUMERO_ENDERECO_IES", "").strip() or None,
+        "complemento": linha.get("DS_COMPLEMENTO_ENDERECO_IES", "").strip() or None,
+        "bairro": linha.get("NO_BAIRRO_IES", "").strip() or None,
+        "cep": cep.zfill(8) if cep else None,
+    }
+    return EnderecoCenso(**campos) if any(campos.values()) else None
 
 
 def ler_ofertas(arquivo: Path, codigos: set[str]) -> list[OfertaCenso]:

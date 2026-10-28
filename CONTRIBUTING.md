@@ -137,16 +137,16 @@ uv run ruff check . ; uv run ruff format .
 ```
 
 - Nenhum teste acessa a internet: parsers usam HTML salvo e HTTP/API usam `responses`.
-- **Fixtures** em `tests/fixtures/<chave>/` ficam fora do Git (`.gitignore`): são páginas de
-  terceiros e podem ter dados pessoais. Para gerar: salve a página uma vez ("Salvar como →
-  somente HTML"), troque nomes e e-mails por fictícios ("Fulano de Tal") e leia com
+- **Fixtures** em `tests/fixtures/<chave>/` **vão para o Git, sempre anonimizadas**: o repo é
+  público. Para gerar: salve a página uma vez ("Salvar como → somente HTML"), troque nomes e
+  e-mails de pessoas por fictícios ("Fulano de Tal", `coordenador@exemplo.br`) e leia com
   `ler("<nome>.html")`. Regressões curtas podem usar um trecho de HTML no próprio teste.
 - Antes de commitar: `pytest` e `ruff` sem erros.
 
 ## 5. Regras do time
 
 1. **Commit:** `TR-<n> Descrição` (card do Jira); branch `TR-<n>-Descricao`. Não commite
-   `.env`, `output/`, microdados nem `tests/fixtures/`.
+   `.env`, `output/`, `fontes/` nem microdados; fixtures só anonimizadas.
 2. **LGPD:** nada de nomes, e-mails ou telefones de pessoas. A seção "Coordenação" fica de fora.
 3. **Site antes do Censo** (D-33): o site é a fonte principal; o Censo (2024) só complementa
    e não cria cursos.

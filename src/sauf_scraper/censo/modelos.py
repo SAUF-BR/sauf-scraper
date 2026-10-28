@@ -8,6 +8,16 @@ from pydantic import Field
 from sauf_scraper.core.models import Grau, Modalidade, SaufModel
 
 
+class EnderecoCenso(SaufModel):
+    """Endereço da sede da IES no Censo (fase C, D-51). CEP só com os 8 dígitos."""
+
+    logradouro: str | None = None
+    numero: str | None = None
+    complemento: str | None = None
+    bairro: str | None = None
+    cep: str | None = Field(default=None, pattern=r"^\d{8}$")
+
+
 class InstituicaoCenso(SaufModel):
     codigo_emec: int = Field(gt=0)
     nome: str = Field(min_length=1)
@@ -17,6 +27,7 @@ class InstituicaoCenso(SaufModel):
     organizacao_academica: str | None = None
     uf: str = Field(pattern=r"^[A-Z]{2}$")
     cidade: str = Field(min_length=1)
+    endereco: EnderecoCenso | None = None
 
 
 class OfertaCenso(SaufModel):

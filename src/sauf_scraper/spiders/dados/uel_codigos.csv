@@ -1,0 +1,54 @@
+chave;nome_site;cidade;turno_site;grau_site;status;codigo_emec;nome_censo;grau_censo;vagas_diurno;vagas_noturno;sugestao;confirmado
+uel:administracao:londrina:matutino-ou-noturno;Administração;Londrina;Matutino ou Noturno;bacharelado, bacharelado;direto;766;Administração;bacharelado;55;80;;sim
+uel:agronomia:londrina:integral;Agronomia;Londrina;Integral;bacharelado;direto;751;Agronomia;bacharelado;104;0;;sim
+uel:arquitetura-e-urbanismo:londrina:integral;Arquitetura e Urbanismo;Londrina;Integral;bacharelado;direto;750;Arquitetura E Urbanismo;bacharelado;77;0;;sim
+uel:arquivologia:londrina:noturno;Arquivologia;Londrina;Noturno;bacharelado;direto;19380;Arquivologia;bacharelado;0;89;;sim
+uel:artes-cenicas:londrina:matutino;Artes Cênicas;Londrina;Matutino;bacharelado;direto;19381;Artes Cênicas;bacharelado;42;0;;sim
+uel:artes-visuais:londrina:matutino-ou-noturno;Artes Visuais;Londrina;Matutino ou Noturno;licenciatura, licenciatura;direto;1146843;Artes Visuais;licenciatura;23;23;;sim
+uel:biblioteconomia:londrina:noturno;Biblioteconomia;Londrina;Noturno;bacharelado;direto;755;Biblioteconomia;bacharelado;0;73;;sim
+uel:biomedicina:londrina:integral;Biomedicina;Londrina;Integral;bacharelado;direto;22083;Biomedicina;bacharelado;21;0;;sim
+uel:biotecnologia:londrina:integral;Biotecnologia;Londrina;Integral;bacharelado;direto;1488130;Biotecnologia;bacharelado;21;0;;sim
+uel:ciencia-da-computacao:londrina:integral;Ciência da Computação;Londrina;Integral;bacharelado;direto;778;Ciência Da Computação;bacharelado;41;0;;sim
+uel:ciencia-de-dados-e-inteligencia-artificial:londrina:noturno;Ciência de Dados e Inteligência Artificial;Londrina;Noturno;bacharelado;direto;1662141;Ciência De Dados E Inteligência Artificial;bacharelado;0;50;;sim
+uel:ciencias-contabeis:londrina:matutino-ou-noturno;Ciências Contábeis;Londrina;Matutino ou Noturno;bacharelado, bacharelado;direto;767;Ciências Contábeis;bacharelado;41;80;;sim
+uel:ciencias-economicas:londrina:matutino-ou-noturno;Ciências Econômicas;Londrina;Matutino ou Noturno;bacharelado, bacharelado;direto;765;Ciências Econômicas;bacharelado;73;84;;sim
+uel:design-de-moda:londrina:matutino;Design de Moda;Londrina;Matutino;bacharelado;direto;92117;Design De Moda;bacharelado;30;0;;sim
+uel:design-grafico:londrina:matutino;Design Gráfico;Londrina;Matutino;bacharelado;direto;92115;Design Gráfico;bacharelado;31;0;;sim
+uel:direito:londrina:matutino-ou-noturno-ou-vespertino;Direito;Londrina;Matutino ou Noturno ou Vespertino;bacharelado, bacharelado, bacharelado;direto;764;Direito;bacharelado;174;80;;sim
+uel:enfermagem:londrina:integral;Enfermagem;Londrina;Integral;bacharelado;direto;763;Enfermagem;bacharelado;60;0;;sim
+uel:engenharia-civil:londrina:integral;Engenharia Civil;Londrina;Integral;bacharelado;direto;42559;Engenharia Civil;bacharelado;123;0;;sim
+uel:engenharia-eletrica:londrina:integral;Engenharia Elétrica;Londrina;Integral;bacharelado;direto;42566;Engenharia Elétrica;bacharelado;70;0;;sim
+uel:farmacia:londrina:integral;Farmácia;Londrina;Integral;bacharelado;direto;761;Farmácia;bacharelado;79;0;;sim
+uel:filosofia:londrina:noturno;Filosofia;Londrina;Noturno;licenciatura;direto;779;Filosofia;licenciatura;0;59;;sim
+uel:fisioterapia:londrina:integral;Fisioterapia;Londrina;Integral;bacharelado;direto;759;Fisioterapia;bacharelado;65;0;;sim
+uel:historia:londrina:matutino-ou-noturno;História;Londrina;Matutino ou Noturno;licenciatura, licenciatura;direto;775;História;licenciatura;60;48;;sim
+uel:jornalismo:londrina:matutino-ou-noturno;Jornalismo;Londrina;Matutino ou Noturno;bacharelado, bacharelado;direto;40980;Jornalismo;bacharelado;33;32;;sim
+uel:letras-espanhol:londrina:noturno;Letras Espanhol;Londrina;Noturno;licenciatura;direto;103397;Letras - Espanhol;licenciatura;0;89;;sim
+uel:letras-frances:londrina:noturno;Letras Francês;Londrina;Noturno;bacharelado;direto;1146835;Letras - Francês;bacharelado;0;32;;sim
+uel:letras-ingles:londrina:noturno;Letras Inglês;Londrina;Noturno;licenciatura;direto;103393;Letras - Inglês;licenciatura;4;48;;sim
+uel:letras-portugues:londrina:matutino-ou-noturno;Letras Português;Londrina;Matutino ou Noturno;licenciatura, licenciatura;direto;103380;Letras - Português;licenciatura;108;75;;sim
+uel:medicina-veterinaria:londrina:integral;Medicina Veterinária;Londrina;Integral;bacharelado;direto;777;Medicina Veterinária;bacharelado;80;0;;sim
+uel:medicina:londrina:integral;Medicina;Londrina;Integral;bacharelado;direto;758;Medicina;bacharelado;84;0;;sim
+uel:musica:londrina:vespertino;Música;Londrina;Vespertino;licenciatura;direto;780;Música;licenciatura;28;0;;sim
+uel:nutricao:londrina:integral;Nutrição;Londrina;Integral;bacharelado;direto;1487244;Nutrição;bacharelado;42;0;;sim
+uel:odontologia:londrina:integral;Odontologia;Londrina;Integral;bacharelado;direto;760;Odontologia;bacharelado;60;0;;sim
+uel:pedagogia:londrina:matutino-ou-noturno;Pedagogia;Londrina;Matutino ou Noturno;licenciatura, licenciatura;direto;92260;Pedagogia;licenciatura;109;94;;sim
+uel:psicologia:londrina:integral;Psicologia;Londrina;Integral;bacharelado;direto;773;Psicologia;bacharelado;104;0;;sim
+uel:relacoes-publicas:londrina:matutino-ou-noturno;Relações Públicas;Londrina;Matutino ou Noturno;bacharelado, bacharelado;direto;40983;Relações Públicas;bacharelado;28;25;;sim
+uel:secretariado-executivo:londrina:noturno;Secretariado Executivo;Londrina;Noturno;bacharelado;direto;781;Secretariado Executivo;bacharelado;0;64;;sim
+uel:servico-social:londrina:matutino-ou-noturno;Serviço Social;Londrina;Matutino ou Noturno;bacharelado, bacharelado;direto;762;Serviço Social;bacharelado;55;44;;sim
+uel:zootecnia:londrina:integral;Zootecnia;Londrina;Integral;bacharelado;direto;56129;Zootecnia;bacharelado;68;0;;sim
+uel:ciencias-biologicas:londrina:integral-ou-matutino;Ciências Biológicas;Londrina;Integral ou Matutino;bacharelado, licenciatura;ambiguo;300772;Ciências Biológicas;bacharelado;40;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+uel:ciencias-biologicas:londrina:integral-ou-matutino;Ciências Biológicas;Londrina;Integral ou Matutino;bacharelado, licenciatura;ambiguo;772;Ciências Biológicas;licenciatura;3;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+uel:ciencias-sociais:londrina:matutino-ou-noturno;Ciências Sociais;Londrina;Matutino ou Noturno;bacharelado, licenciatura;ambiguo;300774;Ciências Sociais;bacharelado;62;26;uma página, vários: confirmar os códigos que esta página cobre;sim
+uel:ciencias-sociais:londrina:matutino-ou-noturno;Ciências Sociais;Londrina;Matutino ou Noturno;bacharelado, licenciatura;ambiguo;774;Ciências Sociais;licenciatura;4;86;uma página, vários: confirmar os códigos que esta página cobre;sim
+uel:educacao-fisica:londrina:matutino-ou-noturno;Educação Física;Londrina;Matutino ou Noturno;bacharelado, licenciatura, bacharelado, licenciatura;ambiguo;754;Educação Física;licenciatura;0;18;uma página, vários: confirmar os códigos que esta página cobre;sim
+uel:educacao-fisica:londrina:matutino-ou-noturno;Educação Física;Londrina;Matutino ou Noturno;bacharelado, licenciatura, bacharelado, licenciatura;ambiguo;92157;Educação Física;bacharelado;10;15;uma página, vários: confirmar os códigos que esta página cobre;sim
+uel:fisica:londrina:integral-ou-noturno;Física;Londrina;Integral ou Noturno;bacharelado, licenciatura;ambiguo;42539;Física;bacharelado;46;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+uel:fisica:londrina:integral-ou-noturno;Física;Londrina;Integral ou Noturno;bacharelado, licenciatura;ambiguo;770;Física;licenciatura;0;69;uma página, vários: confirmar os códigos que esta página cobre;sim
+uel:geografia:londrina:matutino-ou-noturno;Geografia;Londrina;Matutino ou Noturno;bacharelado, licenciatura;ambiguo;300771;Geografia;bacharelado;62;10;uma página, vários: confirmar os códigos que esta página cobre;sim
+uel:geografia:londrina:matutino-ou-noturno;Geografia;Londrina;Matutino ou Noturno;bacharelado, licenciatura;ambiguo;771;Geografia;licenciatura;10;44;uma página, vários: confirmar os códigos que esta página cobre;sim
+uel:matematica:londrina:matutino-ou-noturno;Matemática;Londrina;Matutino ou Noturno;bacharelado, licenciatura;ambiguo;42359;Matemática;bacharelado;53;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+uel:matematica:londrina:matutino-ou-noturno;Matemática;Londrina;Matutino ou Noturno;bacharelado, licenciatura;ambiguo;768;Matemática;licenciatura;0;60;uma página, vários: confirmar os códigos que esta página cobre;sim
+uel:quimica:londrina:integral-ou-noturno;Química;Londrina;Integral ou Noturno;bacharelado, licenciatura;ambiguo;42574;Química;licenciatura;0;102;uma página, vários: confirmar os códigos que esta página cobre;sim
+uel:quimica:londrina:integral-ou-noturno;Química;Londrina;Integral ou Noturno;bacharelado, licenciatura;ambiguo;769;Química;bacharelado;58;0;uma página, vários: confirmar os códigos que esta página cobre;sim

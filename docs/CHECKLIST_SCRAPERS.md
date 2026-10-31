@@ -44,9 +44,28 @@ muitas IES com poucos dados (P-35, opção c → D-43).
   (Umuarama). Para cada uma: achar o código e-MEC à mão, se existir, ou decidir área e
   curso genérico (a definir, P-05).
 
-### 1.2. Scraper de mais 4 universidades (a definir) ❌
+### 1.2. UEL: Universidade Estadual de Londrina (e-MEC 9, `--ies uel`) 🟡
 
-IES, códigos e-MEC e chaves **a definir**. Cada uma precisa entregar:
+| Item | Estado | Observação |
+|---|---|---|
+| Lista de cursos: nome, cidade/UF, link (`urlOrigem`) | ✅ | 46 cursos com página em graduacao.uel.br (campus único, Londrina). Ficam de fora 2 EaD (site do NEAD) e 3 "(novo curso)" sem página. |
+| Grau + turno (`opcoes`) | ✅ | Uma coluna por opção no bloco do curso; "Bacharelado e Licenciatura" vira duas opções. |
+| Modalidade | ✅ | Todos `presencial`. |
+| Duração em semestres | 🟡 | "4.5 ANOS" → 9. Física e Química têm durações diferentes por grau: o texto lista cada uma e `duracaoSemestres` fica vazio. |
+| `sobre` | 🟡 | Só a frase de chamada do cabeçalho (~200 caracteres). |
+| `mercadoTrabalho` | ➖ | O site não tem a seção; fica `null`. |
+| Vagas | 🟡 | O site informa por turno, mas o modelo do lote não tem campo de vagas: vêm do Censo. |
+| Casamento com códigos e-MEC | ✅ | `spiders/dados/uel_codigos.csv`: 39 diretos + 7 páginas "bacharelado + licenciatura" (14 linhas), todas confirmadas; nenhum sem par. |
+
+**Decisões do Carlos sobre a UEL (31/10/2026):** `sobre` = frase de chamada do site;
+`mercadoTrabalho` fica vazio; cursos novos sem página e cursos EaD ficam de fora; Física e
+Química ficam sem `duracaoSemestres` (o texto lista as duas durações); vagas continuam vindo
+do Censo (sem mudar o contrato da API); o código 50017031 do Sisu ("ABI - Educação Física")
+fica de fora da tabela de casamento.
+
+### 1.3. Mais 3 universidades: UFSC, UTFPR e UFSM ❌
+
+Selecionadas em 31/10/2026. Cada uma precisa entregar:
 
 **Obrigatório para contar como "completa":**
 
@@ -97,6 +116,6 @@ IES, códigos e-MEC e chaves **a definir**. Cada uma precisa entregar:
 - [ ] Testes do parser com fixture sem dados pessoais; `pytest` e `ruff check` passam.
 - [ ] Não coleta dados pessoais (ex.: seção de coordenação).
 - [ ] `casar` rodado e CSV revisado (`ambiguo`/`sem_par` resolvidos ou listados aqui).
-- [ ] `--dry-run` conferido: campos obrigatórios da seção 1.2, textos sem HTML e `urlOrigem` em todos.
+- [ ] `--dry-run` conferido: campos obrigatórios da seção 1.3, textos sem HTML e `urlOrigem` em todos.
 - [ ] Testado contra a API local (`censo` → spider) sem `rejeitados`.
 - [ ] Regra nova registrada no `DECISOES.md` e este checklist atualizado.

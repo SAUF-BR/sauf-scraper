@@ -181,6 +181,7 @@ def test_api_recebe_o_censo(settings, pasta_censo):
 
 def test_comando_censo_dry_run(pasta_censo, tmp_path, monkeypatch):
     monkeypatch.setenv("SAUF_OUTPUT_DIR", str(tmp_path / "saida"))
+    monkeypatch.setattr("sauf_scraper.cli.codigos_emec", lambda: [57])
 
     assert main(["censo", "--pasta", str(pasta_censo), "--dry-run"]) == 0
 

@@ -1,0 +1,315 @@
+{
+ "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/santa-helena/sh-licenciatura-em-ciencias-biologicas/apresentacao/apresentacao",
+ "title": "Licenciatura em Ciências Biológicas",
+ "blocks": {
+  "245bb341-57ad-4136-9529-8e027ea589a4": {
+   "@type": "slate",
+   "plaintext": "O profissional formado em Licenciatura em Ciências Biológicas pode atuar no mercado de trabalho nas seguintes áreas:1 – Professor de Ciências, no Ensino Fundamental;2 – Professor de Biologia, no Ensino Médio;3 – Biólogo para atividades em pesquisa, consultoria, gestão, análises laboratoriais e prestação de serviços.",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "O profissional formado em Licenciatura em Ciências Biológicas pode atuar no mercado de trabalho nas seguintes áreas:\n1 – Professor de Ciências, no Ensino Fundamental;\n2 – Professor de Biologia, no Ensino Médio;\n3 – Biólogo para atividades em pesquisa, consultoria, gestão, análises laboratoriais e prestação de serviços."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "260bd16b-2195-42b7-816c-e4207ce47765": {
+   "@type": "slateTable",
+   "table": {
+    "basic": false,
+    "celled": true,
+    "compact": false,
+    "fixed": true,
+    "hideHeaders": true,
+    "inverted": false,
+    "rows": [
+     {
+      "cells": [
+       {
+        "key": "7frtj",
+        "type": "header",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "bdqro"
+     },
+     {
+      "cells": [
+       {
+        "key": "egip0",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": " "
+           },
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "text": "Ficha resumida do curso"
+               }
+              ],
+              "type": "strong"
+             }
+            ],
+            "type": "h3"
+           },
+           {
+            "text": " "
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "8nvn9"
+     },
+     {
+      "cells": [
+       {
+        "key": "22tlg",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": "Turno"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ": Noturno\n"
+           },
+           {
+            "children": [
+             {
+              "text": "Duração"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ": 4 anos\n"
+           },
+           {
+            "children": [
+             {
+              "text": "Carga Horária Total do Curso"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ": 3.385 (três mil trezentas e oitenta e cinco) horas para integralização curricular \n"
+           },
+           {
+            "children": [
+             {
+              "text": "Estágio Curricular: "
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": "402 horas de estágio\n"
+           },
+           {
+            "children": [
+             {
+              "text": "Vagas por Semestre/ano"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ": 44 vagas aniais, com entrada apenas no primeiro semestre.\n"
+           },
+           {
+            "children": [
+             {
+              "text": "Titulação: Licenciado (a) em Ciências Biológicas"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": "\n"
+           },
+           {
+            "children": [
+             {
+              "text": "Início das atividades"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ": 2º semestre/2014"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "eha6k"
+     },
+     {
+      "cells": [
+       {
+        "key": "4e01v",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": " "
+           },
+           {
+            "children": [
+             {
+              "text": "Autorização e Reconhecimento"
+             }
+            ],
+            "type": "h3"
+           },
+           {
+            "text": " "
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "6m1ob"
+     },
+     {
+      "cells": [
+       {
+        "key": "6k3r8",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": " "
+           },
+           {
+            "children": [
+             {
+              "text": "Autorização: Resolução nº 077/13 - COGEP"
+             }
+            ],
+            "type": "p"
+           },
+           {
+            "text": " "
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "d3hel"
+     }
+    ],
+    "striped": false
+   }
+  },
+  "54114628-c242-4bf9-80d5-c7068a7792a1": {
+   "@type": "slate",
+   "plaintext": "Atuação",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Atuação"
+      }
+     ],
+     "type": "h2"
+    }
+   ]
+  },
+  "62279d69-9ee8-4647-9cde-d8773a9c1659": {
+   "@type": "image"
+  },
+  "70aa385a-99ea-44db-903e-6fcf4fc806e5": {
+   "@type": "title"
+  },
+  "994f70a0-25dd-4878-911b-7f05418c733d": {
+   "@type": "slate",
+   "plaintext": "O Curso de Licenciatura em Ciências Biológicas da Universidade Tecnológica Federal do Paraná - Câmpus Santa Helena (E-MEC 1270469), tem por objetivo formar biólogos licenciados para atuar na educação básica (ensino médio e anos fiais do ensino fundamental), e também em projetos de pesquisa científica e tecnológica nas áreas de Ciências Biológicas e outras áreas afins.",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "O Curso de "
+      },
+      {
+       "children": [
+        {
+         "text": "Licenciatura em Ciências Biológicas da Universidade Tecnológica Federal do Paraná"
+        }
+       ],
+       "type": "strong"
+      },
+      {
+       "text": " - Câmpus Santa Helena (E-MEC 1270469), tem por objetivo formar biólogos licenciados para atuar na educação básica (ensino médio e anos fiais do ensino fundamental), e também em projetos de pesquisa científica e tecnológica nas áreas de Ciências Biológicas e outras áreas afins."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "f29b1d6d-ae95-492e-adf3-be96357545b1": {
+   "@type": "slate",
+   "plaintext": "Sobre o Curso",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Sobre o Curso"
+      }
+     ],
+     "type": "h2"
+    }
+   ]
+  }
+ },
+ "blocks_layout": {
+  "items": [
+   "70aa385a-99ea-44db-903e-6fcf4fc806e5",
+   "62279d69-9ee8-4647-9cde-d8773a9c1659",
+   "f29b1d6d-ae95-492e-adf3-be96357545b1",
+   "994f70a0-25dd-4878-911b-7f05418c733d",
+   "54114628-c242-4bf9-80d5-c7068a7792a1",
+   "245bb341-57ad-4136-9529-8e027ea589a4",
+   "260bd16b-2195-42b7-816c-e4207ce47765"
+  ]
+ },
+ "items": []
+}

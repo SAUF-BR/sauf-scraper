@@ -10,8 +10,13 @@ de Spider e registre aqui, ex.:
 from sauf_scraper.spiders.base import Spider
 from sauf_scraper.spiders.uel import UelSpider
 from sauf_scraper.spiders.uem import UemSpider
+from sauf_scraper.spiders.utfpr import UtfprSpider
 
-SPIDERS: dict[str, type[Spider]] = {UemSpider.chave: UemSpider, UelSpider.chave: UelSpider}
+SPIDERS: dict[str, type[Spider]] = {
+    UemSpider.chave: UemSpider,
+    UelSpider.chave: UelSpider,
+    UtfprSpider.chave: UtfprSpider,
+}
 
 
 def codigos_emec() -> list[int]:

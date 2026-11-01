@@ -1,0 +1,404 @@
+{
+ "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/londrina/ld-engenharia-quimica/apresentacao",
+ "title": "Sobre",
+ "blocks": {
+  "06ab4d7e-dbd2-4cc3-8f6b-2c67fb4cc1de": {
+   "@type": "slate",
+   "plaintext": "O profissional formado em Engenharia Química pode atuar no mercado de trabalho nas seguintes áreas:",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "O profissional formado em Engenharia Química pode atuar no mercado de trabalho nas seguintes áreas:"
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "150917dd-8a69-4e8b-ad0a-633da40178c7": {
+   "@type": "slate",
+   "plaintext": "\nIndustrial\nPesquisa\nEnsino\n",
+   "value": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Industrial"
+          }
+         ],
+         "type": "li"
+        },
+        {
+         "children": [
+          {
+           "text": "Pesquisa"
+          }
+         ],
+         "type": "li"
+        },
+        {
+         "children": [
+          {
+           "text": "Ensino"
+          }
+         ],
+         "type": "li"
+        }
+       ],
+       "type": "ol"
+      }
+     ],
+     "type": "ol"
+    }
+   ]
+  },
+  "3283f0f0-b6d6-4919-9c7a-063301e1b05e": {
+   "@type": "slate",
+   "plaintext": "O Curso de Engenharia Química tem como objetivo a formação de um profissional com capacidade analítica, com sólidos conhecimentos de matemática, física, química, além dos conhecimentos típicos da formação de um engenheiro químico, sendo capaz de compreender o planejamento relacionado ao ambiente e ao homem que o integra.",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "O Curso de Engenharia Química tem como objetivo a formação de um profissional com capacidade analítica, com sólidos conhecimentos de matemática, física, química, além dos conhecimentos típicos da formação de um engenheiro químico, sendo capaz de compreender o planejamento relacionado ao ambiente e ao homem que o integra."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "8f30c67a-5bec-4e92-bcac-d15a09ba3303": {
+   "@type": "slate",
+   "plaintext": "Sobre o Curso",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Sobre o Curso"
+      }
+     ],
+     "type": "h2"
+    }
+   ]
+  },
+  "9cbb9986-2103-4c20-8625-dabf45e396ea": {
+   "@type": "title"
+  },
+  "a0feda46-f255-46e9-a157-adfb14862d28": {
+   "@type": "slateTable",
+   "table": {
+    "basic": false,
+    "celled": true,
+    "compact": false,
+    "fixed": true,
+    "hideHeaders": true,
+    "inverted": false,
+    "rows": [
+     {
+      "cells": [
+       {
+        "key": "d1s0k",
+        "type": "header",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "f8hj1"
+     },
+     {
+      "cells": [
+       {
+        "key": "4e7k4",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": " "
+           },
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "text": "Ficha resumida do curso"
+               }
+              ],
+              "type": "strong"
+             }
+            ],
+            "type": "h3"
+           },
+           {
+            "text": " "
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "d77iu"
+     },
+     {
+      "cells": [
+       {
+        "key": "buos6",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": " "
+           },
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "text": "Turno:"
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": " Integral\n"
+             },
+             {
+              "children": [
+               {
+                "text": "Duração:"
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": " 5 anos\n"
+             },
+             {
+              "children": [
+               {
+                "text": "Carga Horária Total do Curso:"
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": " 4.125 horas\n"
+             },
+             {
+              "children": [
+               {
+                "text": "Estágio Curricular:"
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": " 360 horas\n"
+             },
+             {
+              "children": [
+               {
+                "text": "Vagas por semestre:"
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": " 44\n"
+             },
+             {
+              "children": [
+               {
+                "text": "Titulação: "
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": "Bacharel emEngenharia Química\n"
+             },
+             {
+              "children": [
+               {
+                "text": "Abertura do curso: "
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": "2º semestre/2015"
+             }
+            ],
+            "type": "p"
+           },
+           {
+            "text": " "
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "cvh0r"
+     },
+     {
+      "cells": [
+       {
+        "key": "9p5cp",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": " "
+           },
+           {
+            "children": [
+             {
+              "children": [
+               {
+                "text": "Autorização e Reconhecimento"
+               }
+              ],
+              "type": "strong"
+             }
+            ],
+            "type": "h3"
+           },
+           {
+            "text": " "
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "ete8l"
+     },
+     {
+      "cells": [
+       {
+        "key": "4motm",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": " "
+           },
+           {
+            "children": [
+             {
+              "text": "- Autorização: Resolução nº 003/2013 - COGEP, de 11/03/2013"
+             }
+            ],
+            "type": "p"
+           },
+           {
+            "text": " "
+           },
+           {
+            "children": [
+             {
+              "text": "- Reconhecimento: PORTARIA N° 658, DE 17 de maio de 2022. Registro e-MEC n° 201901312"
+             }
+            ],
+            "type": "p"
+           },
+           {
+            "text": " "
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "2u7e7"
+     }
+    ],
+    "striped": false
+   }
+  },
+  "ace4d1b1-6676-417a-9486-b5743e23654d": {
+   "@type": "slate",
+   "plaintext": "Atuação",
+   "value": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Atuação"
+        }
+       ],
+       "type": "strong"
+      }
+     ],
+     "type": "h2"
+    }
+   ]
+  },
+  "c2ce0103-e9f5-437d-ab0f-c34a1579a4a1": {
+   "@type": "image"
+  },
+  "c31cc385-7614-4f74-92f1-7779ac72f619": {
+   "@type": "slate",
+   "plaintext": "A atuação do Engenheiro Químico abrange tendências que incluem novas tecnologias, como nanotecnologia, biomateriais, biotecnologia, tecnologias limpas, desenvolvimento de matrizes energéticas sustentáveis, dentre outras.",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "A atuação do Engenheiro Químico abrange tendências que incluem novas tecnologias, como nanotecnologia, biomateriais, biotecnologia, tecnologias limpas, desenvolvimento de matrizes energéticas sustentáveis, dentre outras."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "e1cba5a2-c8ef-4ba2-8f02-d75ddb7995bb": {
+   "@type": "slate",
+   "plaintext": "O mercado de trabalho é vasto e diversificado, no qual o profissional poderá atuar em diversos segmentos das indústrias, tais como: químicas, agroquímicas, petroquímicas, de processamento de alimentos, sucroenergéticas, etc. Suas atividades ocorrem nas áreas de controle de qualidade, projeto de equipamentos e operação de processo, instrumentação e controle de processos, avaliação econômico-financeira de projetos, gerenciamento industrial, entre outros.",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "O mercado de trabalho é vasto e diversificado, no qual o profissional poderá atuar em diversos segmentos das indústrias, tais como: químicas, agroquímicas, petroquímicas, de processamento de alimentos, sucroenergéticas, etc. Suas atividades ocorrem nas áreas de controle de qualidade, projeto de equipamentos e operação de processo, instrumentação e controle de processos, avaliação econômico-financeira de projetos, gerenciamento industrial, entre outros."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  }
+ },
+ "blocks_layout": {
+  "items": [
+   "9cbb9986-2103-4c20-8625-dabf45e396ea",
+   "8f30c67a-5bec-4e92-bcac-d15a09ba3303",
+   "c2ce0103-e9f5-437d-ab0f-c34a1579a4a1",
+   "3283f0f0-b6d6-4919-9c7a-063301e1b05e",
+   "c31cc385-7614-4f74-92f1-7779ac72f619",
+   "e1cba5a2-c8ef-4ba2-8f02-d75ddb7995bb",
+   "ace4d1b1-6676-417a-9486-b5743e23654d",
+   "06ab4d7e-dbd2-4cc3-8f6b-2c67fb4cc1de",
+   "150917dd-8a69-4e8b-ad0a-633da40178c7",
+   "a0feda46-f255-46e9-a157-adfb14862d28"
+  ]
+ },
+ "items": []
+}

@@ -1,0 +1,122 @@
+chave;nome_site;cidade;turno_site;grau_site;status;codigo_emec;nome_censo;grau_censo;vagas_diurno;vagas_noturno;sugestao;confirmado
+utfpr:administracao:curitiba:matutino;Administração;Curitiba;Matutino;bacharelado;direto;1152630;Administração;bacharelado;89;0;;sim
+utfpr:agronomia:dois-vizinhos:integral;Agronomia;Dois Vizinhos;Integral;bacharelado;direto;1152635;Agronomia;bacharelado;88;0;;sim
+utfpr:agronomia:francisco-beltrao;Agronomia;Francisco Beltrão;;bacharelado;direto;1605593;Agronomia;bacharelado;94;0;;sim
+utfpr:agronomia:santa-helena:integral-diurno;Agronomia;Santa Helena;Integral diurno;bacharelado;direto;1443199;Agronomia;bacharelado;89;0;;sim
+utfpr:arquitetura-e-urbanismo:curitiba:diurno;Arquitetura e Urbanismo;Curitiba;Diurno;bacharelado;direto;120749;Arquitetura E Urbanismo;bacharelado;46;0;;sim
+utfpr:bacharelado-em-administracao:pato-branco:noturno;Administração;Pato Branco;Noturno;bacharelado;direto;14537;Administração;bacharelado;0;53;;sim
+utfpr:bacharelado-em-agronomia:pato-branco;Agronomia;Pato Branco;;bacharelado;direto;14536;Agronomia;bacharelado;92;0;;sim
+utfpr:bacharelado-em-ciencias-biologicas:dois-vizinhos:noturno;Ciências Biológicas;Dois Vizinhos;Noturno;bacharelado;direto;1676486;Ciências Biológicas;bacharelado;0;22;;sim
+utfpr:bacharelado-em-ciencias-contabeis:pato-branco:noturno;Ciências Contábeis;Pato Branco;Noturno;bacharelado;direto;14539;Ciências Contábeis;bacharelado;0;53;;sim
+utfpr:bacharelado-em-engenharia-de-software:cornelio-procopio:noturno;Engenharia de Software;Cornélio Procópio;Noturno;bacharelado;direto;1284709;Engenharia De Software;bacharelado;0;88;;sim
+utfpr:bacharelado-em-engenharia-de-software:dois-vizinhos:noturno;Engenharia de Software;Dois Vizinhos;Noturno;bacharelado;direto;1284707;Engenharia De Software;bacharelado;0;88;;sim
+utfpr:bacharelado-em-quimica-ambiental:curitiba;Química Ambiental;Curitiba;;bacharelado;direto;1599304;Química Ambiental;bacharelado;0;65;;sim
+utfpr:bacharelado-em-quimica-industrial:medianeira:noturno;Química Industrial;Medianeira;Noturno;bacharelado;direto;1650892;Química Industrial;bacharelado;0;46;;sim
+utfpr:bacharelado-em-quimica:curitiba:manha-e-tarde;Química;Curitiba;Manhã e Tarde;bacharelado;direto;1102254;Química;bacharelado;63;0;;sim
+utfpr:ciencia-da-computacao:campo-mourao:integral-vespertino-e-noturno;Ciência da Computação;Campo Mourão;Integral (vespertino e noturno);bacharelado;direto;1164656;Ciência Da Computação;bacharelado;96;0;;sim
+utfpr:ciencia-da-computacao:medianeira;Ciência da Computação;Medianeira;;bacharelado;direto;1152636;Ciência Da Computação;bacharelado;82;0;;sim
+utfpr:ciencia-da-computacao:ponta-grossa:manha-e-tarde;Ciência da Computação;Ponta Grossa;Manhã e Tarde;bacharelado;direto;1102800;Ciência Da Computação;bacharelado;89;0;;sim
+utfpr:ciencia-da-computacao:santa-helena:matutino-e-vespertino;Ciência da Computação;Santa Helena;Matutino e Vespertino;bacharelado;direto;1270472;Ciência Da Computação;bacharelado;90;0;;sim
+utfpr:comunicacao-organizacional:curitiba:noite;Comunicação Organizacional;Curitiba;Noite;bacharelado;direto;1269446;Comunicação Organizacional;bacharelado;0;98;;sim
+utfpr:educacao-fisica:curitiba:manha-e-tarde-integral;Educação Física;Curitiba;Manhã e tarde (Integral);bacharelado;direto;102665;Educação Física;bacharelado;88;0;;sim
+utfpr:engenharia-ambiental-e-sanitaria:campo-mourao:integral-manha-e-tarde;Engenharia Ambiental e Sanitária;Campo Mourão;Integral (manhã e tarde);bacharelado;direto;107840;Engenharia Ambiental E Sanitária;bacharelado;93;0;;sim
+utfpr:engenharia-ambiental-e-sanitaria:curitiba:diurno;Engenharia Ambiental e Sanitária;Curitiba;Diurno;bacharelado;direto;1419565;Engenharia Ambiental E Sanitária;bacharelado;96;0;;sim
+utfpr:engenharia-ambiental-e-sanitaria:francisco-beltrao:integral-manha-e-tarde;Engenharia Ambiental e Sanitária;Francisco Beltrão;Integral - Manhã e tarde;bacharelado;direto;1126907;Engenharia Ambiental E Sanitária;bacharelado;194;0;;sim
+utfpr:engenharia-ambiental-e-sanitaria:londrina:diurno;Engenharia Ambiental e Sanitária;Londrina;Diurno;bacharelado;direto;1102483;Engenharia Ambiental E Sanitária;bacharelado;88;0;;sim
+utfpr:engenharia-ambiental-e-sanitaria:medianeira:tarde-ou-noite-vespertino-ou-noturno;Engenharia Ambiental e Sanitária;Medianeira;Tarde ou Noite (vespertino ou noturno);bacharelado;direto;1632309;Engenharia Ambiental E Sanitária;bacharelado;50;49;;sim
+utfpr:engenharia-ambiental:medianeira:diurno;Engenharia Ambiental;Medianeira;Diurno;bacharelado;direto;1102904;Engenharia Ambiental;bacharelado;0;0;;sim
+utfpr:engenharia-cartografica-e-de-agrimensura:pato-branco:noturno;Engenharia Cartográfica e de Agrimensura;Pato Branco;Noturno;bacharelado;direto;1615936;Engenharia Cartográfica E De Agrimensura;bacharelado;0;27;;sim
+utfpr:engenharia-civil:apucarana:integral-manha-e-tarde;Engenharia Civil;Apucarana;Integral (manhã e tarde);bacharelado;direto;1270438;Engenharia Civil;bacharelado;90;0;;sim
+utfpr:engenharia-civil:campo-mourao:integral-manha-e-tarde;Engenharia Civil;Campo Mourão;Integral (Manhã e Tarde);bacharelado;direto;1103606;Engenharia Civil;bacharelado;92;0;;sim
+utfpr:engenharia-civil:curitiba:tarde-noite;Engenharia Civil;Curitiba;Tarde/Noite;bacharelado;direto;14543;Engenharia Civil;bacharelado;88;0;;sim
+utfpr:engenharia-civil:guarapuava:manha-e-tarde;Engenharia Civil;Guarapuava;Manhã e tarde;bacharelado;direto;1204989;Engenharia Civil;bacharelado;89;0;;sim
+utfpr:engenharia-civil:pato-branco:manha-e-tarde;Engenharia Civil;Pato Branco;Manhã e Tarde;bacharelado;direto;1102403;Engenharia Civil;bacharelado;88;0;;sim
+utfpr:engenharia-civil:toledo:matutino-e-vespertino;Engenharia Civil;Toledo;Matutino e vespertino;bacharelado;direto;1111700;Engenharia Civil;bacharelado;88;0;;sim
+utfpr:engenharia-de-alimentos:campo-mourao:integral;Engenharia de Alimentos;Campo Mourão;Integral;bacharelado;direto;109552;Engenharia De Alimentos;bacharelado;47;0;;sim
+utfpr:engenharia-de-alimentos:francisco-beltrao:manha-e-tarde;Engenharia de Alimentos;Francisco Beltrão;Manhã e Tarde;bacharelado;direto;1306686;Engenharia De Alimentos;bacharelado;88;0;;sim
+utfpr:engenharia-de-alimentos:medianeira:manha;Engenharia de Alimentos;Medianeira;Manhã;bacharelado;direto;1102903;Engenharia De Alimentos;bacharelado;89;0;;sim
+utfpr:engenharia-de-bioprocessos-e-biotecnologia:dois-vizinhos:integral;Engenharia de Bioprocessos e Biotecnologia;Dois Vizinhos;Integral;bacharelado;direto;1279274;Engenharia De Bioprocessos E Biotecnologia;bacharelado;88;0;;sim
+utfpr:engenharia-de-bioprocessos-e-biotecnologia:ponta-grossa:diurno;Engenharia de Bioprocessos e Biotecnologia;Ponta Grossa;Diurno;bacharelado;direto;1379371;Engenharia De Bioprocessos E Biotecnologia;bacharelado;90;0;;sim
+utfpr:engenharia-de-bioprocessos-e-biotecnologia:toledo:integral;Engenharia de Bioprocessos e Biotecnologia;Toledo;Integral;bacharelado;direto;1279333;Engenharia De Bioprocessos E Biotecnologia;bacharelado;90;0;;sim
+utfpr:engenharia-de-computacao:apucarana:manha-e-tarde;Engenharia de Computação;Apucarana;Manhã e Tarde;bacharelado;direto;1443206;Engenharia De Computação;bacharelado;98;0;;sim
+utfpr:engenharia-de-computacao:cornelio-procopio:manha-e-tarde;Engenharia de Computação;Cornélio Procópio;Manhã e Tarde;bacharelado;direto;1102764;Engenharia De Computação;bacharelado;79;0;;sim
+utfpr:engenharia-de-computacao:toledo:integral;Engenharia de Computação;Toledo;Integral;bacharelado;direto;1279331;Engenharia De Computação;bacharelado;91;0;;sim
+utfpr:engenharia-de-controle-e-automacao:cornelio-procopio:diurno;Engenharia de Controle e Automação;Cornélio Procópio;Diurno;bacharelado;direto;1164653;Engenharia De Controle E Automação;bacharelado;88;0;;sim
+utfpr:engenharia-de-controle-e-automacao:curitiba:integral-manha-e-tarde;Engenharia de Controle e Automação;Curitiba;Integral (Manhã e Tarde);bacharelado;direto;1102660;Engenharia De Controle E Automação;bacharelado;88;0;;sim
+utfpr:engenharia-de-materiais:londrina:diurno;Engenharia de Materiais;Londrina;Diurno;bacharelado;direto;5000079;Engenharia De Materiais;bacharelado;89;0;;sim
+utfpr:engenharia-de-producao:londrina:integral-tarde-e-noite;Engenharia de Produção;Londrina;Integral - Tarde e Noite -;bacharelado;direto;1204220;Engenharia De Produção;bacharelado;93;4;;sim
+utfpr:engenharia-de-producao:medianeira:manha;Engenharia de Produção;Medianeira;Manhã;bacharelado;direto;1102417;Engenharia De Produção;bacharelado;91;0;;sim
+utfpr:engenharia-de-producao:ponta-grossa:manha-e-tarde;Engenharia de Produção;Ponta Grossa;Manhã e tarde;bacharelado;direto;1116535;Engenharia De Produção;bacharelado;88;0;;sim
+utfpr:engenharia-eletrica:apucarana:integral-tarde-noite;Engenharia Elétrica;Apucarana;Integral (Tarde/Noite);bacharelado;direto;1270290;Engenharia Elétrica;bacharelado;91;0;;sim
+utfpr:engenharia-eletrica:cornelio-procopio:diurno;Engenharia Elétrica;Cornélio Procópio;Diurno;bacharelado;direto;101951;Engenharia Elétrica;bacharelado;88;0;;sim
+utfpr:engenharia-eletrica:curitiba:manha-e-tarde-tarde-e-noite;Engenharia Elétrica;Curitiba;Manhã e tarde / tarde e noite;bacharelado;direto;30438;Engenharia Elétrica;bacharelado;177;0;;sim
+utfpr:engenharia-eletrica:medianeira:matutino-e-vespertino-integral;Engenharia Elétrica;Medianeira;Matutino e vespertino (integral);bacharelado;direto;1153186;Engenharia Elétrica;bacharelado;89;0;;sim
+utfpr:engenharia-eletrica:pato-branco:manha-e-tarde;Engenharia Elétrica;Pato Branco;Manhã e Tarde;bacharelado;direto;109602;Engenharia Elétrica;bacharelado;90;0;;sim
+utfpr:engenharia-eletrica:ponta-grossa:matutino-e-vespertino;Engenharia Elétrica;Ponta Grossa;Matutino e vespertino;bacharelado;direto;1420238;Engenharia Elétrica;bacharelado;89;0;;sim
+utfpr:engenharia-eletronica:campo-mourao:noturno;Engenharia Eletrônica;Campo Mourão;Noturno;bacharelado;direto;1103297;Engenharia Eletrônica;bacharelado;2;89;;sim
+utfpr:engenharia-eletronica:cornelio-procopio:diurno;Engenharia Eletrônica;Cornélio Procópio;Diurno;bacharelado;direto;1270282;Engenharia Eletrônica;bacharelado;88;0;;sim
+utfpr:engenharia-eletronica:curitiba;Engenharia Eletrônica;Curitiba;;bacharelado;direto;29495;Engenharia Eletrônica;bacharelado;101;0;;sim
+utfpr:engenharia-eletronica:toledo:diurno;Engenharia Eletrônica;Toledo;Diurno;bacharelado;direto;1102354;Engenharia Eletrônica;bacharelado;88;0;;sim
+utfpr:engenharia-florestal:dois-vizinhos:integral;Engenharia Florestal;Dois Vizinhos;Integral;bacharelado;direto;112566;Engenharia Florestal;bacharelado;44;0;;sim
+utfpr:engenharia-mecanica:cornelio-procopio:integral-matutino-e-vespertino;Engenharia Mecânica;Cornélio Procópio;Integral (matutino e vespertino);bacharelado;direto;101947;Engenharia Mecânica;bacharelado;93;0;;sim
+utfpr:engenharia-mecanica:curitiba:manha-tarde-e-tarde-noite;Engenharia Mecânica;Curitiba;Manhã/Tarde e Tarde/Noite;bacharelado;direto;14535;Engenharia Mecânica;bacharelado;180;0;;sim
+utfpr:engenharia-mecanica:guarapuava:diurno;Engenharia Mecânica;Guarapuava;Diurno;bacharelado;direto;1128661;Engenharia Mecânica;bacharelado;89;0;;sim
+utfpr:engenharia-mecanica:londrina:integral-manha-e-tarde;Engenharia Mecânica;Londrina;Integral (Manhã e tarde);bacharelado;direto;1185898;Engenharia Mecânica;bacharelado;93;0;;sim
+utfpr:engenharia-mecanica:pato-branco:manha-e-tarde;Engenharia Mecânica;Pato Branco;Manhã e Tarde;bacharelado;direto;1102531;Engenharia Mecânica;bacharelado;88;0;;sim
+utfpr:engenharia-mecanica:ponta-grossa:diurno;Engenharia Mecânica;Ponta Grossa;Diurno;bacharelado;direto;1102703;Engenharia Mecânica;bacharelado;89;0;;sim
+utfpr:engenharia-mecatronica:curitiba:manha-tarde;Engenharia Mecatrônica;Curitiba;Manhã/tarde;bacharelado;direto;1334010;Engenharia Mecatrônica;bacharelado;98;0;;sim
+utfpr:engenharia-mecatronica:guarapuava:tarde-noite;Engenharia Mecatrônica;Guarapuava;Tarde/Noite;bacharelado;direto;1631460;Engenharia Mecatrônica;bacharelado;90;0;;sim
+utfpr:engenharia-quimica:apucarana:matutino-e-vespertino;Engenharia Química;Apucarana;Matutino e vespertino;bacharelado;direto;1204156;Engenharia Química;bacharelado;89;0;;sim
+utfpr:engenharia-quimica:campo-mourao:integral;Engenharia Química;Campo Mourão;Integral;bacharelado;direto;1443205;Engenharia Química;bacharelado;50;0;;sim
+utfpr:engenharia-quimica:francisco-beltrao:integral-manha-e-tarde;Engenharia Química;Francisco Beltrão;Integral (Manhã e Tarde);bacharelado;direto;1270234;Engenharia Química;bacharelado;90;0;;sim
+utfpr:engenharia-quimica:londrina:integral;Engenharia Química;Londrina;Integral;bacharelado;direto;1270238;Engenharia Química;bacharelado;94;0;;sim
+utfpr:engenharia-quimica:ponta-grossa:matutino-e-vespertino;Engenharia Química;Ponta Grossa;Matutino e vespertino;bacharelado;direto;1102702;Engenharia Química;bacharelado;90;0;;sim
+utfpr:engenharia-textil:apucarana:integral;Engenharia Têxtil;Apucarana;Integral;bacharelado;direto;1114930;Engenharia Têxtil;bacharelado;92;0;;sim
+utfpr:licenciatura-em-ciencias-biologicas:dois-vizinhos:noturno;Ciências Biológicas;Dois Vizinhos;Noturno;licenciatura;direto;1151549;Ciências Biológicas;licenciatura;0;66;;sim
+utfpr:licenciatura-em-ciencias-biologicas:ponta-grossa:integral;Ciências Biológicas;Ponta Grossa;Integral;licenciatura;direto;1400718;Ciências Biológicas;licenciatura;91;0;;sim
+utfpr:licenciatura-em-ciencias-biologicas:santa-helena:noturno;Ciências Biológicas;Santa Helena;Noturno;licenciatura;direto;1270469;Ciências Biológicas;licenciatura;0;44;;sim
+utfpr:licenciatura-em-fisica:curitiba:vespertino;Física;Curitiba;Vespertino;licenciatura;direto;1102413;Física;licenciatura;93;0;;sim
+utfpr:licenciatura-em-informatica:francisco-beltrao;Informática;Francisco Beltrão;;licenciatura;direto;1150932;Informática;licenciatura;0;0;;sim
+utfpr:licenciatura-em-letras-ingles:curitiba:matutino-e-vespertino;Letras Inglês;Curitiba;Matutino e vespertino;licenciatura;direto;1341352;Letras - Inglês;licenciatura;93;0;;sim
+utfpr:licenciatura-em-letras-portugues:curitiba:tarde-e-noite;Letras Português;Curitiba;Tarde e Noite;licenciatura;direto;1341351;Letras - Português;licenciatura;44;49;;sim
+utfpr:licenciatura-em-matematica:cornelio-procopio:noturno;Matemática;Cornélio Procópio;Noturno;licenciatura;direto;1127676;Matemática;licenciatura;0;88;;sim
+utfpr:licenciatura-em-matematica:curitiba;Matemática;Curitiba;;licenciatura;direto;1128169;Matemática;licenciatura;94;0;;sim
+utfpr:licenciatura-em-matematica:pato-branco:noturno;Matemática;Pato Branco;Noturno;licenciatura;direto;14542;Matemática;licenciatura;0;46;;sim
+utfpr:licenciatura-em-matematica:toledo:noturno;Matemática;Toledo;Noturno;licenciatura;direto;1152637;Matemática;licenciatura;0;46;;sim
+utfpr:licenciatura-em-quimica:apucarana:noturno;Química;Apucarana;Noturno;licenciatura;direto;1126431;Química;licenciatura;0;90;;sim
+utfpr:licenciatura-em-quimica:campo-mourao:noturno;Química;Campo Mourão;Noturno;licenciatura;direto;1128054;Química;licenciatura;0;44;;sim
+utfpr:licenciatura-em-quimica:curitiba:vespertino-noturno;Química;Curitiba;Vespertino/Noturno;licenciatura;direto;1161562;Química;licenciatura;47;0;;sim
+utfpr:licenciatura-em-quimica:londrina:noturno;Química;Londrina;Noturno;licenciatura;direto;1152564;Química;licenciatura;0;90;;sim
+utfpr:licenciatura-em-quimica:medianeira:noturno;Química;Medianeira;Noturno;licenciatura;direto;1164183;Química;licenciatura;0;44;;sim
+utfpr:quimica:pato-branco:manha-e-tarde-com-maior;Química;Pato Branco;Manhã e Tarde (com maior;bacharelado;direto;409604;Química;bacharelado;88;0;;sim
+utfpr:sistemas-de-informacao:curitiba:tarde-e-noite;Sistemas de Informação;Curitiba;Tarde e noite;bacharelado;direto;115582;Sistemas De Informação;bacharelado;93;0;;sim
+utfpr:sistemas-de-informacao:francisco-beltrao:noturno;Sistemas de Informação;Francisco Beltrão;Noturno;bacharelado;direto;1616857;Sistemas De Informação;bacharelado;0;93;;sim
+utfpr:sistemas-para-internet:guarapuava;Sistemas para Internet;Guarapuava;;;direto;1128647;Sistemas Para Internet;tecnologo;0;66;;sim
+utfpr:tecnologia-em-alimentos:campo-mourao:noturno;Alimentos;Campo Mourão;Noturno;tecnologo;direto;68311;Alimentos;tecnologo;0;22;;sim
+utfpr:tecnologia-em-alimentos:londrina:noturno;Alimentos;Londrina;Noturno;tecnologo;direto;107502;Alimentos;tecnologo;0;81;;sim
+utfpr:tecnologia-em-alimentos:medianeira:noturno;Alimentos;Medianeira;Noturno;tecnologo;direto;113411;Alimentos;tecnologo;0;61;;sim
+utfpr:tecnologia-em-analise-e-desenvolvimento-de-sistemas:cornelio-procopio:noturno;Análise e Desenvolvimento de Sistemas;Cornélio Procópio;Noturno;tecnologo;direto;110144;Análise E Desenvolvimento De Sistemas;tecnologo;0;70;;sim
+utfpr:tecnologia-em-analise-e-desenvolvimento-de-sistemas:pato-branco:noturno;Análise e Desenvolvimento de Sistemas;Pato Branco;Noturno;tecnologo;direto;60006;Análise E Desenvolvimento De Sistemas;tecnologo;0;61;;sim
+utfpr:tecnologia-em-analise-e-desenvolvimento-de-sistemas:ponta-grossa:noturno;Análise e Desenvolvimento de Sistemas;Ponta Grossa;Noturno;tecnologo;direto;85822;Análise E Desenvolvimento De Sistemas;tecnologo;0;71;;sim
+utfpr:tecnologia-em-automacao-industrial:curitiba:noite;Automação Industrial;Curitiba;Noite;tecnologo;direto;69280;Automação Industrial;tecnologo;0;60;;sim
+utfpr:tecnologia-em-automacao-industrial:ponta-grossa:noturno;Automação Industrial;Ponta Grossa;Noturno;tecnologo;direto;60057;Automação Industrial;tecnologo;0;46;;sim
+utfpr:tecnologia-em-design-de-moda:apucarana:matutino;Design de Moda;Apucarana;Matutino;tecnologo;direto;107572;Design De Moda;tecnologo;64;0;;sim
+utfpr:tecnologia-em-design-grafico:curitiba:manha-e-noite;Design Gráfico;Curitiba;Manhã e Noite;tecnologo;direto;106104;Design Gráfico;tecnologo;44;44;;sim
+utfpr:tecnologia-em-fabricacao-mecanica:ponta-grossa:noturno;Fabricação Mecânica;Ponta Grossa;Noturno;tecnologo;direto;59908;Fabricação Mecânica;tecnologo;0;0;;sim
+utfpr:tecnologia-em-gestao-ambiental:medianeira:noturno;Gestão Ambiental;Medianeira;Noturno;tecnologo;direto;111100;Gestão Ambiental;tecnologo;0;0;;sim
+utfpr:tecnologia-em-gestao-do-agronegocio:medianeira:noturno;Gestão do Agronegócio;Medianeira;Noturno;tecnologo;direto;1676007;Gestão Do Agronegócio;tecnologo;0;30;;sim
+utfpr:tecnologia-em-manutencao-industrial:guarapuava:noturno;Manutenção Industrial;Guarapuava;Noturno;tecnologo;direto;1204999;Manutenção Industrial;tecnologo;0;0;;sim
+utfpr:tecnologia-em-manutencao-industrial:medianeira:noturno;Manutenção Industrial;Medianeira;Noturno;tecnologo;direto;113413;Manutenção Industrial;tecnologo;0;60;;sim
+utfpr:tecnologia-em-manutencao-industrial:pato-branco:noturno;Manutenção Industrial;Pato Branco;Noturno;tecnologo;direto;56540;Manutenção Industrial;tecnologo;0;52;;sim
+utfpr:tecnologia-em-processos-quimicos:toledo:noturno;Processos Químicos;Toledo;Noturno;tecnologo;direto;107602;Processos Químicos;tecnologo;0;72;;sim
+utfpr:tecnologia-em-radiologia:curitiba:vespertino;Radiologia;Curitiba;Vespertino;tecnologo;direto;104532;Radiologia;tecnologo;52;0;;sim
+utfpr:tecnologia-em-sistemas-de-telecomunicacoes:curitiba:noite;Sistemas de Telecomunicações;Curitiba;Noite;tecnologo;direto;106086;Sistemas De Telecomunicações;tecnologo;0;66;;sim
+utfpr:tecnologia-em-sistemas-para-internet:toledo:noturno;Sistemas para Internet;Toledo;Noturno;tecnologo;direto;1271987;Sistemas Para Internet;tecnologo;0;95;;sim
+utfpr:zootecnia:dois-vizinhos:integral;Zootecnia;Dois Vizinhos;Integral;bacharelado;direto;102040;Zootecnia;bacharelado;88;0;;sim
+utfpr:arquitetura-e-urbanismo:guarapuava:noturno;Arquitetura e Urbanismo;Guarapuava;Noturno;bacharelado;sem_par;;;;;;;nao
+utfpr:engenharia-de-computacao:curitiba:manha-e-tarde;Engenharia de Computação;Curitiba;Manhã e Tarde;bacharelado;sem_par;102663;Engenharia Da Computação;bacharelado;;;preenchido à mão: mesmo curso com outro nome no Censo;sim
+utfpr:engenharia-de-computacao:pato-branco:tarde-e-noite;Engenharia de Computação;Pato Branco;Tarde e Noite;bacharelado;sem_par;115616;Engenharia Da Computação;bacharelado;;;preenchido à mão: mesmo curso com outro nome no Censo;sim
+utfpr:engenharia-de-producao:curitiba:tarde-noite;Engenharia de Produção;Curitiba;Tarde/Noite;bacharelado;sem_par;;;;;;;nao
+utfpr:engenharia-mecatronica:ponta-grossa:noturno;Engenharia Mecatrônica;Ponta Grossa;Noturno;bacharelado;sem_par;;;;;;;nao
+utfpr:licenciatura-em-letras-portugues-e-ingles:pato-branco:noturno;Letras Português e Inglês;Pato Branco;Noturno;licenciatura;sem_par;112572;Letras;licenciatura;;;preenchido à mão: mesmo curso com outro nome no Censo;sim
+utfpr:sistemas-de-informacao:londrina:noturno;Sistemas de Informação;Londrina;Noturno;bacharelado;sem_par;;;;;;;nao

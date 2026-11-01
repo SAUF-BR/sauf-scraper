@@ -1,0 +1,27 @@
+{
+ "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/santa-helena/sh-licenciatura-em-ciencias-biologicas/apresentacao",
+ "title": "Apresentação",
+ "blocks": {
+  "a938f844-157a-4952-951b-90f695c856ed": {
+   "@type": "listing",
+   "block": "a938f844-157a-4952-951b-90f695c856ed",
+   "query": [],
+   "variation": "default"
+  },
+  "af8230a2-72d4-4bef-87bd-232bfbe66411": {
+   "@type": "title"
+  }
+ },
+ "blocks_layout": {
+  "items": [
+   "af8230a2-72d4-4bef-87bd-232bfbe66411",
+   "a938f844-157a-4952-951b-90f695c856ed"
+  ]
+ },
+ "items": [
+  {
+   "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/santa-helena/sh-licenciatura-em-ciencias-biologicas/apresentacao/apresentacao",
+   "title": "Licenciatura em Ciências Biológicas"
+  }
+ ]
+}

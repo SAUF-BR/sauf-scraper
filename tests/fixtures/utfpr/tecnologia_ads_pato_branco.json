@@ -1,0 +1,740 @@
+{
+ "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/pato-branco/pb-tecnologia-em-analise-e-desenvolvimento-de-sistemas/apresentacao",
+ "title": "Apresentação",
+ "blocks": {
+  "0e4b9eb7-f624-46b2-a2a3-d820f624d020": {
+   "@type": "slate",
+   "plaintext": "Autorização e Reconhecimento",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Autorização e Reconhecimento"
+      }
+     ],
+     "type": "h3"
+    }
+   ]
+  },
+  "17ece948-a067-4022-9ae0-912184d942e3": {
+   "@type": "buttonsPanel"
+  },
+  "31ecbf11-5069-4b1a-ae0c-73b1516f0cdd": {
+   "@type": "title"
+  },
+  "4734d0a6-ad74-40d8-87cd-61fd0577663f": {
+   "@type": "slate",
+   "plaintext": "- Formar profissionais que possam efetivamente contribuir para o desenvolvimento tecnológico na área de software , notadamente na região sudoeste do Paraná.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "- Formar profissionais que possam efetivamente contribuir para o desenvolvimento tecnológico na área de"
+      },
+      {
+       "children": [
+        {
+         "text": "software"
+        }
+       ],
+       "type": "i"
+      },
+      {
+       "text": ", notadamente na região sudoeste do Paraná."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "7eded571-7fbc-4477-b790-79cf7b8ca5b8": {
+   "@type": "slate",
+   "plaintext": "Dados Sobre o Curso",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Dados Sobre o Curso"
+      }
+     ],
+     "type": "h3"
+    }
+   ]
+  },
+  "8afa1437-690b-4658-b947-a82024aba547": {
+   "@type": "slate",
+   "plaintext": "O curso de Tecnologia em Análise e Desenvolvimento de Sistemas é fruto de uma experiência institucional e coletiva de quase três décadas na oferta de cursos superiores de tecnologia na área de informática pela UTFPR Campus Pato Branco. Assim, os objetivos para o curso de Análise e Desenvolvimento de Sistemas foram definidos considerando as políticas institucionais e de órgãos reguladores, bem como o contexto regional, as necessidades atuais e as oportunidades e perspectivas na área de tecnologia de informação e desenvolvimento de software, a fim de prover uma formação cidadã e centrada em tecnologia da informação e inovação. Os objetivos do curso são:",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "O curso de Tecnologia em Análise e Desenvolvimento de Sistemas é fruto de uma experiência institucional e coletiva de quase três décadas na oferta de cursos superiores de tecnologia na área de informática pela UTFPR "
+      },
+      {
+       "children": [
+        {
+         "text": "Campus "
+        }
+       ],
+       "type": "i"
+      },
+      {
+       "text": "Pato Branco. Assim, os objetivos para o curso de Análise e Desenvolvimento de Sistemas foram definidos considerando as políticas institucionais e de órgãos reguladores, bem como o contexto regional, as necessidades atuais e as oportunidades e perspectivas na área de tecnologia de informação e desenvolvimento de "
+      },
+      {
+       "children": [
+        {
+         "text": "software, "
+        }
+       ],
+       "type": "i"
+      },
+      {
+       "text": "a fim de prover uma formação cidadã e centrada em tecnologia da informação e inovação. Os objetivos do curso são:"
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "92ea6db0-b7e7-48f1-b6e6-b60e56a467af": {
+   "@type": "slate",
+   "plaintext": "- Possibilitar formação que facilite o desenvolvimento de sistemas com tecnologias atuais e com inovação e qualidade, bem como o entendimento da necessidade de constante aperfeiçoamento e atualização tecnológica.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "- Possibilitar formação que facilite o desenvolvimento de sistemas com tecnologias atuais e com inovação e qualidade, bem como o entendimento da necessidade de constante aperfeiçoamento e atualização tecnológica."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "95120c8c-bd72-4cb0-bfae-746d1eb22c3b": {
+   "@type": "slate",
+   "plaintext": "- Preparar o estudante para que ele atue de forma profissional, ética, empreendedora e cidadã, seja no mercado de trabalho como empregado, como autônomo prestador de serviços, ou em empreendimento próprio.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "- Preparar o estudante para que ele atue de forma profissional, ética, empreendedora e cidadã, seja no mercado de trabalho como empregado, como autônomo prestador de serviços, ou em empreendimento próprio."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "95bf6242-4450-49b0-86ab-2d86a79b3247": {
+   "@type": "slate",
+   "plaintext": "Com base na experiência acumulada na oferta de cursos superiores de tecnologia na área de informática, considerando a manutenção de uma demanda regional significativa por profissionais em análise e desenvolvimento de sistemas, e tendências observadas no mundo do trabalho, chegou-se a uma adequação do perfil do egresso, envolvendo competências abrangentes que viabilizem a formação de profissionais alinhados aos valores institucionais, com elevada empregabilidade e com suficiente flexibilidade para seguirem seu aprendizado profissional ao longo da vida.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Com base na experiência acumulada na oferta de cursos superiores de tecnologia na área de informática, considerando a manutenção de uma demanda regional significativa por profissionais em análise e desenvolvimento de sistemas, e tendências observadas no mundo do trabalho, chegou-se a uma adequação do perfil do egresso, envolvendo competências abrangentes que viabilizem a formação de profissionais alinhados aos valores institucionais, com elevada empregabilidade e com suficiente flexibilidade para seguirem seu aprendizado profissional ao longo da vida."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "a4879b0a-4eaa-4d75-8b88-6b5d2a623a55": {
+   "@type": "slate",
+   "plaintext": "- Atender necessidades regionais e nacionais em termos de formação de recursos humanos em análise, projeto e desenvolvimento de sistemas de informação.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "- Atender necessidades regionais e nacionais em termos de formação de recursos humanos em análise, projeto e desenvolvimento de sistemas de informação."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "a79bc75e-eab6-409b-933a-8ed6898d4369": {
+   "@type": "slate",
+   "plaintext": "- Analisar diferentes contextos de demandas e oportunidades em software visando ao uso otimizado de recursos atuais.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "- Analisar diferentes contextos de demandas e oportunidades em"
+      },
+      {
+       "children": [
+        {
+         "text": "software"
+        }
+       ],
+       "type": "em"
+      },
+      {
+       "text": "visando ao uso otimizado de recursos atuais."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "ae805db7-7d0d-4a15-a6c7-bcaac72b16f4": {
+   "@type": "slate",
+   "plaintext": "- Projetar com atitude cooperativa sistemas de informação visando ao atendimento de requisitos e aos padrões de qualidade.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "- Projetar com atitude cooperativa sistemas de informação visando ao atendimento de requisitos e aos padrões de qualidade."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "b08f9050-0ada-46dd-8f53-71c5ba7658a5": {
+   "@type": "slate",
+   "plaintext": "Dessa forma, o egresso de Análise e Desenvolvimento de Sistemas pode atuar como autônomo, empreendedor ou colaborador em organizações públicas ou privadas que utilizem tecnologia de informação, abrangendo empresas de planejamento, desenvolvimento de projetos, assistência técnica e consultoria, empresas de tecnologia da informação, empresas em geral (indústria, comércio e serviços), organizações não-governamentais, órgãos públicos, institutos e centros de pesquisa. Egressos que seguem formação na pós-graduação podem inclusive atuar no Ensino Superior.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Dessa forma,"
+      },
+      {
+       "children": [
+        {
+         "text": "o egresso de Análise e Desenvolvimento de Sistemas pode atuar "
+        }
+       ],
+       "type": "b"
+      },
+      {
+       "text": "como autônomo, empreendedor ou colaborador em organizações públicas ou privadas que utilizem tecnologia de informação, abrangendo empresas de planejamento, desenvolvimento de projetos, assistência técnica e consultoria, empresas de tecnologia da informação, empresas em geral (indústria, comércio e serviços), organizações não-governamentais, órgãos públicos, institutos e centros de pesquisa. Egressos que seguem formação na pós-graduação podem inclusive atuar no Ensino Superior."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "baf62e59-d677-403c-9a90-ce7fed8d35df": {
+   "@type": "slate",
+   "plaintext": "  Perfil do egresso",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": ""
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        }
+       ],
+       "data": {
+        "url": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/pato-branco/pb-tecnologia-em-analise-e-desenvolvimento-de-sistemas#perfil-do-egresso"
+       },
+       "type": "link"
+      },
+      {
+       "text": "Perfil do egresso"
+      }
+     ],
+     "type": "h3"
+    }
+   ]
+  },
+  "c3eb6cd6-2239-4600-9e1f-5e42fede93a5": {
+   "@type": "slate",
+   "plaintext": "Reconhecimento do curso renovado pela Portaria do MEC nº 923/2018, de 27/12/2018, D.O.U., Seção 1, p. 298-313, de 28/12/2018",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Reconhecimento do curso renovado pela Portaria do MEC nº 923/2018, de 27/12/2018, D.O.U., Seção 1, p. 298-313, de 28/12/2018"
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "e3169cf3-239e-42b1-9d03-552bd79898b8": {
+   "@type": "slate",
+   "plaintext": "Desta forma, “ o egresso do Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas é um profissional capaz de propor soluções e processos de informação eficientes e sustentáveis, envolvendo   hardware   e   software   em diferentes contextos sociotécnicos.” Tal profissional se caracteriza por analisar cenários organizacionais visando soluções sistêmicas, respeitando a legislação vigente e preceitos ético-profissionais. Assim, esse profissional será capaz de:",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Desta forma, “"
+      },
+      {
+       "children": [
+        {
+         "text": "o egresso do Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas é um profissional capaz de propor soluções e processos de informação eficientes e sustentáveis, envolvendo"
+        }
+       ],
+       "type": "b"
+      },
+      {
+       "text": ""
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        },
+        {
+         "children": [
+          {
+           "text": "hardware "
+          }
+         ],
+         "type": "i"
+        },
+        {
+         "text": ""
+        }
+       ],
+       "type": "b"
+      },
+      {
+       "text": ""
+      },
+      {
+       "children": [
+        {
+         "text": "e"
+        }
+       ],
+       "type": "b"
+      },
+      {
+       "text": ""
+      },
+      {
+       "children": [
+        {
+         "text": ""
+        },
+        {
+         "children": [
+          {
+           "text": "software "
+          }
+         ],
+         "type": "i"
+        },
+        {
+         "text": ""
+        }
+       ],
+       "type": "b"
+      },
+      {
+       "text": ""
+      },
+      {
+       "children": [
+        {
+         "text": "em diferentes contextos sociotécnicos.” "
+        }
+       ],
+       "type": "b"
+      },
+      {
+       "text": "Tal profissional se caracteriza por analisar cenários organizacionais visando soluções sistêmicas, respeitando a legislação vigente e preceitos ético-profissionais. Assim, esse profissional será capaz de:"
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "edb078d3-2a22-449b-a4b2-16200e03d9d6": {
+   "@type": "slateTable",
+   "table": {
+    "basic": true,
+    "celled": false,
+    "compact": false,
+    "fixed": true,
+    "hideHeaders": true,
+    "inverted": false,
+    "rows": [
+     {
+      "cells": [
+       {
+        "key": "fbf03",
+        "type": "header",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "9k7hj",
+        "type": "header",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       }
+      ],
+      "key": "91l3m"
+     },
+     {
+      "cells": [
+       {
+        "key": "5n9he",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": "Turno"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "euu80",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": "Noturno"
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       }
+      ],
+      "key": "dhhff"
+     },
+     {
+      "cells": [
+       {
+        "key": "7tkik",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": "Duração"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "627jk",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": "3 anos"
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       }
+      ],
+      "key": "4n4u9"
+     },
+     {
+      "cells": [
+       {
+        "key": "aaf4o",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": "Carga horária total do curso"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "3hl1g",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "2.400 horas"
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "fus5h"
+     },
+     {
+      "cells": [
+       {
+        "key": "2kftk",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": "Vagas por semestre"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "i1u",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": "52"
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       }
+      ],
+      "key": "1u8u5"
+     },
+     {
+      "cells": [
+       {
+        "key": "ct29c",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": "Titulação"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "2tf5a",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "Tecnólogo em Análise e Desenvolvimento de Sistemas"
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "chnuk"
+     },
+     {
+      "cells": [
+       {
+        "key": "at82t",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": "Início das atividades"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "1mmpo",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": "1999 (Informática - Modalidade Sistemas de Informação)"
+           }
+          ],
+          "type": "p"
+         },
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "2006 (Análise e Desenvolvimento de Sistemas)"
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "dqvgi"
+     }
+    ],
+    "striped": false
+   }
+  },
+  "f4cb1bd7-510d-4d37-8ae5-b1101ed36f63": {
+   "@type": "slate",
+   "plaintext": "- Desenvolver sistemas computacionais utilizando as tecnologias que viabilizem as soluções mais adequadas.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "- Desenvolver sistemas computacionais utilizando as tecnologias que viabilizem as soluções mais adequadas."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  }
+ },
+ "blocks_layout": {
+  "items": [
+   "31ecbf11-5069-4b1a-ae0c-73b1516f0cdd",
+   "17ece948-a067-4022-9ae0-912184d942e3",
+   "8afa1437-690b-4658-b947-a82024aba547",
+   "4734d0a6-ad74-40d8-87cd-61fd0577663f",
+   "a4879b0a-4eaa-4d75-8b88-6b5d2a623a55",
+   "92ea6db0-b7e7-48f1-b6e6-b60e56a467af",
+   "95120c8c-bd72-4cb0-bfae-746d1eb22c3b",
+   "baf62e59-d677-403c-9a90-ce7fed8d35df",
+   "95bf6242-4450-49b0-86ab-2d86a79b3247",
+   "e3169cf3-239e-42b1-9d03-552bd79898b8",
+   "a79bc75e-eab6-409b-933a-8ed6898d4369",
+   "ae805db7-7d0d-4a15-a6c7-bcaac72b16f4",
+   "f4cb1bd7-510d-4d37-8ae5-b1101ed36f63",
+   "b08f9050-0ada-46dd-8f53-71c5ba7658a5",
+   "7eded571-7fbc-4477-b790-79cf7b8ca5b8",
+   "edb078d3-2a22-449b-a4b2-16200e03d9d6",
+   "0e4b9eb7-f624-46b2-a2a3-d820f624d020",
+   "c3eb6cd6-2239-4600-9e1f-5e42fede93a5"
+  ]
+ },
+ "items": []
+}

@@ -1,0 +1,60 @@
+{
+ "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/@search?path.depth=2",
+ "items": [
+  {
+   "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/pato-branco",
+   "@type": "Document",
+   "title": "Pato Branco",
+   "review_state": "published"
+  },
+  {
+   "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio",
+   "@type": "Document",
+   "title": "Cornélio Procópio",
+   "review_state": "published"
+  },
+  {
+   "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/curitiba",
+   "@type": "Document",
+   "title": "Curitiba",
+   "review_state": "published"
+  },
+  {
+   "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/pato-branco/pb-licenciatura-em-matematica",
+   "@type": "Document",
+   "title": "Licenciatura em Matemática",
+   "review_state": "published"
+  },
+  {
+   "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/pato-branco/pb-tecnologia-em-analise-e-desenvolvimento-de-sistemas",
+   "@type": "Document",
+   "title": "Tecnologia em Análise e Desenvolvimento de Sistemas",
+   "review_state": "published"
+  },
+  {
+   "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-bacharelado-em-engenharia-de-software",
+   "@type": "Document",
+   "title": "Bacharelado em Engenharia de Software",
+   "review_state": "published"
+  },
+  {
+   "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/curitiba/ct-bacharelado-em-quimica",
+   "@type": "Document",
+   "title": "Bacharelado em Química",
+   "review_state": "published"
+  },
+  {
+   "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/curitiba/ct-engenharia-eletrica",
+   "@type": "Document",
+   "title": "Engenharia Elétrica",
+   "review_state": "published"
+  },
+  {
+   "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/curitiba/ct-licenciatura-em-quimica",
+   "@type": "Document",
+   "title": "Licenciatura em Química",
+   "review_state": "published"
+  }
+ ],
+ "items_total": 9
+}

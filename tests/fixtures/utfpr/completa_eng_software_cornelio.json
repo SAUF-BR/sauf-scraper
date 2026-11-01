@@ -1,0 +1,799 @@
+{
+ "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/cornelio-procopio/cp-bacharelado-em-engenharia-de-software/apresentacao",
+ "title": "Apresentação",
+ "blocks": {
+  "0aecf2c0-ff24-4c65-bf4c-86e6d139f59b": {
+   "@type": "slate",
+   "plaintext": "O egresso do curso superior de Bacharelado em Engenharia de Software é um profissional-cidadão crítico e ético, capaz de desenvolver, manter e aplicar soluções computacionais fazendo uso das atividades do Processo de Desenvolvimento de Software, relacionadas à Engenharia de Requisitos, Modelagem, Arquitetura de Software, Construção, Testes, Gerenciamento de Projetos, Configuração, Qualidade e Segurança da Informação, dimensionando a escalabilidade e a complexidade do software, para o benefício geral da sociedade, nas suas mais diferentes áreas de conhecimento. O egresso também deve ser capaz de:",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "O egresso do curso superior de Bacharelado em Engenharia de Software é um profissional-cidadão crítico e ético, capaz de desenvolver, manter e aplicar soluções computacionais fazendo uso das atividades do Processo de Desenvolvimento de Software, relacionadas à Engenharia de Requisitos, Modelagem, Arquitetura de Software, Construção, Testes, Gerenciamento de Projetos, Configuração, Qualidade e Segurança da Informação, dimensionando a escalabilidade e a complexidade do software, para o benefício geral da sociedade, nas suas mais diferentes áreas de conhecimento. O egresso também deve ser capaz de:"
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "1b547222-17aa-4464-b436-8a821db62280": {
+   "@type": "slate",
+   "plaintext": "Sobre o Curso",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Sobre o Curso"
+      }
+     ],
+     "type": "h3"
+    }
+   ]
+  },
+  "3d76b4ea-ad7a-4fb6-bef8-881448f6aca0": {
+   "@type": "slate",
+   "plaintext": "Aprovação do projeto de abertura do curso pela Resolução nº 080/13-COGEP de 19 de dezembro de 2013. Reconhecimento com conceito 4 pela Portaria MEC nº 489 de 19 de novembro de 2020.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Aprovação do projeto de abertura do curso pela Resolução nº 080/13-COGEP de 19 de dezembro de 2013."
+          }
+         ],
+         "type": "li"
+        },
+        {
+         "children": [
+          {
+           "text": "Reconhecimento com conceito 4 pela Portaria MEC nº 489 de 19 de novembro de 2020."
+          }
+         ],
+         "type": "li"
+        }
+       ],
+       "type": "ul"
+      }
+     ],
+     "type": "div"
+    }
+   ]
+  },
+  "41058a16-a455-4e36-9e3b-c5cf69166752": {
+   "@type": "slate",
+   "plaintext": "\nCompetência Comum: Resolver problemas estruturados de contexto real, de maneira autônoma e eficaz, integrando interpretação de dados, modelagem de solução por meio de raciocínio computacional, aplicação de técnicas e ferramentas computacionais, validação e comunicação de resultados, dimensionando a complexidade de algoritmos, atuando de forma individual ou em equipe, consciente dos aspectos éticos, legais, sociais e a constante evolução da Computação;\nCompetência Específica: Desenvolver soluções computacionais para diferentes plataformas, viáveis para diferentes contextos organizacionais, de forma responsável, autônoma, eficaz e cooperativa, aplicando processos, técnicas, procedimentos e ferramentas de Engenharia de Requisitos, Modelagem, Arquitetura de Software, Contrução, Teste e Gerenciamento de Projetos, Configuração e Qualidade, seguindo normas técnicas, preceitos éticos e legislação vigente.\n",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Competência Comum"
+          }
+         ],
+         "type": "strong"
+        },
+        {
+         "text": ": Resolver problemas estruturados de contexto real, de maneira autônoma e eficaz, integrando interpretação de dados, modelagem de solução por meio de raciocínio computacional, aplicação de técnicas e ferramentas computacionais, validação e comunicação de resultados, dimensionando a complexidade de algoritmos, atuando de forma individual ou em equipe, consciente dos aspectos éticos, legais, sociais e a constante evolução da Computação;"
+        }
+       ],
+       "type": "li"
+      },
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Competência Específica"
+          }
+         ],
+         "type": "strong"
+        },
+        {
+         "text": ": Desenvolver soluções computacionais para diferentes plataformas, viáveis para diferentes contextos organizacionais, de forma responsável, autônoma, eficaz e cooperativa, aplicando processos, técnicas, procedimentos e ferramentas de Engenharia de Requisitos, Modelagem, Arquitetura de Software, Contrução, Teste e Gerenciamento de Projetos, Configuração e Qualidade, seguindo normas técnicas, preceitos éticos e legislação vigente."
+        }
+       ],
+       "type": "li"
+      }
+     ],
+     "type": "ul"
+    }
+   ]
+  },
+  "4321f358-b3fc-4912-9e48-c117d21d75ca": {
+   "@type": "slate",
+   "size": "ensino-institucional"
+  },
+  "47821228-d483-42be-9c98-2928d5fba497": {
+   "@type": "slate",
+   "plaintext": "Formação ",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Formação "
+        }
+       ],
+       "type": "strong"
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "59e8b553-8f2e-4937-aee4-ca23956c3e97": {
+   "@type": "slate",
+   "plaintext": "Perfil do Egresso",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Perfil do Egresso"
+        }
+       ],
+       "type": "strong"
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "6d36b45a-cfd8-41ed-9f22-9c84d74f6cd4": {
+   "@type": "slate",
+   "plaintext": "Dadas as constantes atualizações tecnológicas da área de TI, que oferecem ferramentas de comunicação sofisticadas, e a elevada quantidade de alunos que recebem propostas de trabalho ou de estágio fora da cidade de Cornélio Procópio, foram previstas atividades a distância (EaD), concentradas principalmente no final do curso.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Dadas as constantes atualizações tecnológicas da área de TI, que oferecem ferramentas de comunicação sofisticadas, e a elevada quantidade de alunos que recebem propostas de trabalho ou de estágio fora da cidade de Cornélio Procópio, foram previstas atividades a distância (EaD), concentradas principalmente no final do curso."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "7db96b91-9050-4a09-926e-832a0aabb132": {
+   "@type": "slate",
+   "plaintext": "Em 2022, a coordenação do curso conduziu uma pesquisa com os alunos egressos. No momento da pesquisa existiam 62 egressos no curso, dos quais 42 (68%) participaram da pesquisa. A pesquisa teve como principal objetivo identificar mais detalhes sobre o perfil de profissionais que o curso formou até o momento. Além disso, a pesquisa possibilitou identificar as diferentes tendências tecnológicas que devem ser incorporadas na atualização da estrutura curricular do curso, conforme apresentado no presente PPC. A seguir, alguns dos dados levantados foram:",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Em 2022, a coordenação do curso conduziu uma pesquisa com os alunos egressos. No momento da pesquisa existiam 62 egressos no curso, dos quais 42 (68%) participaram da pesquisa. A pesquisa teve como principal objetivo identificar mais detalhes sobre o perfil de profissionais que o curso formou até o momento. Além disso, a pesquisa possibilitou identificar as diferentes tendências tecnológicas que devem ser incorporadas na atualização da estrutura curricular do curso, conforme apresentado no presente PPC. A seguir, alguns dos dados levantados foram:"
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "8bc98470-f6a1-442f-83ff-d34b8eaca84c": {
+   "@type": "slate",
+   "plaintext": "O curso utiliza o processo  de ensino-aprendizagem baseado na estrutura da matriz pedagógica orientada pelas competências esperadas do perfil do egresso, articulando teoria e prática. As competências que são formadas pelo aluno, ao longo do curso, são:",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "O curso utiliza o processo  de ensino-aprendizagem baseado na estrutura da matriz pedagógica orientada pelas competências esperadas do perfil do egresso, articulando teoria e prática. As competências que são formadas pelo aluno, ao longo do curso, são:"
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "8c20b7f6-d17d-4328-a47a-2fb2dbc65d96": {
+   "@type": "title"
+  },
+  "9d06afaa-62cd-49f7-b811-5318cb47f436": {
+   "@type": "slate",
+   "plaintext": "A presente versão do curso, além de enriquecer as áreas relacionadas à Programação Web e Programação para Dispositivos Móveis, também inclui unidades curriculares considerando a área de Computação em Nuvem, Big Data, Aprendizado de Máquina e Ciência de Dados, todas essas tecnologias indicadas como tendências internacionais. Dessa forma, o egresso do Curso de Bacharelado em Engenharia de Software pode atuar em diversas áreas, assumindo papel fundamental no desenvolvimento da região.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "A presente versão do curso, além de enriquecer as áreas relacionadas à Programação Web e Programação para Dispositivos Móveis, também inclui unidades curriculares considerando a área de Computação em Nuvem, Big Data, Aprendizado de Máquina e Ciência de Dados, todas essas tecnologias indicadas como tendências internacionais. Dessa forma, o egresso do Curso de Bacharelado em Engenharia de Software pode atuar em diversas áreas, assumindo papel fundamental no desenvolvimento da região."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "a181bbeb-0a08-4897-bb3c-d12c52064da5": {
+   "@type": "slate",
+   "plaintext": "100% dos respondentes atuam na área do curso. 86,7% dos respondentes atuam profissionalmente nos estados do Paraná e São Paulo. Entre os cargos exercidos pelos egressos, os que apareceram mais frequentemente foram: Desenvolvedor de Software (74%), Analista de Qualidade/Teste (11%) e Engenheiro de Software (8%).",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "100% dos respondentes atuam na área do curso."
+        }
+       ],
+       "type": "li"
+      },
+      {
+       "children": [
+        {
+         "text": "86,7% dos respondentes atuam profissionalmente nos estados do Paraná e São Paulo."
+        }
+       ],
+       "type": "li"
+      },
+      {
+       "children": [
+        {
+         "text": "Entre os cargos exercidos pelos egressos, os que apareceram mais frequentemente foram: Desenvolvedor de Software (74%), Analista de Qualidade/Teste (11%) e Engenheiro de Software (8%)."
+        }
+       ],
+       "type": "li"
+      }
+     ],
+     "type": "ul"
+    }
+   ]
+  },
+  "a26b278a-b9f6-4e22-bbb1-4853dc09b8ab": {
+   "@type": "slateTable",
+   "table": {
+    "basic": true,
+    "celled": false,
+    "compact": false,
+    "fixed": true,
+    "hideHeaders": true,
+    "inverted": false,
+    "rows": [
+     {
+      "cells": [
+       {
+        "key": "3nujt",
+        "type": "header",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "3ejje",
+        "type": "header",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       }
+      ],
+      "key": "4v2s7"
+     },
+     {
+      "cells": [
+       {
+        "key": "a3ih5",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": "Turno"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "a2abp",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": "Noturno"
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       }
+      ],
+      "key": "d1h2q"
+     },
+     {
+      "cells": [
+       {
+        "key": "2rr4c",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": "Duração"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "8ch01",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": "4 anos"
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       }
+      ],
+      "key": "27oni"
+     },
+     {
+      "cells": [
+       {
+        "key": "758j1",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": "Carga Horária Total do Curso"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "uodb",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": "3210 horas"
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       }
+      ],
+      "key": "bguvb"
+     },
+     {
+      "cells": [
+       {
+        "key": "261cg",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": "Estágio Curricular"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "58j0u",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": "360 horas"
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       }
+      ],
+      "key": "57emf"
+     },
+     {
+      "cells": [
+       {
+        "key": "87onm",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": "Atividades Complementares"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "73ggk",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": "180"
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       }
+      ],
+      "key": "eanin"
+     },
+     {
+      "cells": [
+       {
+        "key": "vbe2",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": "Vagas por Semestre"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "r1ho",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": "40"
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       }
+      ],
+      "key": "uemh"
+     },
+     {
+      "cells": [
+       {
+        "key": "e9pu3",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           },
+           {
+            "children": [
+             {
+              "text": "Titulação"
+             }
+            ],
+            "type": "strong"
+           },
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "4d88n",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "Bacharel em Engenharia de Software"
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "5135s"
+     },
+     {
+      "cells": [
+       {
+        "key": "cu52s",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": ""
+             },
+             {
+              "children": [
+               {
+                "text": "Início das Atividades"
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": ""
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       },
+       {
+        "key": "e5625",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "2º semestre/2014"
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "casvj"
+     }
+    ],
+    "striped": false
+   }
+  },
+  "ac80ad75-34d8-4bd1-a570-a9a136b78f74": {
+   "@type": "slate",
+   "plaintext": "\nDesenvolver soluções inovadoras e sustentáveis, com ética, identificando novas oportunidades de negócios, considerando a complexidade e escalabilidade das soluções;\nAtuar colaborativamente em projetos de desenvolvimento de software, com equipes multiprofissionais locais ou geograficamente distribuídas; e\nAplicar processos, técnicas, procedimentos e boas práticas de construção, evolução e avaliação de software.\n",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "Desenvolver soluções inovadoras e sustentáveis, com ética, identificando novas oportunidades de negócios, considerando a complexidade e escalabilidade das soluções;"
+        }
+       ],
+       "type": "li"
+      },
+      {
+       "children": [
+        {
+         "text": "Atuar colaborativamente em projetos de desenvolvimento de software, com equipes multiprofissionais locais ou geograficamente distribuídas; e"
+        }
+       ],
+       "type": "li"
+      },
+      {
+       "children": [
+        {
+         "text": "Aplicar processos, técnicas, procedimentos e boas práticas de construção, evolução e avaliação de software."
+        }
+       ],
+       "type": "li"
+      }
+     ],
+     "type": "ul"
+    }
+   ]
+  },
+  "b359f329-2e4c-456f-8d4a-eb654b204f5f": {
+   "@type": "buttonsPanel"
+  },
+  "d12da170-526a-47cc-9502-d9050ad5acab": {
+   "@type": "subject",
+   "subject": "Bacharelado em Engenharia de Software"
+  },
+  "dc7b7797-ddfe-437c-93d6-e51b797aae49": {
+   "@type": "slate",
+   "plaintext": "Atuação",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Atuação"
+      }
+     ],
+     "type": "h3"
+    }
+   ]
+  },
+  "e1e4564b-337c-41ba-a76f-31bf2e7845f1": {
+   "@type": "slate",
+   "plaintext": "Dados Sobre o Curso",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Dados Sobre o Curso"
+      }
+     ],
+     "type": "h3"
+    }
+   ]
+  },
+  "f1003e05-5b48-47b7-835a-ddc08e8e148b": {
+   "@type": "slate",
+   "plaintext": "Autorização e Reconhecimento",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Autorização e Reconhecimento"
+      }
+     ],
+     "type": "h3"
+    }
+   ]
+  },
+  "fa976619-c2f9-4834-8efd-b92cd7fb3e9b": {
+   "@type": "slate",
+   "plaintext": "O Curso de Bacharelado em Engenharia de Software do Câmpus Cornélio Procópio tem como objetivo geral a formação de recursos humanos para o planejamento, desenvolvimento, gestão (do projeto e da qualidade) e manutenção de produtos caracterizados como software, com vistas a atender as necessidades do mercado de trabalho corrente. As necessidades que podem ser atendidas abrangem principalmente o desenvolvimento, implantação e gerenciamento de projetos e conhecimento para uso em processos organizacionais, passando pela infraestrutura e manutenção de software. O curso desenvolve o pensamento científico dentro da Engenharia de Software, bem como a criatividade, para solucionar problemas que envolvam uma combinação de recursos humanos e computacionais inter-relacionando a coleta, o armazenamento, a recuperação, a distribuição e o uso de dados.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "O Curso de Bacharelado em Engenharia de Software do Câmpus Cornélio Procópio tem como objetivo geral a formação de recursos humanos para o planejamento, desenvolvimento, gestão (do projeto e da qualidade) e manutenção de produtos caracterizados como software, com vistas a atender as necessidades do mercado de trabalho corrente. As necessidades que podem ser atendidas abrangem principalmente o desenvolvimento, implantação e gerenciamento de projetos e conhecimento para uso em processos organizacionais, passando pela infraestrutura e manutenção de software. O curso desenvolve o pensamento científico dentro da Engenharia de Software, bem como a criatividade, para solucionar problemas que envolvam uma combinação de recursos humanos e computacionais inter-relacionando a coleta, o armazenamento, a recuperação, a distribuição e o uso de dados."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  }
+ },
+ "blocks_layout": {
+  "items": [
+   "d12da170-526a-47cc-9502-d9050ad5acab",
+   "8c20b7f6-d17d-4328-a47a-2fb2dbc65d96",
+   "b359f329-2e4c-456f-8d4a-eb654b204f5f",
+   "4321f358-b3fc-4912-9e48-c117d21d75ca",
+   "1b547222-17aa-4464-b436-8a821db62280",
+   "fa976619-c2f9-4834-8efd-b92cd7fb3e9b",
+   "9d06afaa-62cd-49f7-b811-5318cb47f436",
+   "6d36b45a-cfd8-41ed-9f22-9c84d74f6cd4",
+   "59e8b553-8f2e-4937-aee4-ca23956c3e97",
+   "0aecf2c0-ff24-4c65-bf4c-86e6d139f59b",
+   "ac80ad75-34d8-4bd1-a570-a9a136b78f74",
+   "47821228-d483-42be-9c98-2928d5fba497",
+   "8bc98470-f6a1-442f-83ff-d34b8eaca84c",
+   "41058a16-a455-4e36-9e3b-c5cf69166752",
+   "dc7b7797-ddfe-437c-93d6-e51b797aae49",
+   "7db96b91-9050-4a09-926e-832a0aabb132",
+   "a181bbeb-0a08-4897-bb3c-d12c52064da5",
+   "e1e4564b-337c-41ba-a76f-31bf2e7845f1",
+   "a26b278a-b9f6-4e22-bbb1-4853dc09b8ab",
+   "f1003e05-5b48-47b7-835a-ddc08e8e148b",
+   "3d76b4ea-ad7a-4fb6-bef8-881448f6aca0"
+  ]
+ },
+ "items": []
+}

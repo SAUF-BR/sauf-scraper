@@ -36,8 +36,9 @@ Modelo: `parsers/uem.py`, `spiders/uem.py` e `tests/test_parser_uem.py`. No exem
 fictícia tem chave `xyz` e código e-MEC `1234`.
 
 1. **Levantamento:** código e-MEC da IES (cadastro e-MEC ou `CO_IES` do Censo), `robots.txt`
-   e se as páginas são HTML simples. Salve a lista de cursos e 2 ou 3 páginas de curso como
-   fixtures (seção 4).
+   e se as páginas são HTML simples. Se o HTML vier vazio (site em JavaScript), procure a API
+   JSON que a página usa, como na UTFPR (Plone: `/++api++/<caminho>`); o parser passa a ler
+   o JSON. Salve a lista de cursos e 2 ou 3 páginas de curso como fixtures (seção 4).
 2. **Parser** (`parsers/xyz.py`): funções puras como `extrair_lista` e `extrair_detalhes`.
    `None` quando o campo não aparece; textos longos sem HTML, com `\n` entre linhas e `\n\n`
    entre parágrafos (D-37); nada de dados pessoais.
@@ -105,7 +106,7 @@ fictícia tem chave `xyz` e código e-MEC `1234`.
 
 No `LoteIngestao` tudo é obrigatório: `execucaoId`, `fonte`, `codigoEmecInstituicao` e
 `cursos`. "Não obrigatório" só quer dizer que a validação aceita `null`; o que uma IES precisa
-para contar como **completa** está no [checklist](docs/CHECKLIST_SCRAPERS.md#13-mais-3-universidades-ufsc-utfpr-e-ufsm-).
+para contar como **completa** está no [checklist](docs/CHECKLIST_SCRAPERS.md#14-mais-2-universidades-ufsc-e-ufsm-).
 
 ## 3. Enviando os dados
 

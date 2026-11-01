@@ -1,0 +1,700 @@
+{
+ "@id": "https://www.utfpr.edu.br/cursos/coordenacoes/graduacao/curitiba/ct-engenharia-eletrica/apresentacao",
+ "title": "Apresentação",
+ "blocks": {
+  "1b5b9e76-28ab-4461-9515-b8a4b50d191c": {
+   "@type": "slate",
+   "plaintext": "Atuação",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Atuação"
+      }
+     ],
+     "type": "h3"
+    }
+   ]
+  },
+  "276a413e-1576-4484-919a-05c7b2dfcc95": {
+   "@type": "slate",
+   "plaintext": "O Engenheiro Eletricista possui seu principal foco em sistemas de energia, contando também com uma forte formação nas áreas de eletrônica e automação. Os profissionais formados neste curso   podem atuar em sistemas industriais complexos e em concessionárias de serviços públicos.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "O Engenheiro Eletricista possui seu principal foco em sistemas de energia, contando também com uma forte formação nas áreas de eletrônica e automação. Os profissionais formados neste curso   podem atuar em sistemas industriais complexos e em concessionárias de serviços públicos."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "2834b2ff-5808-4b71-9d2a-110bae6fe67f": {
+   "@type": "slate",
+   "plaintext": "O Currículo prevê a realização do Trabalho de Conclusão de Curso, que deve abranger conhecimentos de Engenharia Elétrica no qual o estudante exercitará a capacidade de resolver problemas, de trabalhar em equipe e de comunicar-se, além de desenvolver atitudes como iniciativa e determinação.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "O Currículo prevê a realização do Trabalho de Conclusão de Curso, que deve abranger conhecimentos de Engenharia Elétrica no qual o estudante exercitará a capacidade de resolver problemas, de trabalhar em equipe e de comunicar-se, além de desenvolver atitudes como iniciativa e determinação."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "3988c2af-8a0e-4454-887e-2e8383dd20a9": {
+   "@type": "title"
+  },
+  "4deda3bd-0769-4114-8a01-63e9650c8aa3": {
+   "@type": "slateTable",
+   "table": {
+    "basic": true,
+    "celled": false,
+    "compact": false,
+    "fixed": true,
+    "hideHeaders": true,
+    "inverted": false,
+    "rows": [
+     {
+      "cells": [
+       {
+        "key": "fj08h",
+        "type": "header",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       },
+       {
+        "key": "31jte",
+        "type": "header",
+        "value": [
+         {
+          "children": [
+           {
+            "text": ""
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       }
+      ],
+      "key": "fs7l7"
+     },
+     {
+      "cells": [
+       {
+        "key": "ask6s",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": ""
+             },
+             {
+              "children": [
+               {
+                "text": "Turno"
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": ""
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       },
+       {
+        "key": "ef5rb",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "Manhã e tarde / tarde e noite"
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "adm5i"
+     },
+     {
+      "cells": [
+       {
+        "key": "aklip",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": ""
+             },
+             {
+              "children": [
+               {
+                "text": "Duração"
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": ""
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       },
+       {
+        "key": "2jgfk",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "5 anos"
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "bn1kn"
+     },
+     {
+      "cells": [
+       {
+        "key": "cncmo",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": ""
+             },
+             {
+              "children": [
+               {
+                "text": "Carga Horária Total do Curso"
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": ""
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       },
+       {
+        "key": "ev895",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "4.435 horas"
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "8vtj1"
+     },
+     {
+      "cells": [
+       {
+        "key": "25i8r",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": ""
+             },
+             {
+              "children": [
+               {
+                "text": "Estágio Curricular"
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": ""
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       },
+       {
+        "key": "3q437",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "400 horas"
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "flr17"
+     },
+     {
+      "cells": [
+       {
+        "key": "m7n5",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": ""
+             },
+             {
+              "children": [
+               {
+                "text": "Vagas por semestre"
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": ""
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       },
+       {
+        "key": "7fjce",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "text": "88"
+           }
+          ],
+          "type": "p"
+         }
+        ]
+       }
+      ],
+      "key": "5p8pq"
+     },
+     {
+      "cells": [
+       {
+        "key": "aqlcv",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": ""
+             },
+             {
+              "children": [
+               {
+                "text": "Titulação"
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": ""
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       },
+       {
+        "key": "dfo5e",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "Engenheiro Eletricista"
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "1fps1"
+     },
+     {
+      "cells": [
+       {
+        "key": "1m2r8",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": ""
+             },
+             {
+              "children": [
+               {
+                "text": "Início das Atividades"
+               }
+              ],
+              "type": "strong"
+             },
+             {
+              "text": ""
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       },
+       {
+        "key": "52t3i",
+        "type": "data",
+        "value": [
+         {
+          "children": [
+           {
+            "children": [
+             {
+              "text": "1º semestre/1979"
+             }
+            ],
+            "type": "p"
+           }
+          ],
+          "type": "div"
+         }
+        ]
+       }
+      ],
+      "key": "6d2rv"
+     }
+    ],
+    "striped": false
+   }
+  },
+  "67221009-e73f-4e4c-9091-777c3c22c6d1": {
+   "@type": "slate",
+   "plaintext": "- Aprovado o funcionamento pela Resolução nº 18/85\n– COENS, de 19/08/1985. - Reconhecido pela Portaria MEC n° 124/1983. - Reconhecimento renovado pela Portaria MEC n° 756/2007, de 03/09/2007.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "text": "- Aprovado o funcionamento pela Resolução nº 18/85\n– COENS, de 19/08/1985."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "children": [
+        {
+         "text": "- Reconhecido pela Portaria MEC n° 124/1983."
+        }
+       ],
+       "type": "p"
+      },
+      {
+       "children": [
+        {
+         "text": "- Reconhecimento renovado pela Portaria MEC n° 756/2007, de 03/09/2007."
+        }
+       ],
+       "type": "p"
+      }
+     ],
+     "type": "div"
+    }
+   ]
+  },
+  "75bbee16-b703-4123-8a37-fa4fe5aba0ed": {
+   "@type": "slate",
+   "plaintext": "Projeto e condução de experimentos e de pesquisas tecnológicas; Concepção, projetos, especificação E análise de sistemas, produtos e processos; Planejamento, supervisão, elaboração, orientação e coordenação de projetos e serviços de Engenharia Elétrica; Supervisão na operação e na manutenção de sistemas e equipamentos eletroeletrônicos; Avaliação na segurança e na viabilidade técnico-econômico-financeira de projetos de Engenharia Elétrica; Atuação na assessoria, assistência técnica e consultoria de projetos de Engenharia Elétrica; Elaboração de vistoria, perícia, avaliação, arbitramento, laudo e parecer técnico de serviços de Engenharia Elétrica.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "children": [
+        {
+         "children": [
+          {
+           "text": "Projeto e condução de experimentos e de pesquisas tecnológicas;"
+          }
+         ],
+         "type": "li"
+        },
+        {
+         "children": [
+          {
+           "text": "Concepção, projetos, especificação E análise de sistemas, produtos e processos;"
+          }
+         ],
+         "type": "li"
+        },
+        {
+         "children": [
+          {
+           "text": "Planejamento, supervisão, elaboração, orientação e coordenação de projetos e serviços de Engenharia Elétrica;"
+          }
+         ],
+         "type": "li"
+        },
+        {
+         "children": [
+          {
+           "text": "Supervisão na operação e na manutenção de sistemas e equipamentos eletroeletrônicos;"
+          }
+         ],
+         "type": "li"
+        },
+        {
+         "children": [
+          {
+           "text": "Avaliação na segurança e na viabilidade técnico-econômico-financeira de projetos de Engenharia Elétrica;"
+          }
+         ],
+         "type": "li"
+        },
+        {
+         "children": [
+          {
+           "text": "Atuação na assessoria, assistência técnica e consultoria de projetos de Engenharia Elétrica;"
+          }
+         ],
+         "type": "li"
+        },
+        {
+         "children": [
+          {
+           "text": "Elaboração de vistoria, perícia, avaliação, arbitramento, laudo e parecer técnico de serviços de Engenharia Elétrica."
+          }
+         ],
+         "type": "li"
+        }
+       ],
+       "type": "ol"
+      }
+     ],
+     "type": "ol"
+    }
+   ]
+  },
+  "77123335-a82f-4217-94ca-ebf4f70b6ce5": {
+   "@type": "slate",
+   "plaintext": "As disciplinas optativas, em um total de 560 horas, permitem ao egresso um aprofundamento no conhecimento de suas áreas de interesse. O aluno pode escolher dentre as áreas de Eletrônica Industrial, Instalações e Gerenciamento de Energia em Edificações, Sistemas Elétricos Industriais ou Sistemas de Potência, aquelas disciplinas que melhor atendem a sua vocação.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "As disciplinas optativas, em um total de 560 horas, permitem ao egresso um aprofundamento no conhecimento de suas áreas de interesse. O aluno pode escolher dentre as áreas de Eletrônica Industrial, Instalações e Gerenciamento de Energia em Edificações, Sistemas Elétricos Industriais ou Sistemas de Potência, aquelas disciplinas que melhor atendem a sua vocação."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "8045c9a1-945e-4e9c-ab94-a9253c39f182": {
+   "@type": "slate",
+   "plaintext": "Para garantir uma formação generalista, o curso propicia ao aluno uma forte formação nos conteúdos básicos e profissionalizantes que caracterizam a formação do Engenheiro Eletricista.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Para garantir uma formação generalista, o curso propicia ao aluno uma forte formação nos conteúdos básicos e profissionalizantes que caracterizam a formação do Engenheiro Eletricista."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "95fc0366-5507-4a0b-9ccc-289c2828f0f5": {
+   "@type": "slate",
+   "plaintext": "Autorização e Reconhecimento",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Autorização e Reconhecimento"
+      }
+     ],
+     "type": "h3"
+    }
+   ]
+  },
+  "96af8573-7fce-481f-b01a-01a12c9d0fc9": {
+   "@type": "slate",
+   "plaintext": "O profissional formado em Engenharia Elétrica pode atuar no mercado de trabalho nas seguintes áreas:",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "O profissional formado em Engenharia Elétrica pode atuar no mercado de trabalho nas seguintes áreas:"
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "ad3db690-7296-4330-a37e-f51b7297fc83": {
+   "@type": "buttonsPanel"
+  },
+  "b8724028-b997-4778-b096-474bc71a5fb8": {
+   "@type": "slate",
+   "plaintext": "Além disso, são previstas disciplinas de Gestão e Economia, visando capacitar o egresso para atuar na área gerencial. O curso tem duração de 5 anos (10 semestres letivos), com uma grande ênfase em aulas práticas e de laboratório além do Estágio Curricular Obrigatório com duração de 400 horas.",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Além disso, são previstas disciplinas de Gestão e Economia, visando capacitar o egresso para atuar na área gerencial. O curso tem duração de 5 anos (10 semestres letivos), com uma grande ênfase em aulas práticas e de laboratório além do Estágio Curricular Obrigatório com duração de 400 horas."
+      }
+     ],
+     "type": "p"
+    }
+   ]
+  },
+  "c9fe3481-4d9d-4f5c-b09b-f8894c3bf6ec": {
+   "@type": "slate",
+   "plaintext": "Dados Sobre o Curso",
+   "size": "ensino-institucional",
+   "value": [
+    {
+     "children": [
+      {
+       "text": "Dados Sobre o Curso"
+      }
+     ],
+     "type": "h3"
+    }
+   ]
+  },
+  "f8118d74-c724-49f9-b6ca-95fbd8ae21f1": {
+   "@type": "subject",
+   "subject": "Bacharelado em Engenharia Elétrica"
+  }
+ },
+ "blocks_layout": {
+  "items": [
+   "f8118d74-c724-49f9-b6ca-95fbd8ae21f1",
+   "3988c2af-8a0e-4454-887e-2e8383dd20a9",
+   "ad3db690-7296-4330-a37e-f51b7297fc83",
+   "276a413e-1576-4484-919a-05c7b2dfcc95",
+   "8045c9a1-945e-4e9c-ab94-a9253c39f182",
+   "77123335-a82f-4217-94ca-ebf4f70b6ce5",
+   "b8724028-b997-4778-b096-474bc71a5fb8",
+   "2834b2ff-5808-4b71-9d2a-110bae6fe67f",
+   "1b5b9e76-28ab-4461-9515-b8a4b50d191c",
+   "96af8573-7fce-481f-b01a-01a12c9d0fc9",
+   "75bbee16-b703-4123-8a37-fa4fe5aba0ed",
+   "c9fe3481-4d9d-4f5c-b09b-f8894c3bf6ec",
+   "4deda3bd-0769-4114-8a01-63e9650c8aa3",
+   "95fc0366-5507-4a0b-9ccc-289c2828f0f5",
+   "67221009-e73f-4e4c-9091-777c3c22c6d1"
+  ]
+ },
+ "items": []
+}

@@ -63,7 +63,26 @@ Química ficam sem `duracaoSemestres` (o texto lista as duas durações); vagas 
 do Censo (sem mudar o contrato da API); o código 50017031 do Sisu ("ABI - Educação Física")
 fica de fora da tabela de casamento.
 
-### 1.3. Mais 3 universidades: UFSC, UTFPR e UFSM ❌
+### 1.3. UTFPR: Universidade Tecnológica Federal do Paraná (e-MEC 588, `--ies utfpr`) 🟡
+
+| Item | Estado | Observação |
+|---|---|---|
+| Lista de cursos: nome, cidade/UF, link (`urlOrigem`) | ✅ | 121 cursos em 13 campi, pela API JSON do site (`/++api++/`). |
+| Grau + turno (`opcoes`) | ✅ | Grau pelo título ("Licenciatura em…") ou pela "Titulação"; 1 curso sem grau no site recebe o do Censo. |
+| Modalidade | ✅ | Todos `presencial`. |
+| Duração em semestres | 🟡 | 115 de 121 (anos, semestres ou "períodos" da ficha). |
+| Turno | 🟡 | 113 de 121; texto livre do site ("Manhã e Tarde", "Tarde/Noite"…). |
+| `sobre` | ✅ | 119 de 121 ("Sobre o Curso" ou texto inicial; "Perfil do egresso" junto, como na UEM). |
+| `mercadoTrabalho` | ✅ | 107 de 121 (seção "Atuação" e variações). |
+| Casamento com códigos e-MEC | 🟡 | 114 diretos + 3 preenchidos à mão (nome diferente no Censo); 4 sem par. |
+
+**Pendências da UTFPR:**
+
+- [ ] 4 cursos sem par no Censo 2024 (provavelmente novos): Arquitetura e Urbanismo (Guarapuava), Engenharia de Produção (Curitiba), Engenharia Mecatrônica (Ponta Grossa), Sistemas de Informação (Londrina).
+- [ ] Sisu: 105 de 107 linhas casam. Sobram 1690306 (Engenharia de Produção, Curitiba, Integral) e 102667 (Design, Curitiba).
+- [ ] Bacharelado em Química Ambiental (Curitiba): a página do curso responde 401 (não é pública); entra só com nome, grau e link.
+
+### 1.4. Mais 2 universidades: UFSC e UFSM ❌
 
 Selecionadas em 31/10/2026. Cada uma precisa entregar:
 
@@ -116,6 +135,6 @@ Selecionadas em 31/10/2026. Cada uma precisa entregar:
 - [ ] Testes do parser com fixture sem dados pessoais; `pytest` e `ruff check` passam.
 - [ ] Não coleta dados pessoais (ex.: seção de coordenação).
 - [ ] `casar` rodado e CSV revisado (`ambiguo`/`sem_par` resolvidos ou listados aqui).
-- [ ] `--dry-run` conferido: campos obrigatórios da seção 1.3, textos sem HTML e `urlOrigem` em todos.
+- [ ] `--dry-run` conferido: campos obrigatórios da seção 1.4, textos sem HTML e `urlOrigem` em todos.
 - [ ] Testado contra a API local (`censo` → spider) sem `rejeitados`.
 - [ ] Regra nova registrada no `DECISOES.md` e este checklist atualizado.

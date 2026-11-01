@@ -3,7 +3,8 @@
 Guia para criar ou manter um scraper do SAUF-BR. Setup e comandos do dia a dia estão no
 [README](README.md); detalhes arquivo por arquivo em [docs/ESTRUTURA.md](docs/ESTRUTURA.md);
 Censo × site em [docs/MAPEAMENTO_CENSO.md](docs/MAPEAMENTO_CENSO.md); o que existe e o que
-falta em [docs/CHECKLIST_SCRAPERS.md](docs/CHECKLIST_SCRAPERS.md). Decisões (D-xx):
+falta em [docs/CHECKLIST_SCRAPERS.md](docs/CHECKLIST_SCRAPERS.md); todos os links usados em
+[docs/FONTES.md](docs/FONTES.md). Decisões (D-xx):
 `sauf-api/docs/DECISOES.md`.
 
 ## 1. Como funciona
@@ -155,3 +156,5 @@ uv run ruff check . ; uv run ruff format .
 5. **Educação com os servidores:** só `self.http.get` (robots.txt + delay de 2 s), só as
    páginas necessárias, sem coletas repetidas à toa; para investigar, 1 ou 2 páginas.
 6. **Regra nova de negócio** é combinada com o time e registrada no `DECISOES.md`.
+7. **Fontes:** acessou um link novo (avaliação, spider ou importador)? Registre em
+   [docs/FONTES.md](docs/FONTES.md), com a data do primeiro acesso, no mesmo commit ou PR.

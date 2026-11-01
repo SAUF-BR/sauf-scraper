@@ -47,9 +47,11 @@ mas as outras continuam sendo processadas.
 2. No `.env` deste projeto:
    - `SAUF_API_BASE_URL=http://localhost:8080` (sem `/api/v1` no fim);
    - `SAUF_API_KEY` com **o mesmo valor** do `SAUF_API_KEY` do `.env` da API.
-3. Os microdados do Censo (INEP) na pasta `microdados_censo_da_educacao_superior_2024/`,
-   dentro deste projeto (já está no `.gitignore`). Para usar outra pasta, defina
-   `SAUF_CENSO_DIR` no `.env` ou passe `--pasta` no comando.
+3. Os microdados do Censo (INEP) extraídos numa pasta `fontes/microdados_censo*` (hoje
+   `fontes/microdados_censo_da_educacao_superior_2024/`), junto das planilhas do IGC e do
+   Sisu (`fontes/` está no `.gitignore`). O caminho é resolvido a partir da raiz do projeto;
+   com mais de uma pasta, vale a de maior ano no nome (ex.: 2025 ganha de 2024). Para usar
+   outra pasta, defina `SAUF_CENSO_DIR` no `.env` ou passe `--pasta` no comando.
 
 ### Exemplo: do zero até ver os cursos da UEM na API
 

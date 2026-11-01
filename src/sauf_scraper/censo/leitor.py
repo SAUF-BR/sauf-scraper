@@ -147,9 +147,15 @@ def linhas(arquivo: Path) -> Iterator[dict[str, str]]:
 
 
 def arquivo_censo(pasta: Path, padrao: str) -> Path:
+    """Arquivo do Censo dentro da pasta extraída do .zip (em `dados/` ou na própria pasta)."""
+    pasta = Path(pasta).resolve()
     encontrados = sorted((pasta / "dados").glob(padrao)) or sorted(pasta.glob(padrao))
     if not encontrados:
-        raise FileNotFoundError(f"{padrao} não encontrado em {pasta}")
+        raise FileNotFoundError(
+            f"{padrao} não encontrado em {pasta} nem em {pasta / 'dados'}. "
+            "Extraia os microdados do Censo em fontes/ ou indique outra pasta com "
+            "--pasta <caminho> ou SAUF_CENSO_DIR no .env."
+        )
     return encontrados[-1]
 
 

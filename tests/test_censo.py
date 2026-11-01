@@ -165,8 +165,59 @@ def test_json_sai_em_camel_case(pasta_censo):
 
 
 def test_pasta_sem_arquivos_da_erro_claro(tmp_path):
-    with pytest.raises(FileNotFoundError):
+    with pytest.raises(FileNotFoundError, match="--pasta") as erro:
         ler_censo(tmp_path, [57])
+
+    assert str(tmp_path.resolve()) in str(erro.value)
+
+
+def test_pasta_do_censo_vem_de_fontes_na_raiz_do_projeto(monkeypatch):
+    from sauf_scraper.core.config import FONTES, RAIZ_PROJETO, Settings
+
+    monkeypatch.delenv("SAUF_CENSO_DIR", raising=False)
+
+    assert Settings(_env_file=None).censo_dir is None
+    assert FONTES == RAIZ_PROJETO / "fontes"
+    assert (RAIZ_PROJETO / "pyproject.toml").exists()
+
+
+def test_resolver_pasta_unica(tmp_path):
+    from sauf_scraper.core.config import resolver_pasta_censo
+
+    (tmp_path / "microdados_censo_2024").mkdir()
+
+    assert resolver_pasta_censo(None, tmp_path) == tmp_path / "microdados_censo_2024"
+
+
+def test_resolver_pasta_escolhe_o_maior_ano(tmp_path):
+    from sauf_scraper.core.config import resolver_pasta_censo
+
+    (tmp_path / "microdados_censo_da_educacao_superior_2024").mkdir()
+    (tmp_path / "microdados_censo_da_educacao_superior_2025").mkdir()
+    (tmp_path / "microdados_censo_2099.zip").write_bytes(b"")  # arquivo, não pasta: ignorado
+
+    escolhida = resolver_pasta_censo(None, tmp_path)
+
+    assert escolhida.name == "microdados_censo_da_educacao_superior_2025"
+
+
+def test_resolver_pasta_sem_nenhuma_da_erro_claro(tmp_path):
+    from sauf_scraper.core.config import resolver_pasta_censo
+
+    with pytest.raises(FileNotFoundError, match="--pasta") as erro:
+        resolver_pasta_censo(None, tmp_path)
+
+    assert str(tmp_path.resolve()) in str(erro.value)
+    assert "microdados_censo*" in str(erro.value)
+
+
+def test_resolver_pasta_explicita_nao_procura_em_fontes(tmp_path):
+    from sauf_scraper.core.config import resolver_pasta_censo
+
+    (tmp_path / "microdados_censo_2025").mkdir()
+    outra = tmp_path / "qualquer"
+
+    assert resolver_pasta_censo(outra, tmp_path) == outra
 
 
 @responses.activate

@@ -185,8 +185,9 @@ uv run sauf-scraper censo --dry-run      # grava output/censo-<ano>.json
 uv run sauf-scraper censo                # envia para a API (precisa de SAUF_API_KEY)
 ```
 
-A pasta dos microdados vem de `SAUF_CENSO_DIR` (padrão:
-`microdados_censo_da_educacao_superior_2024`) ou de `--pasta`. Com o Censo 2024 e só a UEM,
+A pasta dos microdados vem de `--pasta` ou de `SAUF_CENSO_DIR`. Sem eles, o scraper procura
+`fontes/microdados_censo*` (a partir da raiz do projeto) e usa a de maior ano no nome
+(`resolver_pasta_censo` em `core/config.py`). Com o Censo 2024 e só a UEM,
 leva uns 20 segundos e gera 1 instituição e 93 ofertas.
 
 Formato enviado (JSON, camelCase):

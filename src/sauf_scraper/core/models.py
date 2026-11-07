@@ -15,7 +15,7 @@ from datetime import UTC, datetime
 from enum import StrEnum
 from typing import Annotated
 
-from pydantic import BaseModel, ConfigDict, Field, HttpUrl
+from pydantic import BaseModel, ConfigDict, Field, HttpUrl, field_validator
 from pydantic.alias_generators import to_camel
 
 
@@ -101,6 +101,20 @@ class Opcao(SaufModel):
     turno: str | None = None
 
 
+def juntar_por_grau(opcoes: list[Opcao]) -> list[Opcao]:
+    """Uma Opcao por grau (D-34; a API guarda uma opção por grau na oferta): os turnos do
+    mesmo grau viram um texto só, no formato da UEM.
+
+    [bacharelado Matutino, bacharelado Noturno] -> [bacharelado "Matutino ou Noturno"]
+    """
+    turnos: dict[Grau, list[str]] = {}
+    for opcao in opcoes:
+        lista = turnos.setdefault(opcao.grau, [])
+        if opcao.turno and opcao.turno not in lista:
+            lista.append(opcao.turno)
+    return [Opcao(grau=grau, turno=" ou ".join(lista) or None) for grau, lista in turnos.items()]
+
+
 class Curso(SaufModel):
     """UM curso como aparece no site da instituição: uma página = um curso (D-34).
 
@@ -123,6 +137,15 @@ class Curso(SaufModel):
     duracao_semestres: int | None = Field(default=None, gt=0)
     cidade: str | None = None
     uf: str | None = Field(default=None, pattern=r"^[A-Z]{2}$")
+
+    @field_validator("opcoes")
+    @classmethod
+    def _um_grau_por_opcao(cls, opcoes: list[Opcao]) -> list[Opcao]:
+        """A API recusa (erro 500) duas opções com o mesmo grau: use juntar_por_grau."""
+        graus = [o.grau for o in opcoes]
+        if len(graus) != len(set(graus)):
+            raise ValueError(f"grau repetido nas opções: {graus}")
+        return opcoes
 
 
 class LoteIngestao(SaufModel):

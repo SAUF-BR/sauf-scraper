@@ -37,7 +37,15 @@ class HttpEducado:
         self._esperar_vez(dominio)
 
         kwargs.setdefault("timeout", self._settings.request_timeout_seconds)
-        resposta = self._session.get(url, **kwargs)
+        try:
+            resposta = self._session.get(url, **kwargs)
+        except requests.ConnectionError:
+            # Alguns servidores fecham a conexão reaproveitada (keep-alive) sem avisar:
+            # espera o delay e tenta uma vez só, já numa conexão nova.
+            logger.warning("conexão caiu, tentando de novo", extra={"dados": {"url": url}})
+            self._ultima_requisicao[dominio] = time.monotonic()
+            self._esperar_vez(dominio)
+            resposta = self._session.get(url, **kwargs)
         self._ultima_requisicao[dominio] = time.monotonic()
         logger.info("GET", extra={"dados": {"url": url, "status": resposta.status_code}})
         resposta.raise_for_status()

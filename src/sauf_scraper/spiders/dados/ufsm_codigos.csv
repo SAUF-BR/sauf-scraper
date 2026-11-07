@@ -1,0 +1,119 @@
+chave;nome_site;cidade;turno_site;grau_site;status;codigo_emec;nome_censo;grau_censo;vagas_diurno;vagas_noturno;sugestao;confirmado
+ufsm:agronomia:frederico-westphalen;Agronomia;Frederico Westphalen;Integral;bacharelado;direto;103376;Agronomia;bacharelado;127;0;;sim
+ufsm:agronomia:santa-maria;Agronomia;Santa Maria;Diurno;bacharelado;direto;13859;Agronomia;bacharelado;200;0;;sim
+ufsm:arquitetura-e-urbanismo:cachoeira-do-sul;Arquitetura e Urbanismo;Cachoeira do Sul;Noturno;bacharelado;direto;1292698;Arquitetura E Urbanismo;bacharelado;0;266;;sim
+ufsm:arquitetura-e-urbanismo:santa-maria;Arquitetura e Urbanismo;Santa Maria;Diurno;bacharelado;direto;13896;Arquitetura E Urbanismo;bacharelado;30;0;;sim
+ufsm:arquivologia:santa-maria;Arquivologia;Santa Maria;Diurno;bacharelado;direto;13849;Arquivologia;bacharelado;84;0;;sim
+ufsm:ciencia-da-computacao:santa-maria;Ciência da Computação;Santa Maria;Diurno;bacharelado;direto;13881;Ciência Da Computação;bacharelado;40;0;;sim
+ufsm:ciencias-biologicas:palmeira-das-missoes;Ciências Biológicas;Palmeira das Missões;Integral;licenciatura;direto;1084792;Ciências Biológicas;licenciatura;321;0;;sim
+ufsm:ciencias-economicas:palmeira-das-missoes;Ciências Econômicas;Palmeira das Missões;;;direto;1106428;Ciências Econômicas;bacharelado;0;273;;sim
+ufsm:danca-bacharelado:santa-maria;Dança;Santa Maria;Diurno;bacharelado;direto;1192336;Dança;bacharelado;43;0;;sim
+ufsm:danca-licenciatura:santa-maria;Dança;Santa Maria;Diurno;licenciatura;direto;1192463;Dança;licenciatura;26;0;;sim
+ufsm:desenho-industrial:santa-maria;Desenho Industrial;Santa Maria;Diurno;bacharelado;direto;23928;Desenho Industrial;bacharelado;40;0;;sim
+ufsm:educacao-especial-inclusiva:santa-maria;Educação Especial Inclusiva;Santa Maria;Integral;licenciatura;direto;1680611;Educação Especial Inclusiva;licenciatura;30;0;;sim
+ufsm:enfermagem:palmeira-das-missoes;Enfermagem;Palmeira das Missões;Integral;bacharelado;direto;103406;Enfermagem;bacharelado;89;0;;sim
+ufsm:enfermagem:santa-maria;Enfermagem;Santa Maria;Diurno;bacharelado;direto;13865;Enfermagem;bacharelado;52;0;;sim
+ufsm:engenharia-acustica:santa-maria;Engenharia Acústica;Santa Maria;Diurno;bacharelado;direto;121622;Engenharia Acústica;bacharelado;237;0;;sim
+ufsm:engenharia-aeroespacial:santa-maria;Engenharia Aeroespacial;Santa Maria;Diurno;bacharelado;direto;1276292;Engenharia Aeroespacial;bacharelado;40;0;;sim
+ufsm:engenharia-agricola:cachoeira-do-sul;Engenharia Agrícola;Cachoeira do Sul;Integral;bacharelado;direto;1292699;Engenharia Agrícola;bacharelado;653;0;;sim
+ufsm:engenharia-ambiental-e-sanitaria:frederico-westphalen;Engenharia Ambiental e Sanitária;Frederico Westphalen;Integral;bacharelado;direto;1084770;Engenharia Ambiental E Sanitária;bacharelado;526;0;;sim
+ufsm:engenharia-ambiental-e-sanitaria:santa-maria;Engenharia Ambiental e Sanitária;Santa Maria;Integral;bacharelado;direto;121634;Engenharia Ambiental E Sanitária;bacharelado;212;0;;sim
+ufsm:engenharia-civil:santa-maria;Engenharia Civil;Santa Maria;Diurno;bacharelado;direto;13858;Engenharia Civil;bacharelado;97;0;;sim
+ufsm:engenharia-de-controle-e-automacao:santa-maria;Engenharia de Controle e Automação;Santa Maria;Diurno;bacharelado;direto;121630;Engenharia De Controle E Automação;bacharelado;128;0;;sim
+ufsm:engenharia-de-producao:santa-maria;Engenharia de Produção;Santa Maria;Diurno;bacharelado;direto;121626;Engenharia De Produção;bacharelado;97;0;;sim
+ufsm:engenharia-de-telecomunicacoes:santa-maria;Engenharia de Telecomunicações;Santa Maria;Diurno;bacharelado;direto;1276295;Engenharia De Telecomunicações;bacharelado;302;0;;sim
+ufsm:engenharia-de-transportes-e-logistica:cachoeira-do-sul;Engenharia de Transportes e Logística;Cachoeira do Sul;Noturno;bacharelado;direto;1292700;Engenharia De Transportes E Logística;bacharelado;0;654;;sim
+ufsm:engenharia-eletrica:cachoeira-do-sul;Engenharia Elétrica;Cachoeira do Sul;Diurno;bacharelado;direto;1292701;Engenharia Elétrica;bacharelado;551;0;;sim
+ufsm:engenharia-eletrica:santa-maria;Engenharia Elétrica;Santa Maria;Diurno;bacharelado;direto;120381;Engenharia Elétrica;bacharelado;100;0;;sim
+ufsm:engenharia-florestal:frederico-westphalen;Engenharia Florestal;Frederico Westphalen;Integral;bacharelado;direto;103388;Engenharia Florestal;bacharelado;507;0;;sim
+ufsm:engenharia-florestal:santa-maria;Engenharia Florestal;Santa Maria;Diurno;bacharelado;direto;13856;Engenharia Florestal;bacharelado;391;0;;sim
+ufsm:engenharia-mecanica:cachoeira-do-sul;Engenharia Mecânica;Cachoeira do Sul;Integral;bacharelado;direto;1292702;Engenharia Mecânica;bacharelado;636;0;;sim
+ufsm:engenharia-mecanica:santa-maria;Engenharia Mecânica;Santa Maria;Diurno;bacharelado;direto;120379;Engenharia Mecânica;bacharelado;60;0;;sim
+ufsm:engenharia-quimica:santa-maria;Engenharia Química;Santa Maria;Diurno;bacharelado;direto;120383;Engenharia Química;bacharelado;211;0;;sim
+ufsm:estatistica:santa-maria;Estatística;Santa Maria;Integral;bacharelado;direto;121600;Estatística;bacharelado;161;161;;sim
+ufsm:farmacia:santa-maria;Farmácia;Santa Maria;Integral;bacharelado;direto;13868;Farmácia;bacharelado;112;0;;sim
+ufsm:fisioterapia:santa-maria;Fisioterapia;Santa Maria;Diurno;bacharelado;direto;13862;Fisioterapia;bacharelado;50;0;;sim
+ufsm:fonoaudiologia:santa-maria;Fonoaudiologia;Santa Maria;Diurno;bacharelado;direto;13864;Fonoaudiologia;bacharelado;35;0;;sim
+ufsm:jornalismo-bacharelado:frederico-westphalen;Jornalismo;Frederico Westphalen;Integral;bacharelado;direto;103398;Jornalismo;bacharelado;249;0;;sim
+ufsm:jornalismo:santa-maria;Jornalismo;Santa Maria;Diurno;bacharelado;direto;33011;Jornalismo;bacharelado;33;0;;sim
+ufsm:licenciatura-em-teatro:santa-maria;Teatro;Santa Maria;Integral;licenciatura;direto;1107216;Teatro;licenciatura;41;0;;sim
+ufsm:medicina-veterinaria:santa-maria;Medicina Veterinária;Santa Maria;Diurno;bacharelado;direto;13857;Medicina Veterinária;bacharelado;94;0;;sim
+ufsm:medicina:santa-maria;Medicina;Santa Maria;Diurno;bacharelado;direto;13866;Medicina;bacharelado;123;0;;sim
+ufsm:meteorologia:santa-maria;Meteorologia;Santa Maria;Diurno;bacharelado;direto;90333;Meteorologia;bacharelado;113;0;;sim
+ufsm:nutricao:palmeira-das-missoes;Nutrição;Palmeira das Missões;Integral;bacharelado;direto;1084794;Nutrição;bacharelado;131;0;;sim
+ufsm:nutricao:santa-maria;Nutrição;Santa Maria;Integral;bacharelado;direto;1633455;Nutrição;bacharelado;25;0;;sim
+ufsm:odontologia:santa-maria;Odontologia;Santa Maria;Diurno;bacharelado;direto;13867;Odontologia;bacharelado;78;0;;sim
+ufsm:psicologia:santa-maria;Psicologia;Santa Maria;Diurno;bacharelado;direto;18391;Psicologia;bacharelado;39;0;;sim
+ufsm:quimica-licenciatura:santa-maria;Química;Santa Maria;Diurno;licenciatura;direto;13874;Química;licenciatura;187;0;;sim
+ufsm:redes-de-computadores:santa-maria;Redes de Computadores;Santa Maria;;;direto;121614;Redes De Computadores;tecnologo;165;0;;sim
+ufsm:relacoes-internacionais:santa-maria;Relações Internacionais;Santa Maria;Diurno;bacharelado;direto;121604;Relações Internacionais;bacharelado;50;0;;sim
+ufsm:relacoes-publicas-bacharelado:frederico-westphalen;Relações Públicas;Frederico Westphalen;Matutino;bacharelado;direto;1084705;Relações Públicas;bacharelado;139;0;;sim
+ufsm:servico-social:santa-maria;Serviço Social;Santa Maria;Noturno;bacharelado;direto;1107233;Serviço Social;bacharelado;0;124;;sim
+ufsm:sistemas-de-informacao:frederico-westphalen;Sistemas de Informação;Frederico Westphalen;Noturno;bacharelado;direto;1106427;Sistemas De Informação;bacharelado;0;103;;sim
+ufsm:sistemas-de-informacao:santa-maria;Sistemas de Informação;Santa Maria;Diurno;bacharelado;direto;121636;Sistemas De Informação;bacharelado;40;0;;sim
+ufsm:tecnologia-em-agronegocio:santa-maria;Agronegócio;Santa Maria;Matutino;tecnologo;direto;1084796;Agronegócio;tecnologo;107;0;;sim
+ufsm:tecnologia-em-alimentos:santa-maria;Alimentos;Santa Maria;Diurno;tecnologo;direto;121620;Alimentos;tecnologo;466;0;;sim
+ufsm:tecnologia-em-eletronica-industrial:santa-maria;Eletrônica Industrial;Santa Maria;Diurno;tecnologo;direto;1376007;Eletrônica Industrial;tecnologo;109;0;;sim
+ufsm:tecnologia-em-fabricacao-mecanica:santa-maria;Fabricação Mecânica;Santa Maria;Diurno;tecnologo;direto;121608;Fabricação Mecânica;tecnologo;150;0;;sim
+ufsm:tecnologia-em-geoprocessamento:santa-maria;Geoprocessamento;Santa Maria;Diurno;tecnologo;direto;121616;Geoprocessamento;tecnologo;177;0;;sim
+ufsm:tecnologia-em-gestao-ambiental:santa-maria;Gestão Ambiental;Santa Maria;Matutino;tecnologo;direto;1084801;Gestão Ambiental;tecnologo;140;0;;sim
+ufsm:tecnologia-em-gestao-de-cooperativas:santa-maria;Gestão de Cooperativas;Santa Maria;Noturno;tecnologo;direto;121618;Gestão De Cooperativas;tecnologo;0;40;;sim
+ufsm:tecnologia-em-gestao-de-turismo:santa-maria;Gestão de Turismo;Santa Maria;Diurno;tecnologo;direto;1084804;Gestão De Turismo;tecnologo;128;0;;sim
+ufsm:tecnologia-em-processos-quimicos:santa-maria;Processos Químicos;Santa Maria;Diurno;tecnologo;direto;1167875;Processos Químicos;tecnologo;193;0;;sim
+ufsm:tecnologia-em-sistemas-para-internet:santa-maria;Sistemas para Internet;Santa Maria;Integral;tecnologo;direto;1107234;Sistemas Para Internet;tecnologo;40;0;;sim
+ufsm:terapia-ocupacional:santa-maria;Terapia Ocupacional;Santa Maria;Integral;bacharelado;direto;121638;Terapia Ocupacional;bacharelado;41;0;;sim
+ufsm:zootecnia:palmeira-das-missoes;Zootecnia;Palmeira das Missões;Integral;bacharelado;direto;103404;Zootecnia;bacharelado;351;0;;sim
+ufsm:zootecnia:santa-maria;Zootecnia;Santa Maria;Diurno;bacharelado;direto;13854;Zootecnia;bacharelado;192;0;;sim
+ufsm:administracao:palmeira-das-missoes;Administração;Palmeira das Missões;Integral ou Noturno;bacharelado;ambiguo;103408;Administração;bacharelado;0;308;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:administracao:palmeira-das-missoes;Administração;Palmeira das Missões;Integral ou Noturno;bacharelado;ambiguo;103410;Administração;bacharelado;323;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:administracao:santa-maria;Administração;Santa Maria;Diurno ou Noturno;bacharelado;ambiguo;1161626;Administração;bacharelado;0;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:administracao:santa-maria;Administração;Santa Maria;Diurno ou Noturno;bacharelado;ambiguo;13852;Administração;bacharelado;101;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:administracao:santa-maria;Administração;Santa Maria;Diurno ou Noturno;bacharelado;ambiguo;41011;Administração;bacharelado;0;93;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:artes-cenicas:santa-maria;Artes Cênicas;Santa Maria;Diurno;bacharelado;ambiguo;39136;Artes Cênicas;bacharelado;3;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:artes-cenicas:santa-maria;Artes Cênicas;Santa Maria;Diurno;bacharelado;ambiguo;39137;Artes Cênicas;bacharelado;0;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:artes-visuais:santa-maria;Artes Visuais;Santa Maria;Diurno;bacharelado, licenciatura;ambiguo;84839;Artes Visuais;bacharelado;48;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:artes-visuais:santa-maria;Artes Visuais;Santa Maria;Diurno;bacharelado, licenciatura;ambiguo;84840;Artes Visuais;licenciatura;26;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:ciencias-biologicas:santa-maria;Ciências Biológicas;Santa Maria;Diurno ou Integral;bacharelado, licenciatura;ambiguo;1113713;Ciências Biológicas;bacharelado;20;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:ciencias-biologicas:santa-maria;Ciências Biológicas;Santa Maria;Diurno ou Integral;bacharelado, licenciatura;ambiguo;45328;Ciências Biológicas;licenciatura;10;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:ciencias-contabeis:santa-maria;Ciências Contábeis;Santa Maria;Diurno ou Noturno;bacharelado;ambiguo;13853;Ciências Contábeis;bacharelado;0;58;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:ciencias-contabeis:santa-maria;Ciências Contábeis;Santa Maria;Diurno ou Noturno;bacharelado;ambiguo;84423;Ciências Contábeis;bacharelado;65;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:ciencias-economicas:santa-maria;Ciências Econômicas;Santa Maria;Diurno ou Noturno;bacharelado;ambiguo;13851;Ciências Econômicas;bacharelado;105;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:ciencias-economicas:santa-maria;Ciências Econômicas;Santa Maria;Diurno ou Noturno;bacharelado;ambiguo;41054;Ciências Econômicas;bacharelado;0;131;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:ciencias-sociais:santa-maria;Ciências Sociais;Santa Maria;Noturno;bacharelado, licenciatura;ambiguo;112656;Ciências Sociais;licenciatura;0;93;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:ciencias-sociais:santa-maria;Ciências Sociais;Santa Maria;Noturno;bacharelado, licenciatura;ambiguo;18881;Ciências Sociais;bacharelado;0;163;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:direito:santa-maria;Direito;Santa Maria;Diurno ou Noturno;bacharelado;ambiguo;13850;Direito;bacharelado;57;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:direito:santa-maria;Direito;Santa Maria;Diurno ou Noturno;bacharelado;ambiguo;41063;Direito;bacharelado;0;99;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:educacao-especial:santa-maria;Educação Especial;Santa Maria;Integral ou Noturno;licenciatura;ambiguo;121606;Educação Especial;licenciatura;0;178;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:educacao-especial:santa-maria;Educação Especial;Santa Maria;Integral ou Noturno;licenciatura;ambiguo;13841;Educação Especial;licenciatura;140;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:educacao-fisica:santa-maria;Educação Física;Santa Maria;Diurno;licenciatura, bacharelado;ambiguo;103346;Educação Física;bacharelado;68;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:educacao-fisica:santa-maria;Educação Física;Santa Maria;Diurno;licenciatura, bacharelado;ambiguo;13877;Educação Física;licenciatura;69;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:filosofia:santa-maria;Filosofia;Santa Maria;Noturno ou Integral;bacharelado, licenciatura;ambiguo;121602;Filosofia;bacharelado;0;186;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:filosofia:santa-maria;Filosofia;Santa Maria;Noturno ou Integral;bacharelado, licenciatura;ambiguo;13839;Filosofia;licenciatura;176;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:fisica:santa-maria;Física;Santa Maria;Diurno ou Noturno;bacharelado, licenciatura;ambiguo;13840;Física;licenciatura;134;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:fisica:santa-maria;Física;Santa Maria;Diurno ou Noturno;bacharelado, licenciatura;ambiguo;13899;Física;bacharelado;83;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:fisica:santa-maria;Física;Santa Maria;Diurno ou Noturno;bacharelado, licenciatura;ambiguo;41065;Física;licenciatura;0;207;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:geografia:santa-maria;Geografia;Santa Maria;Diurno;bacharelado, licenciatura;ambiguo;1113727;Geografia;bacharelado;143;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:geografia:santa-maria;Geografia;Santa Maria;Diurno;bacharelado, licenciatura;ambiguo;46588;Geografia;licenciatura;139;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:historia:santa-maria;História;Santa Maria;Diurno;bacharelado, licenciatura;ambiguo;1113732;História;bacharelado;15;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:historia:santa-maria;História;Santa Maria;Diurno;bacharelado, licenciatura;ambiguo;84427;História;licenciatura;36;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:matematica:santa-maria;Matemática;Santa Maria;Integral ou Noturno;bacharelado, licenciatura;ambiguo;1113741;Matemática;bacharelado;101;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:matematica:santa-maria;Matemática;Santa Maria;Integral ou Noturno;bacharelado, licenciatura;ambiguo;13873;Matemática;licenciatura;116;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:matematica:santa-maria;Matemática;Santa Maria;Integral ou Noturno;bacharelado, licenciatura;ambiguo;41069;Matemática;licenciatura;0;224;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:musica:santa-maria;Música;Santa Maria;;;ambiguo;13845;Música;bacharelado;135;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:musica:santa-maria;Música;Santa Maria;;;ambiguo;41072;Música;licenciatura;54;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:pedagogia:santa-maria;Pedagogia;Santa Maria;;;ambiguo;117717;Pedagogia;licenciatura;161;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:pedagogia:santa-maria;Pedagogia;Santa Maria;;;ambiguo;121286;Pedagogia;licenciatura;0;81;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsm:ciencia-de-dados-e-inteligencia-artificial:cachoeira-do-sul;Ciência de Dados e Inteligência Artificial;Cachoeira do Sul;;;sem_par;;;;;;;nao
+ufsm:direito:frederico-westphalen;Direito;Frederico Westphalen;;;sem_par;;;;;;;nao
+ufsm:engenharia-de-computacao:santa-maria;Engenharia de Computação;Santa Maria;Diurno;bacharelado;sem_par;121624;Engenharia Da Computação;bacharelado;;;preenchido à mão: mesmo curso com outro nome no Censo;sim
+ufsm:letras:santa-maria;Letras;Santa Maria;Diurno ou Noturno;bacharelado, licenciatura;sem_par;;;;;;;nao
+ufsm:licenciatura-intercultural-indigena:frederico-westphalen;Licenciatura Intercultural Indígena;Frederico Westphalen;Noturno;licenciatura;sem_par;;;;;;;nao
+ufsm:licenciatura-interdisciplinar-indigena:frederico-westphalen;Licenciatura Interdisciplinar Indígena;Frederico Westphalen;Matutino;licenciatura;sem_par;;;;;;;nao
+ufsm:myba-guarani-licenciatura-intercultural-indigena-mbya-guarani:santa-maria;Myba Guarani – Licenciatura Intercultural Indígena – Mbya Guarani;Santa Maria;;;sem_par;;;;;;;nao
+ufsm:nanotecnologia-e-inovacao-computacional:santa-maria;Nanotecnologia e Inovação Computacional;Santa Maria;Integral;bacharelado;sem_par;;;;;;;nao
+ufsm:producao-editorial:santa-maria;Produção Editorial;Santa Maria;Diurno;bacharelado;sem_par;1107232;Comunicação Social - Produção Editorial;bacharelado;;;preenchido à mão: mesmo curso com outro nome no Censo;sim
+ufsm:programa-especial-de-graduacao:santa-maria;Programa Especial de Graduação;Santa Maria;Diurno;licenciatura;sem_par;1113371;Programa Especial De Graduação De Formação De Professores Para A Educação Profissional;licenciatura;;;preenchido à mão: mesmo curso com outro nome no Censo;sim
+ufsm:publicidade-e-propaganda:santa-maria;Publicidade e Propaganda;Santa Maria;;;sem_par;40152;Comunicação Social - Publicidade E Propaganda;bacharelado;;;preenchido à mão: mesmo curso com outro nome no Censo;sim
+ufsm:quimica-industrial-e-quimica-bacharelado:santa-maria;Química Industrial e Química;Santa Maria;Diurno ou Integral;bacharelado;sem_par;;;;;;;nao
+ufsm:relacoes-publicas:santa-maria;Relações Públicas;Santa Maria;Diurno;bacharelado;sem_par;40153;Comunicação Social - Relações Públicas;bacharelado;;;preenchido à mão: mesmo curso com outro nome no Censo;sim
+ufsm:seguranca-cibernetica:santa-maria;SEGURANÇA CIBERNÉTICA;Santa Maria;;;sem_par;;;;;;;nao

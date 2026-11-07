@@ -1,0 +1,17 @@
+User-agent: *
+
+Disallow: /feed/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content
+Disallow: /xmlrpc.php 
+Disallow: /wp/*
+
+Sitemap: https://www.ufsm.br/wp-sitemap.xml
+Sitemap: https://www.ufsm.br/65-anos/wp-sitemap.xml
+Sitemap: https://www.ufsm.br/comunicacao/wp-sitemap.xml
+Sitemap: https://www.ufsm.br/cursos/graduacao/educacao-a-distancia/computacao/wp-sitemap.xml
+Sitemap: https://www.ufsm.br/cursos/graduacao/santa-maria/administracao/wp-sitemap.xml
+Sitemap: https://www.ufsm.br/cursos/graduacao/santa-maria/ciencias-biologicas/wp-sitemap.xml
+Sitemap: https://www.ufsm.br/cursos/graduacao/santa-maria/danca-bacharelado/wp-sitemap.xml
+Sitemap: https://www.ufsm.br/cursos/tecnico/santa-maria/administracao/wp-sitemap.xml

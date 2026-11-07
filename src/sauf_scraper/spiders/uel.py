@@ -11,6 +11,7 @@ from sauf_scraper.core.models import (
     LoteIngestao,
     Modalidade,
     Opcao,
+    juntar_por_grau,
     montar_chave_curso,
     semestres_de_texto,
 )
@@ -82,18 +83,17 @@ def montar_curso(item: CursoListado, detalhes: DetalhesCurso) -> Curso:
 
 
 def opcoes_da_pagina(detalhes: DetalhesCurso) -> list[Opcao]:
-    """Uma Opcao por coluna do bloco (grau + turno), sem repetir o mesmo par.
+    """Uma Opcao por grau, com os turnos das colunas desse grau ("Matutino ou Noturno").
 
     "Bacharelado e Licenciatura" vira duas opções no mesmo turno, como nas outras IES
     (sauf-api/docs/DECISOES.md, seção 6, item 5).
     """
-    opcoes: list[Opcao] = []
-    for coluna in detalhes.opcoes:
-        for grau in graus_do_texto(coluna.grau):
-            opcao = Opcao(grau=grau, turno=_capitalizar(coluna.turno))
-            if opcao not in opcoes:
-                opcoes.append(opcao)
-    return opcoes
+    opcoes = [
+        Opcao(grau=grau, turno=_capitalizar(coluna.turno))
+        for coluna in detalhes.opcoes
+        for grau in graus_do_texto(coluna.grau)
+    ]
+    return juntar_por_grau(opcoes)
 
 
 def turno_da_pagina(detalhes: DetalhesCurso) -> str | None:

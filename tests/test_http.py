@@ -1,4 +1,5 @@
 import pytest
+import requests
 import responses
 
 from sauf_scraper.client.http import BloqueadoPorRobotsError, HttpEducado
@@ -32,3 +33,21 @@ def test_envia_user_agent_do_bot(settings):
     HttpEducado(settings).get("https://site.br/cursos")
 
     assert responses.calls[-1].request.headers["User-Agent"] == settings.user_agent
+
+
+@responses.activate
+def test_conexao_que_cai_tenta_mais_uma_vez(settings):
+    responses.get("https://site.br/robots.txt", status=404)
+    responses.get("https://site.br/cursos", body=requests.ConnectionError("caiu"))
+    responses.get("https://site.br/cursos", body="ok")
+
+    assert HttpEducado(settings).get("https://site.br/cursos").text == "ok"
+
+
+@responses.activate
+def test_conexao_que_cai_duas_vezes_desiste(settings):
+    responses.get("https://site.br/robots.txt", status=404)
+    responses.get("https://site.br/cursos", body=requests.ConnectionError("caiu"))
+
+    with pytest.raises(requests.ConnectionError):
+        HttpEducado(settings).get("https://site.br/cursos")

@@ -1,0 +1,109 @@
+chave;nome_site;cidade;turno_site;grau_site;status;codigo_emec;nome_censo;grau_censo;vagas_diurno;vagas_noturno;sugestao;confirmado
+ufsc:administracao:florianopolis;Administração;Florianópolis;;;direto;14213;Administração;bacharelado;226;166;;sim
+ufsc:agronomia:curitibanos;Agronomia;Curitibanos;;;direto;1184410;Agronomia;bacharelado;382;0;;sim
+ufsc:agronomia:florianopolis;Agronomia;Florianópolis;;;direto;14214;Agronomia;bacharelado;227;0;;sim
+ufsc:animacao:florianopolis;Animação;Florianópolis;;;direto;1333514;Animação;bacharelado;40;0;;sim
+ufsc:antropologia:florianopolis;Antropologia;Florianópolis;;;direto;1115811;Antropologia;bacharelado;49;0;;sim
+ufsc:arquitetura-e-urbanismo:florianopolis;Arquitetura e Urbanismo;Florianópolis;;bacharelado;direto;14215;Arquitetura E Urbanismo;bacharelado;80;0;;sim
+ufsc:arquivologia:florianopolis;Arquivologia;Florianópolis;;;direto;1108414;Arquivologia;bacharelado;169;0;;sim
+ufsc:artes-cenicas:florianopolis;Artes Cênicas;Florianópolis;;;direto;111962;Artes Cênicas;bacharelado;0;30;;sim
+ufsc:biblioteconomia:florianopolis;Biblioteconomia;Florianópolis;;;direto;14216;Biblioteconomia;bacharelado;0;150;;sim
+ufsc:ciencia-da-informacao:florianopolis;Ciência da Informação;Florianópolis;;;direto;1330164;Ciência Da Informação;bacharelado;40;0;;sim
+ufsc:ciencia-e-tecnologia-de-alimentos:florianopolis;Ciência e Tecnologia de Alimentos;Florianópolis;;;direto;116534;Ciência E Tecnologia De Alimentos;bacharelado;225;0;;sim
+ufsc:ciencia-e-tecnologia:joinville;Ciência e Tecnologia;Joinville;;;direto;1084137;Ciência E Tecnologia;bacharelado;123;0;;sim
+ufsc:ciencias-contabeis:florianopolis;Ciências Contábeis;Florianópolis;;;direto;14219;Ciências Contábeis;bacharelado;170;174;;sim
+ufsc:ciencias-economicas:florianopolis;Ciências Econômicas;Florianópolis;;;direto;14220;Ciências Econômicas;bacharelado;221;232;;sim
+ufsc:cinema:florianopolis;Cinema;Florianópolis;;;direto;86625;Cinema;bacharelado;30;0;;sim
+ufsc:design-de-produto:florianopolis;Design de Produto;Florianópolis;;;direto;116530;Design De Produto;bacharelado;40;0;;sim
+ufsc:design:florianopolis;Design;Florianópolis;;;direto;116526;Design;bacharelado;40;0;;sim
+ufsc:direito:florianopolis;Direito;Florianópolis;;;direto;14223;Direito;bacharelado;99;109;;sim
+ufsc:educacao-do-campo:florianopolis;Educação do Campo;Florianópolis;;;direto;122346;Educação Do Campo;licenciatura;77;0;;sim
+ufsc:enfermagem:florianopolis;Enfermagem;Florianópolis;;;direto;14225;Enfermagem;bacharelado;79;0;;sim
+ufsc:engenharia-aeroespacial:joinville;Engenharia Aeroespacial;Joinville;;bacharelado;direto;1270287;Engenharia Aeroespacial;bacharelado;53;0;;sim
+ufsc:engenharia-automotiva:joinville;Engenharia Automotiva;Joinville;;bacharelado;direto;1270297;Engenharia Automotiva;bacharelado;85;0;;sim
+ufsc:engenharia-civil-de-infraestrutura:joinville;Engenharia Civil de Infraestrutura;Joinville;;bacharelado;direto;1270310;Engenharia Civil De Infraestrutura;bacharelado;141;0;;sim
+ufsc:engenharia-civil:florianopolis;Engenharia Civil;Florianópolis;;bacharelado;direto;14241;Engenharia Civil;bacharelado;134;0;;sim
+ufsc:engenharia-de-alimentos:florianopolis;Engenharia de Alimentos;Florianópolis;;bacharelado;direto;14226;Engenharia De Alimentos;bacharelado;188;0;;sim
+ufsc:engenharia-de-aquicultura:florianopolis;Engenharia de Aquicultura;Florianópolis;;bacharelado;direto;20133;Engenharia De Aquicultura;bacharelado;318;0;;sim
+ufsc:engenharia-de-computacao:ararangua;Engenharia de Computação;Araranguá;;bacharelado;direto;1133610;Engenharia De Computação;bacharelado;115;0;;sim
+ufsc:engenharia-de-controle-e-automacao:blumenau;Engenharia de Controle e Automação;Blumenau;;bacharelado;direto;1270376;Engenharia De Controle E Automação;bacharelado;363;0;;sim
+ufsc:engenharia-de-controle-e-automacao:florianopolis;Engenharia de Controle e Automação;Florianópolis;;bacharelado;direto;14249;Engenharia De Controle E Automação;bacharelado;87;0;;sim
+ufsc:engenharia-de-energia:ararangua;Engenharia de Energia;Araranguá;;bacharelado;direto;1105824;Engenharia De Energia;bacharelado;192;0;;sim
+ufsc:engenharia-de-materiais:blumenau;Engenharia de Materiais;Blumenau;;bacharelado;direto;1270375;Engenharia De Materiais;bacharelado;426;0;;sim
+ufsc:engenharia-de-materiais:florianopolis;Engenharia de Materiais;Florianópolis;;bacharelado;direto;20135;Engenharia De Materiais;bacharelado;145;0;;sim
+ufsc:engenharia-de-producao-civil:florianopolis;Engenharia de Produção Civil;Florianópolis;;bacharelado;direto;35550;Engenharia De Produção Civil;bacharelado;0;0;;sim
+ufsc:engenharia-de-producao-eletrica:florianopolis;Engenharia de Produção Elétrica;Florianópolis;;bacharelado;direto;31945;Engenharia De Produção Elétrica;bacharelado;0;0;;sim
+ufsc:engenharia-de-producao-mecanica:florianopolis;Engenharia de Produção Mecânica;Florianópolis;;bacharelado;direto;23960;Engenharia De Produção Mecânica;bacharelado;0;0;;sim
+ufsc:engenharia-eletrica:florianopolis;Engenharia Elétrica;Florianópolis;;bacharelado;direto;14242;Engenharia Elétrica;bacharelado;158;0;;sim
+ufsc:engenharia-eletronica:florianopolis;Engenharia Eletrônica;Florianópolis;;bacharelado;direto;122341;Engenharia Eletrônica;bacharelado;151;0;;sim
+ufsc:engenharia-ferroviaria-e-metroviaria:joinville;Engenharia Ferroviária e Metroviária;Joinville;;bacharelado;direto;1270303;Engenharia Ferroviária E Metroviária;bacharelado;167;0;;sim
+ufsc:engenharia-florestal:curitibanos;Engenharia Florestal;Curitibanos;;bacharelado;direto;1184098;Engenharia Florestal;bacharelado;261;0;;sim
+ufsc:engenharia-mecanica:florianopolis;Engenharia Mecânica;Florianópolis;;bacharelado;direto;14243;Engenharia Mecânica;bacharelado;116;0;;sim
+ufsc:engenharia-mecatronica:joinville;Engenharia Mecatrônica;Joinville;;bacharelado;direto;1270305;Engenharia Mecatrônica;bacharelado;62;0;;sim
+ufsc:engenharia-naval:joinville;Engenharia Naval;Joinville;;bacharelado;direto;1270308;Engenharia Naval;bacharelado;132;0;;sim
+ufsc:engenharia-quimica:florianopolis;Engenharia Química;Florianópolis;;bacharelado;direto;14247;Engenharia Química;bacharelado;71;0;;sim
+ufsc:engenharia-sanitaria-e-ambiental:florianopolis;Engenharia Sanitária e Ambiental;Florianópolis;;bacharelado;direto;14248;Engenharia Sanitaria E Ambiental;bacharelado;223;0;;sim
+ufsc:engenharia-textil:blumenau;Engenharia Têxtil;Blumenau;;bacharelado;direto;1270377;Engenharia Têxtil;bacharelado;501;0;;sim
+ufsc:farmacia:florianopolis;Farmácia;Florianópolis;;;direto;14227;Farmácia;bacharelado;170;0;;sim
+ufsc:fisioterapia:ararangua;Fisioterapia;Araranguá;;;direto;1126962;Fisioterapia;bacharelado;145;0;;sim
+ufsc:fonoaudiologia:florianopolis;Fonoaudiologia;Florianópolis;;;direto;122343;Fonoaudiologia;bacharelado;71;0;;sim
+ufsc:geologia:florianopolis;Geologia;Florianópolis;;;direto;1114547;Geologia;bacharelado;73;0;;sim
+ufsc:jornalismo:florianopolis;Jornalismo;Florianópolis;;;direto;14222;Jornalismo;bacharelado;60;0;;sim
+ufsc:matematica-bacharelado:florianopolis;Matemática;Florianópolis;;bacharelado;direto;25831;Matemática;bacharelado;127;0;;sim
+ufsc:matematica-licenciatura:blumenau;Matemática;Blumenau;;licenciatura;direto;1270371;Matemática;licenciatura;269;213;;sim
+ufsc:matematica-licenciatura:florianopolis;Matemática;Florianópolis;;licenciatura;direto;14233;Matemática;licenciatura;380;0;;sim
+ufsc:medicina-veterinaria:curitibanos;Medicina Veterinária;Curitibanos;;;direto;1175716;Medicina Veterinária;bacharelado;105;0;;sim
+ufsc:medicina:ararangua;Medicina;Araranguá;;;direto;5001427;Medicina;bacharelado;65;0;;sim
+ufsc:medicina:florianopolis;Medicina;Florianópolis;;;direto;14234;Medicina;bacharelado;100;0;;sim
+ufsc:meteorologia:florianopolis;Meteorologia;Florianópolis;;;direto;1169589;Meteorologia;bacharelado;156;0;;sim
+ufsc:museologia:florianopolis;Museologia;Florianópolis;;;direto;1115842;Museologia;bacharelado;61;0;;sim
+ufsc:nutricao:florianopolis;Nutrição;Florianópolis;;;direto;14235;Nutrição;bacharelado;70;0;;sim
+ufsc:oceanografia:florianopolis;Oceanografia;Florianópolis;;;direto;111956;Oceanografia;bacharelado;68;0;;sim
+ufsc:odontologia:florianopolis;Odontologia;Florianópolis;;;direto;14236;Odontologia;bacharelado;100;0;;sim
+ufsc:pedagogia:florianopolis;Pedagogia;Florianópolis;;;direto;14237;Pedagogia;licenciatura;115;0;;sim
+ufsc:quimica-bacharelado:blumenau;Química;Blumenau;;bacharelado;direto;1453638;Química;bacharelado;173;0;;sim
+ufsc:quimica-licenciatura:blumenau;Química;Blumenau;;licenciatura;direto;1270372;Química;licenciatura;0;253;;sim
+ufsc:relacoes-internacionais:florianopolis;Relações Internacionais;Florianópolis;;;direto;116532;Relações Internacionais;bacharelado;80;0;;sim
+ufsc:secretariado-executivo:florianopolis;Secretariado Executivo;Florianópolis;;;direto;82368;Secretariado Executivo;bacharelado;0;148;;sim
+ufsc:servico-social:florianopolis;Serviço Social;Florianópolis;;;direto;14240;Serviço Social;bacharelado;0;138;;sim
+ufsc:sistemas-de-informacao:florianopolis;Sistemas de Informação;Florianópolis;;;direto;21600;Sistemas De Informação;bacharelado;0;100;;sim
+ufsc:tecnologias-da-informacao-e-comunicacao:ararangua;Tecnologias da Informação e Comunicação;Araranguá;;;direto;1084054;Tecnologias Da Informação E Comunicação;bacharelado;0;60;;sim
+ufsc:zootecnia:florianopolis;Zootecnia;Florianópolis;;;direto;111954;Zootecnia;bacharelado;110;0;;sim
+ufsc:ciencias-biologicas:florianopolis;Ciências Biológicas;Florianópolis;;bacharelado, licenciatura;ambiguo;1116025;Ciências Biológicas;licenciatura;0;129;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:ciencias-biologicas:florianopolis;Ciências Biológicas;Florianópolis;;bacharelado, licenciatura;ambiguo;14218;Ciências Biológicas;licenciatura;0;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:ciencias-biologicas:florianopolis;Ciências Biológicas;Florianópolis;;bacharelado, licenciatura;ambiguo;314218;Ciências Biológicas;bacharelado;3;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:ciencias-sociais:florianopolis;Ciências Sociais;Florianópolis;;bacharelado, licenciatura;ambiguo;14221;Ciências Sociais;licenciatura;10;3;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:ciencias-sociais:florianopolis;Ciências Sociais;Florianópolis;;bacharelado, licenciatura;ambiguo;314221;Ciências Sociais;bacharelado;3;7;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:educacao-fisica:florianopolis;Educação Física;Florianópolis;;bacharelado, licenciatura;ambiguo;14224;Educação Física;licenciatura;74;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:educacao-fisica:florianopolis;Educação Física;Florianópolis;;bacharelado, licenciatura;ambiguo;97099;Educação Física;bacharelado;61;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:filosofia:florianopolis;Filosofia;Florianópolis;;bacharelado, licenciatura;ambiguo;14228;Filosofia;licenciatura;89;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:filosofia:florianopolis;Filosofia;Florianópolis;;bacharelado, licenciatura;ambiguo;314228;Filosofia;bacharelado;0;64;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:fisica:florianopolis;Física;Florianópolis;;bacharelado, licenciatura;ambiguo;14229;Física;bacharelado;139;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:fisica:florianopolis;Física;Florianópolis;;bacharelado, licenciatura;ambiguo;42696;Física;licenciatura;0;258;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:geografia:florianopolis;Geografia;Florianópolis;;bacharelado, licenciatura;ambiguo;14230;Geografia;licenciatura;6;2;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:geografia:florianopolis;Geografia;Florianópolis;;bacharelado, licenciatura;ambiguo;314230;Geografia;bacharelado;4;1;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:historia:florianopolis;História;Florianópolis;;bacharelado, licenciatura;ambiguo;14231;História;licenciatura;0;5;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:historia:florianopolis;História;Florianópolis;;bacharelado, licenciatura;ambiguo;314231;História;bacharelado;0;5;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:letras-alemao:florianopolis;Letras – Alemão;Florianópolis;;;ambiguo;351917;Letras - Alemão;bacharelado;73;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:letras-alemao:florianopolis;Letras – Alemão;Florianópolis;;;ambiguo;51917;Letras - Alemão;licenciatura;63;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:letras-espanhol:florianopolis;Letras – Espanhol;Florianópolis;;;ambiguo;351937;Letras - Espanhol;bacharelado;65;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:letras-espanhol:florianopolis;Letras – Espanhol;Florianópolis;;;ambiguo;51937;Letras - Espanhol;licenciatura;41;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:letras-frances:florianopolis;Letras – Francês;Florianópolis;;;ambiguo;351938;Letras - Francês;bacharelado;54;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:letras-frances:florianopolis;Letras – Francês;Florianópolis;;;ambiguo;51938;Letras - Francês;licenciatura;45;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:letras-ingles:florianopolis;Letras – Inglês;Florianópolis;;;ambiguo;351941;Letras - Inglês;bacharelado;20;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:letras-ingles:florianopolis;Letras – Inglês;Florianópolis;;;ambiguo;51941;Letras - Inglês;licenciatura;8;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:letras-italiano:florianopolis;Letras – Italiano;Florianópolis;;;ambiguo;351943;Letras - Italiano;bacharelado;60;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:letras-italiano:florianopolis;Letras – Italiano;Florianópolis;;;ambiguo;51943;Letras - Italiano;licenciatura;49;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:letras-libras:florianopolis;Letras - Libras;Florianópolis;;;ambiguo;122348;Letras - Libras;bacharelado;79;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:letras-libras:florianopolis;Letras - Libras;Florianópolis;;;ambiguo;122350;Letras - Libras;licenciatura;39;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:psicologia:florianopolis;Psicologia;Florianópolis;;;ambiguo;14238;Psicologia;licenciatura;33;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:psicologia:florianopolis;Psicologia;Florianópolis;;;ambiguo;314238;Psicologia;bacharelado;91;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:quimica:florianopolis;Química;Florianópolis;;bacharelado, licenciatura;ambiguo;116536;Química;licenciatura;123;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:quimica:florianopolis;Química;Florianópolis;;bacharelado, licenciatura;ambiguo;314239;Química;bacharelado;203;0;uma página, vários: confirmar os códigos que esta página cobre;sim
+ufsc:ciencia-de-dados:florianopolis;Ciência de Dados;Florianópolis;;;sem_par;;;;;;;nao
+ufsc:ciencias-da-computacao:florianopolis;Ciências da Computação;Florianópolis;;;sem_par;14217;Ciência Da Computação;bacharelado;;;preenchido à mão: mesmo curso com outro nome no Censo;sim
+ufsc:engenharia-de-producao-plena:florianopolis;Engenharia de Produção Plena;Florianópolis;;bacharelado;sem_par;1608913;Engenharia De Produção;bacharelado;;;preenchido à mão: mesmo curso com outro nome no Censo;sim
+ufsc:engenharia-de-transportes-e-logistica:joinville;Engenharia de Transportes e Logística;Joinville;;bacharelado;sem_par;1270311;Engenharia De Transporte E Logística;bacharelado;;;preenchido à mão: mesmo curso com outro nome no Censo;sim
+ufsc:letras-portugues:florianopolis;Letras – Português;Florianópolis;;;sem_par;;;;;;;nao
+ufsc:licenciatura-indigena:florianopolis;Licenciatura Indígena;Florianópolis;;licenciatura;sem_par;1156456;Licenciatura Intercultural Indígena;licenciatura;;;preenchido à mão: mesmo curso com outro nome no Censo;sim
+ufsc:medicina:curitibanos;Medicina;Curitibanos;;;sem_par;;;;;;;nao

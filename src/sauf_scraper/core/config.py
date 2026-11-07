@@ -49,7 +49,8 @@ class Settings(BaseSettings):
 
     api_base_url: str = "http://localhost:8080"
     api_key: SecretStr | None = None
-    api_timeout_seconds: float = 30.0
+    # O POST do censo no Supabase remoto leva uns 3 min (no Docker local, segundos).
+    api_timeout_seconds: float = 300.0
 
     user_agent: str = "SAUF-BR-Bot/0.1"
     request_delay_seconds: float = 2.0

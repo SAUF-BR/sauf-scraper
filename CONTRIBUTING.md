@@ -107,7 +107,7 @@ fictícia tem chave `xyz` e código e-MEC `1234`.
 
 No `LoteIngestao` tudo é obrigatório: `execucaoId`, `fonte`, `codigoEmecInstituicao` e
 `cursos`. "Não obrigatório" só quer dizer que a validação aceita `null`; o que uma IES precisa
-para contar como **completa** está no [checklist](docs/CHECKLIST_SCRAPERS.md#14-mais-2-universidades-ufsc-e-ufsm-).
+para contar como **completa** está no [checklist](docs/CHECKLIST_SCRAPERS.md#16-o-que-cada-ies-entrega).
 
 ## 3. Enviando os dados
 

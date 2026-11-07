@@ -1,7 +1,15 @@
 import pytest
 from pydantic import ValidationError
 
-from sauf_scraper.core.models import Curso, LoteIngestao, montar_chave_curso, semestres_de_texto
+from sauf_scraper.core.models import (
+    Curso,
+    Grau,
+    LoteIngestao,
+    Opcao,
+    juntar_por_grau,
+    montar_chave_curso,
+    semestres_de_texto,
+)
 
 URL = "https://www.exemplo.br/curso/abc123"
 
@@ -113,3 +121,27 @@ def test_semestres_de_texto(texto, semestres):
 
 def test_montar_chave_curso_ignora_partes_vazias():
     assert montar_chave_curso("UEM", "", "Física") == "uem:fisica"
+
+
+def test_juntar_por_grau_une_os_turnos_do_mesmo_grau():
+    opcoes = [
+        Opcao(grau=Grau.BACHARELADO, turno="Matutino"),
+        Opcao(grau=Grau.LICENCIATURA, turno="Noturno"),
+        Opcao(grau=Grau.BACHARELADO, turno="Noturno"),
+        Opcao(grau=Grau.BACHARELADO, turno="Noturno"),
+    ]
+
+    assert juntar_por_grau(opcoes) == [
+        Opcao(grau=Grau.BACHARELADO, turno="Matutino ou Noturno"),
+        Opcao(grau=Grau.LICENCIATURA, turno="Noturno"),
+    ]
+
+
+def test_curso_com_grau_repetido_nas_opcoes_e_invalido():
+    with pytest.raises(ValidationError, match="grau repetido"):
+        Curso(
+            chave="x:y",
+            url_origem="https://x.br/",
+            nome="Y",
+            opcoes=[Opcao(grau=Grau.BACHARELADO), Opcao(grau=Grau.BACHARELADO, turno="Noturno")],
+        )

@@ -178,6 +178,7 @@ Para ver o que seria enviado **sem mandar nada** para a API, troque os passos 2 
 | `422` "Instituição com código e-MEC 57 não está cadastrada. Rode o import do Censo antes." | A coleta (`--ies uem`) rodou antes do `censo`. | Rodar `uv run sauf-scraper censo` (passo 2) e depois a coleta de novo. |
 | `401` | `SAUF_API_KEY` diferente nos dois `.env`. | Deixar os dois valores iguais e reiniciar a API. |
 | `Connection refused` / `ConnectError` | A API não está no ar ou o `SAUF_API_BASE_URL` está errado. | Subir a API (passo 1) e conferir a URL (`http://localhost:8080`, sem `/api/v1`). |
+| `ReadTimeout` (`Read timed out`) | A API demorou mais que `SAUF_API_TIMEOUT_SECONDS` (padrão 300 s) para responder; acontece no `censo` contra o Supabase remoto. | Os dados podem ter sido gravados mesmo assim: confira em `/api/v1/universidades` antes de rodar de novo. Se precisar, aumente `SAUF_API_TIMEOUT_SECONDS` no `.env`. |
 | Arquivo do Censo não encontrado | Microdados fora da pasta esperada. | Ajustar `SAUF_CENSO_DIR` ou usar `--pasta`. |
 
 ## Estrutura

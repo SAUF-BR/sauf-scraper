@@ -1,7 +1,7 @@
 # Checklist dos scrapers
 
 O que existe, o que falta e o que cada scraper entrega (base: análise do protótipo e
-D-38 a D-47). Como criar um spider: [CONTRIBUTING.md](../CONTRIBUTING.md). Atualizado em 10/10/2026.
+D-38 a D-47). Como criar um spider: [CONTRIBUTING.md](../CONTRIBUTING.md). Atualizado em 07/11/2026.
 
 Legenda: ✅ feito · 🟡 com pendência · 🔜 próxima · ❌ falta · ⏸️ adiado/fora do MVP · 🚫 fora do plano · ➖ não se aplica
 
@@ -49,7 +49,7 @@ muitas IES com poucos dados (P-35, opção c → D-43).
 | Item | Estado | Observação |
 |---|---|---|
 | Lista de cursos: nome, cidade/UF, link (`urlOrigem`) | ✅ | 46 cursos com página em graduacao.uel.br (campus único, Londrina). Ficam de fora 2 EaD (site do NEAD) e 3 "(novo curso)" sem página. |
-| Grau + turno (`opcoes`) | ✅ | Uma coluna por opção no bloco do curso; "Bacharelado e Licenciatura" vira duas opções. |
+| Grau + turno (`opcoes`) | ✅ | Uma opção por grau, com os turnos das colunas desse grau ("Matutino ou Noturno", como na UEM; a API guarda uma opção por grau); "Bacharelado e Licenciatura" vira duas opções. |
 | Modalidade | ✅ | Todos `presencial`. |
 | Duração em semestres | 🟡 | "4.5 ANOS" → 9. Física e Química têm durações diferentes por grau: o texto lista cada uma e `duracaoSemestres` fica vazio. |
 | `sobre` | 🟡 | Só a frase de chamada do cabeçalho (~200 caracteres). |
@@ -82,19 +82,56 @@ fica de fora da tabela de casamento.
 - [ ] Sisu: 105 de 107 linhas casam. Sobram 1690306 (Engenharia de Produção, Curitiba, Integral) e 102667 (Design, Curitiba).
 - [ ] Bacharelado em Química Ambiental (Curitiba): a página do curso responde 401 (não é pública); entra só com nome, grau e link.
 
-### 1.4. Mais 2 universidades: UFSC e UFSM ❌
+### 1.4. UFSC: Universidade Federal de Santa Catarina (e-MEC 585, `--ies ufsc`) 🟡
 
-Selecionadas em 31/10/2026. Cada uma precisa entregar:
+| Item | Estado | Observação |
+|---|---|---|
+| Lista de cursos: nome, cidade/UF, link (`urlOrigem`) | ✅ | 92 cursos em 5 campi, da tabela de https://guiadecursos.ufsc.br/listagem/. Os EaD ficam numa página à parte e ficam de fora. |
+| Grau (`opcoes`) | 🟡 | 42 de 92 pelo nome ou título ("Matemática – Licenciatura", "Química (Licenciatura, Bacharelado e Tecnológica)") e engenharias/arquitetura = bacharelado; os outros recebem o grau do Censo pelo casamento. |
+| Turno | ➖ | O guia não informa: fica `null`. |
+| Modalidade | ✅ | Todos `presencial`. |
+| Duração em semestres | ➖ | O guia não informa: fica `null`. |
+| `sobre` | ✅ | 92 de 92: texto da página até o separador dos depoimentos (depoimentos com nome de estudante ficam de fora, LGPD). |
+| `mercadoTrabalho` | ➖ | Sem seção própria (o assunto aparece no meio do texto corrido): fica `null`. |
+| Casamento com códigos e-MEC | 🟡 | `spiders/dados/ufsc_codigos.csv`: 70 diretos + 15 páginas com bacharelado e licenciatura (31 linhas, confirmadas) + 4 preenchidos à mão (candidato único no Censo); 3 sem par. |
 
-**Obrigatório para contar como "completa":**
+**Pendências da UFSC:**
 
-- [ ] Lista de cursos: nome, campus/cidade/UF e link da página (`urlOrigem`)
-- [ ] Grau + turno (`opcoes`)
-- [ ] Modalidade
-- [ ] Duração em semestres (`duracaoSemestres`, mantendo `duracaoTexto`)
-- [ ] `sobre` (texto do curso)
-- [ ] `mercadoTrabalho` (quando a página tiver a seção)
-- [ ] Casamento com os códigos e-MEC (`spiders/dados/<chave>_codigos.csv` revisado)
+- [ ] 3 cursos sem par: Ciência de Dados (Florianópolis) e Medicina (Curitibanos), sem código no Censo 2024 (provavelmente novos); Letras – Português (Florianópolis), com 2 candidatos no Censo (bacharelado 351945 e licenciatura 51945), deixado sem par pela regra do candidato único.
+- [ ] Preenchidos à mão (conferir): Ciências da Computação → 14217 "Ciência da Computação"; Engenharia de Produção Plena → 1608913 "Engenharia de Produção"; Engenharia de Transportes e Logística (Joinville) → 1270311; Licenciatura Indígena → 1156456 "Licenciatura Intercultural Indígena".
+
+### 1.5. UFSM: Universidade Federal de Santa Maria (e-MEC 582, `--ies ufsm`) 🟡
+
+| Item | Estado | Observação |
+|---|---|---|
+| Lista de cursos: nome, cidade/UF, link (`urlOrigem`) | ✅ | 97 cursos em 4 campi, pelas linhas `Sitemap:` do https://www.ufsm.br/robots.txt (o site não tem uma página com a lista). Os EaD (`educacao-a-distancia`) ficam de fora. |
+| Grau + turno (`opcoes`) | 🟡 | 88 de 97, pelo texto-modelo "Apresentação" (grau, modalidade, turno e períodos de cada habilitação); uma opção por grau ("Diurno ou Noturno"). O bloco "Núcleo Comum" (ABI) fica de fora. 9 páginas não têm o bloco: o grau vem do Censo quando há casamento. |
+| Modalidade | 🟡 | 88 de 97 (`presencial`); `null` nas 9 páginas sem o bloco. |
+| Duração em semestres | 🟡 | 81 de 97 ("8 períodos semestrais" → 8). 7 cursos têm durações diferentes por habilitação: o texto lista cada uma e `duracaoSemestres` fica vazio, como na UEL. |
+| `sobre` | 🟡 | 38 de 97: só da página "Sobre o curso" (`…/sobre-o-curso/`); 59 cursos não têm essa página (404). |
+| `mercadoTrabalho` | 🟡 | 16 de 97: seção "Áreas de atuação" (e variações) da página "Sobre o curso". |
+| Casamento com códigos e-MEC | 🟡 | `spiders/dados/ufsm_codigos.csv`: 65 diretos + 18 páginas com mais de um código no Censo (turno ou grau; 39 linhas, confirmadas) + 5 preenchidos à mão (candidato único); 9 sem par. |
+
+**Pendências da UFSM:**
+
+- [ ] `sobre` só para 38 cursos. Os outros sites de curso usam páginas com nomes diferentes no menu ("Descrição do Curso", "Sobre"…); seguir o link do menu é a próxima melhoria (a página "Sobre" = `informacoes-gerais` cita coordenação pelo nome e não serve).
+- [ ] 9 sem par: Ciência de Dados e IA (Cachoeira do Sul), Direito (Frederico Westphalen), Nanotecnologia e Inovação Computacional, Segurança Cibernética, Licenciatura Intercultural Indígena e Licenciatura Interdisciplinar Indígena (Frederico Westphalen) e Mbya Guarani (Santa Maria), sem código no Censo 2024; Letras e "Química Industrial e Química Bacharelado" (Santa Maria), com mais de um candidato.
+- [ ] Preenchidos à mão (conferir): Engenharia de Computação → 121624; Produção Editorial → 1107232; Publicidade e Propaganda → 40152; Relações Públicas (Santa Maria) → 40153; Programa Especial de Graduação → 1113371 (formação de professores para a educação profissional).
+- [ ] "Programa Especial de Graduação" (3 semestres, licenciatura) entrou como curso porque está na lista de graduação do site; confirmar se deve aparecer.
+
+---
+
+### 1.6. O que cada IES entrega
+
+**Obrigatório para contar como "completa"** (quando o site tem o dado):
+
+- Lista de cursos: nome, campus/cidade/UF e link da página (`urlOrigem`)
+- Grau + turno (`opcoes`, uma opção por grau)
+- Modalidade
+- Duração em semestres (`duracaoSemestres`, mantendo `duracaoTexto`)
+- `sobre` (texto do curso)
+- `mercadoTrabalho` (quando a página tiver a seção)
+- Casamento com os códigos e-MEC (`spiders/dados/<chave>_codigos.csv` revisado)
 
 **Opcional:**
 

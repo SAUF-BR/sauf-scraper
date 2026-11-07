@@ -109,10 +109,7 @@ def test_montar_curso_de_administracao():
 
     assert curso.chave == "uel:administracao:londrina:matutino-ou-noturno"
     assert str(curso.url_origem) == "https://graduacao.uel.br/administracao/"
-    assert curso.opcoes == [
-        Opcao(grau=Grau.BACHARELADO, turno="Matutino"),
-        Opcao(grau=Grau.BACHARELADO, turno="Noturno"),
-    ]
+    assert curso.opcoes == [Opcao(grau=Grau.BACHARELADO, turno="Matutino ou Noturno")]
     assert curso.turno == "Matutino ou Noturno"
     assert (curso.duracao_texto, curso.duracao_semestres) == ("4.5 anos", 9)
     assert curso.modalidade == Modalidade.PRESENCIAL

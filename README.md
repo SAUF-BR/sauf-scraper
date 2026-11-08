@@ -181,6 +181,70 @@ Para ver o que seria enviado **sem mandar nada** para a API, troque os passos 2 
 | `ReadTimeout` (`Read timed out`) | A API demorou mais que `SAUF_API_TIMEOUT_SECONDS` (padrão 300 s) para responder; acontece no `censo` contra o Supabase remoto. | Os dados podem ter sido gravados mesmo assim: confira em `/api/v1/universidades` antes de rodar de novo. Se precisar, aumente `SAUF_API_TIMEOUT_SECONDS` no `.env`. |
 | Arquivo do Censo não encontrado | Microdados fora da pasta esperada. | Ajustar `SAUF_CENSO_DIR` ou usar `--pasta`. |
 
+## Banco de questões (ENEM)
+
+Questões do ENEM 2022, 2023 e 2024 para os simulados (ADR-SC-010). O texto vem do dataset
+[maritaca-ai/enem](https://huggingface.co/datasets/maritaca-ai/enem) (Apache-2.0); o gabarito
+oficial, a área, a habilidade e a dificuldade (parâmetro B da TRI) vêm do `ITENS_PROVA` dos
+microdados do ENEM (INEP). A API precisa estar no ar, como no passo 1 acima.
+
+1. Baixe o zip dos microdados do ano em
+   `https://download.inep.gov.br/microdados/microdados_enem_<ano>.zip` (é grande) e extraia
+   **só** `DADOS/ITENS_PROVA_<ano>.csv` para `fontes/enem/` (fora do Git). No Windows, abra o
+   zip no Explorer e arraste o arquivo, ou use o 7-Zip:
+   `7z e microdados_enem_2024.zip DADOS/ITENS_PROVA_2024.csv -ofontes/enem`.
+2. Rode (o `<ano>.jsonl` do maritaca é baixado para `fontes/enem/` se ainda não estiver lá):
+
+```powershell
+uv run sauf-scraper questoes enem --ano 2022 2023 2024 --dry-run   # grava output/questoes-enem-<ano>.json
+uv run sauf-scraper questoes enem --ano 2022 2023 2024             # envia para POST /api/v1/ingestao/questoes
+```
+
+Cada ano vira dois lotes (dia 1: questões 1 a 90; dia 2: 91 a 180), sempre no caderno
+**laranja**, que é o da versão em texto do dataset. O comando confere o gabarito do dataset com
+o do INEP e para com erro se menos de 90% bater (sinal de `ITENS_PROVA` de outro ano). Quando
+diverge, vale o do INEP. Reenviar atualiza as questões, sem duplicar.
+
+Como cada questão é montada:
+
+- **Figuras** viram imagem Markdown `![descrição](url)`, com a descrição do dataset como texto
+  alternativo. A URL é a original (repositório piresramon/gpt-4-enem) ou, com
+  `SAUF_QUESTOES_IMAGENS_URL`, a do nosso bucket (ver abaixo).
+- **Texto-base e comando**: o último parágrafo de texto (com as figuras e tabelas que vêm
+  depois dele) é o comando; o resto é o texto-base. Texto-base repetido na prova é guardado uma
+  vez só.
+- **Anulada** (gabarito "X" no INEP): fica sem alternativa correta.
+- **Status**: `disponivel`, ou `pendente_revisao` com o motivo quando a conversão do dataset
+  estragou algo: fórmula escrita por extenso ("x elevado a 2"), tabela com sobras ("Unnamed: 1",
+  "nan"), alternativa vazia ou só com figura, ou gabarito diferente do INEP. Em 2022 a 2024 são
+  42 pendentes de 540.
+
+### Imagens no bucket do Supabase
+
+Para não depender do GitHub dos autores, as 214 figuras de 2022 a 2024 podem ficar num bucket
+público do Supabase Storage. O link no texto muda de base, mas o caminho continua o mesmo
+(`2024/questao_02_fileoutpart5.png`, `2023/day_2/fileoutpart44.png`). A API e o banco não mudam.
+
+1. Baixe as figuras (uns 7 min, por causa do intervalo entre requisições; rodar de novo só
+   baixa as que faltam). Se alguma falhar, o comando lista as falhas e sai com erro:
+   `uv run sauf-scraper questoes enem --ano 2022 2023 2024 --baixar-imagens`
+2. No painel do Supabase: projeto > Storage > New bucket `questoes-enem`, com "Public bucket".
+3. Arraste as pastas `2022`, `2023` e `2024` de `fontes/enem/imagens/` para dentro do bucket
+   (não precisa da service_role key).
+4. No `.env`: `SAUF_QUESTOES_IMAGENS_URL=https://<projeto>.supabase.co/storage/v1/object/public/questoes-enem`.
+   Abra no navegador `<essa URL>/2024/questao_02_fileoutpart5.png` para conferir.
+5. Envie de novo: `uv run sauf-scraper questoes enem --ano 2022 2023 2024`. As questões são
+   atualizadas com os links novos. Com a variável definida, o comando recusa enviar se faltar
+   alguma figura em `fontes/enem/imagens/`.
+
+Sem a variável (ou vazia), tudo fica como antes: link para o GitHub.
+
+Crédito gravado em cada questão: "ENEM <ano> (INEP), via maritaca-ai/enem (Apache-2.0)".
+Artigos do dataset: *Evaluating GPT-3.5 and GPT-4 Models on Brazilian University
+Admission Exams* ([arXiv:2303.17003](https://arxiv.org/abs/2303.17003)) e
+*Evaluating GPT-4's Vision Capabilities on Brazilian University Admission Exams*
+([arXiv:2311.14169](https://arxiv.org/abs/2311.14169)).
+
 ## Estrutura
 
 Explicação detalhada de cada arquivo: [docs/ESTRUTURA.md](docs/ESTRUTURA.md).

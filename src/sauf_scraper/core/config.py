@@ -58,5 +58,8 @@ class Settings(BaseSettings):
 
     output_dir: Path = Path("output")
 
+    # Base pública das figuras das questões (ex.: bucket do Supabase). Vazio = link original.
+    questoes_imagens_url: str | None = None
+
     # Vazio = procura fontes/microdados_censo* (ver resolver_pasta_censo).
     censo_dir: Path | None = None

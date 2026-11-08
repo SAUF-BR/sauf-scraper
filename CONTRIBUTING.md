@@ -130,6 +130,7 @@ O gov.br bloqueia robôs: baixe a planilha à mão, salve em `fontes/` (fora do 
 |---|---|---|
 | IGC (nota MEC) | [INEP: indicadores de qualidade](https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/indicadores-educacionais/indicadores-de-qualidade-da-educacao-superior), aba 2023 | `uv run sauf-scraper igc --arquivo fontes/IGC_2023.xlsx [--dry-run]` |
 | Sisu (notas de corte) | [Sisu: documentos](https://www.gov.br/mec/pt-br/sisu/documentos), seção "Inscrições e notas de corte" | `uv run sauf-scraper sisu --arquivo fontes/<planilha>.xlsx [--dry-run]` |
+| Questões do ENEM (texto) | [maritaca-ai/enem](https://huggingface.co/datasets/maritaca-ai/enem): baixado sozinho; o `ITENS_PROVA_<ano>.csv` sai do zip dos microdados do ENEM (`https://download.inep.gov.br/microdados/microdados_enem_<ano>.zip`) (ver [README](README.md#banco-de-questões-enem)) | `uv run sauf-scraper questoes enem --ano 2022 2023 2024 [--dry-run]` |
 
 ## 4. Testes e qualidade
 

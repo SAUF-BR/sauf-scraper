@@ -19,7 +19,7 @@ from sauf_scraper.core.config import Settings, resolver_pasta_censo
 from sauf_scraper.core.logging import configurar_logging
 from sauf_scraper.core.models import LoteIngestao
 from sauf_scraper.core.pipeline import executar
-from sauf_scraper.geral import igc, sisu
+from sauf_scraper.geral import enem, igc, sisu
 from sauf_scraper.geral.base import entregar
 from sauf_scraper.spiders import SPIDERS, codigos_emec
 
@@ -36,6 +36,8 @@ def main(argv: list[str] | None = None) -> int:
         return main_igc(argv[1:])
     if argv[:1] == ["sisu"]:
         return main_sisu(argv[1:])
+    if argv[:1] == ["questoes"]:
+        return main_questoes(argv[1:])
 
     parser = argparse.ArgumentParser(
         prog="sauf-scraper", epilog="Import do Censo: sauf-scraper censo --help"
@@ -210,6 +212,100 @@ def main_sisu(argv: list[str]) -> int:
     resposta = entregar(lote, f"sisu-{lote.ano}.json", sisu.ENDPOINT, Settings(), args.dry_run)
     if resposta is not None:
         logger.info("sisu enviado", extra={"dados": {"resposta": resposta.model_dump()}})
+    return 0
+
+
+def main_questoes(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(
+        prog="sauf-scraper questoes",
+        description=(
+            "Monta o banco de questões (ADR-SC-010): dataset maritaca-ai/enem cruzado com o "
+            "ITENS_PROVA dos microdados do ENEM. Envia um lote por dia de prova."
+        ),
+    )
+    parser.add_argument("banca", choices=["enem"], help="por enquanto só o ENEM")
+    parser.add_argument("--ano", type=int, nargs="+", required=True, help="ex.: 2022 2023 2024")
+    parser.add_argument(
+        "--pasta",
+        type=Path,
+        default=Path("fontes/enem"),
+        help="onde ficam <ano>.jsonl e ITENS_PROVA_<ano>.csv (padrão: fontes/enem)",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="grava output/questoes-enem-<ano>.json em vez de enviar",
+    )
+    parser.add_argument(
+        "--baixar-imagens",
+        action="store_true",
+        help="só baixa as figuras para <pasta>/imagens/ (a pasta que vai para o bucket) e sai",
+    )
+    args = parser.parse_args(argv)
+
+    configurar_logging()
+    settings = Settings()
+    http = HttpEducado(settings)
+    if args.baixar_imagens:
+        return baixar_imagens_enem(http, args.pasta, args.ano)
+
+    pasta_imagens = args.pasta / "imagens"
+    for ano in args.ano:
+        itens = args.pasta / f"ITENS_PROVA_{ano}.csv"
+        if not itens.exists():
+            parser.error(
+                f"falta {itens}: extraia DADOS/ITENS_PROVA_{ano}.csv do zip dos microdados "
+                f"do ENEM {ano} (INEP) para essa pasta"
+            )
+        registros = enem.ler_maritaca(enem.baixar_maritaca(http, args.pasta, ano))
+        base_imagens = settings.questoes_imagens_url
+        if base_imagens and (faltando := enem.imagens_faltando(registros, pasta_imagens)):
+            parser.error(
+                f"SAUF_QUESTOES_IMAGENS_URL definida, mas {len(faltando)} figura(s) de {ano} "
+                f"não estão em {pasta_imagens} (ex.: {faltando[0]}): rode com --baixar-imagens "
+                "e suba a pasta para o bucket antes de enviar"
+            )
+        lotes = enem.montar_lotes(ano, registros, enem.ler_itens(itens), base_imagens)
+        logger.info("questões montadas", extra={"dados": {"ano": ano, **enem.resumo(lotes)}})
+        if args.dry_run:
+            ArquivoJson(settings.output_dir).gravar(
+                f"questoes-enem-{ano}.json", enem.ProvasEnem(ano=ano, lotes=lotes)
+            )
+            continue
+        api = ApiSauf(settings)
+        for lote in lotes:
+            resposta = api.postar(enem.ENDPOINT, lote)
+            logger.info(
+                "questões enviadas",
+                extra={
+                    "dados": {
+                        "ano": ano,
+                        "edicao": lote.prova.edicao,
+                        "resposta": resposta.model_dump(),
+                    }
+                },
+            )
+    return 0
+
+
+def baixar_imagens_enem(http: HttpEducado, pasta: Path, anos: list[int]) -> int:
+    """Baixa as figuras dos anos para <pasta>/imagens/; lista as falhas e sai com erro."""
+    falhas = []
+    for ano in anos:
+        registros = enem.ler_maritaca(enem.baixar_maritaca(http, pasta, ano))
+        total = len(enem.imagens_do_dataset(registros))
+        falhas_do_ano = enem.baixar_imagens(http, registros, pasta / "imagens")
+        falhas += falhas_do_ano
+        logger.info(
+            "imagens baixadas",
+            extra={"dados": {"ano": ano, "total": total, "falhas": len(falhas_do_ano)}},
+        )
+    for falha in falhas:
+        logger.error("imagem não baixada", extra={"dados": {"falha": falha}})
+    if falhas:
+        print(f"{len(falhas)} imagem(ns) não baixada(s); rode de novo para tentar só as que faltam")
+        return 1
+    print(f"Imagens em {pasta / 'imagens'}: arraste as pastas de ano para o bucket")
     return 0
 
 

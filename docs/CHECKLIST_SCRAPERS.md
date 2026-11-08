@@ -153,6 +153,7 @@ fica de fora da tabela de casamento.
 | G4 | **PROUni / FIES** | "Aceita PROUni/FIES" | 🚫 Fora do plano | As 5 IES são públicas (D-51). |
 | G5 | **e-MEC: endereço** | "Onde fica" na página da universidade | 🚫 Fora do plano | O endereço já vem no arquivo de IES do Censo (`DS_ENDERECO_IES` etc.), estendendo o G1 na fase C (D-51). |
 | G6 | **RAIS / CAGED** | Aba "Mercado e salários" | ⏸️ | Fora do MVP (P-31 a → D-40). |
+| G7 | **Questões do ENEM** (maritaca-ai/enem + `ITENS_PROVA` do INEP) | Banco de questões dos simulados | ✅ | `uv run sauf-scraper questoes enem --ano 2022 2023 2024`. 540 questões, 42 pendentes de revisão (ADR-SC-010, D-68 da API). Rotas de simulado e front: depois. |
 
 ---
 

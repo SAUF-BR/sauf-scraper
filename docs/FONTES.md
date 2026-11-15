@@ -53,3 +53,4 @@ Links acessados para o desenvolvimento, sem dados entrando no banco.
 | Fonte | Links acessados | Para que serviu | Data |
 |---|---|---|---|
 | Vercel: skill react-best-practices | https://vercel.com/blog/introducing-react-best-practices · repositório https://github.com/vercel-labs/agent-skills (clonada só a pasta `skills/react-best-practices`, commit 1a2c79d, licença MIT) | Regras de performance de React usadas no polimento dos simulados do front (TR-409); a skill fica local em `sauf-web-front/.claude/skills/`, fora do Git | 13/11/2026 |
+| Anthropic: skill frontend-design | https://github.com/anthropics/skills (clonada só a pasta `skills/frontend-design`, commit 1780c5e, licença em `LICENSE.txt` da pasta) | Guia de design usado nos ajustes dos simulados do front (TR-409), sem trocar paleta, tipografia e tokens do SAUF; a skill fica local em `sauf-web-front/.claude/skills/`, fora do Git | 15/11/2026 |

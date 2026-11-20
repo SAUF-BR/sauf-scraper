@@ -166,6 +166,8 @@ fica de fora da tabela de casamento.
 | Conteúdo das formas de ingresso (PROUni, SISU, FIES, ENEM) | Tela "Formas de ingresso" | ❌ |
 | Eventos e calendário | Calendário e notificações | ⏸️ Adiado (P-33) |
 
+**Enviado ao Supabase em 20/11/2026 (Carlos):** migration do TR-343, ano, "sobre" e site das 5 IES, logo e capa da UEM e logo da UEL. Detalhes em [dados/README.md](../dados/README.md), seção 7.
+
 ### 3.1. Imagens escolhidas e ainda não baixadas (TR-343)
 
 O Wikimedia Commons limitou as requisições (HTTP 429) em 20/11/2026. Estas imagens já foram

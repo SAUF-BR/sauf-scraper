@@ -248,6 +248,15 @@ responde **422** "não está cadastrada".
 - **Local:** API rodando na sua máquina contra o Postgres do Docker (ADR-BE-004).
 - **Supabase (produção):** **só o Carlos executa**, com o `.env` de produção.
 
+### Histórico de envios ao Supabase
+
+| Data | O que foi | Quem | Conferência |
+|---|---|---|---|
+| 20/11/2026 | Migration `V2026_11_20_1200__dados_manuais_ies.sql` (API da branch TR-343, porta própria, ignorando só a migration `2026.11.16.0215` da TR-325, que estava no Supabase e não na main). `ies`: as 5 universidades com ano, "sobre" e site; imagens só logo da UEM (CC BY-SA 4.0), capa da UEM (CC0) e logo da UEL (domínio público). `areas`: nada (nenhuma imagem baixada ainda). | Carlos | GETs públicos conferiram ano, 3 parágrafos, logo, capa e créditos de cada IES; o segundo envio voltou "sem mudanças" nas 5. |
+
+Pendente: as 18 imagens da seção 3.1 do `docs/CHECKLIST_SCRAPERS.md`. Quando entrarem no TOML,
+basta rodar `ies` e `areas` de novo: só o que é novo muda.
+
 ---
 
 ## 8. Conferir no app

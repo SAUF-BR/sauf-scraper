@@ -28,10 +28,16 @@ sobre = [
   "https://www.utfpr.edu.br/noticias/geral/utfpr-uma-historia-de-116-anos-ofertando-educacao-e-20-anos-como-universidade",
 ]
 
-# [logo] pendente (TR-343): imagem escolhida, ainda não baixada.
-# Arquivo: img/utfpr-logo.png
-# Commons: https://commons.wikimedia.org/wiki/File:UTFPR_logo.svg
+[logo]
+arquivo = "img/utfpr-logo.png"
+autor = "Universidade Tecnológica Federal do Paraná"
+licenca = "CC BY 4.0"
+licenca_url = "https://creativecommons.org/licenses/by/4.0"
+fonte_url = "https://commons.wikimedia.org/wiki/File:UTFPR_logo.svg"
 
-# [capa] pendente (TR-343): imagem escolhida, ainda não baixada.
-# Arquivo: img/utfpr-capa.jpg
-# Commons: https://commons.wikimedia.org/wiki/File:C%C3%A2mpus_Curitiba.jpg
+[capa]
+arquivo = "img/utfpr-capa.jpg"
+autor = "UTFPR em Imagens"
+licenca = "CC BY 2.0"
+licenca_url = "https://creativecommons.org/licenses/by/2.0"
+fonte_url = "https://commons.wikimedia.org/wiki/File:C%C3%A2mpus_Curitiba.jpg"

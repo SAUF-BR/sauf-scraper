@@ -168,15 +168,11 @@ fica de fora da tabela de casamento.
 
 **Enviado ao Supabase em 20/11/2026 (Carlos):** migration do TR-343, ano, "sobre" e site das 5 IES, logo e capa da UEM e logo da UEL. Detalhes em [dados/README.md](../dados/README.md), seção 7.
 
-### 3.1. Imagens escolhidas e ainda não baixadas (TR-343)
+### 3.1. Imagens do TR-343
 
-O servidor de arquivos do Wikimedia (upload.wikimedia.org) bloqueia programas sem contato no
-User-Agent (HTTP 429 desde 20/11/2026); o navegador não é bloqueado. Para baixar à mão: abrir a
-página, clicar em **Baixar** (Download) e escolher o tamanho indicado; salvar no destino com o
-nome exato. Logo: PNG com cerca de 500 px de largura (o Commons gera o PNG do SVG); capa e área:
-cerca de 1280 px de largura, JPG. Licença e autor já conferidos na API do Commons em 20/11/2026.
-Depois: trocar o comentário `# [...] pendente` do TOML pela seção completa (dados/README.md,
-seções 4 e 5), `--dry-run`, enviar e riscar a linha.
+✅ As 18 imagens que faltavam foram baixadas em 20/11/2026 pelo Chrome (o servidor de arquivos do
+Wikimedia bloqueava o script com HTTP 429; o navegador não é bloqueado) e entraram nos TOML.
+Enviadas para a API local; **falta o envio ao Supabase** (só o Carlos roda; dados/README.md, seção 7).
 
 | Destino | Baixar | Página no Commons | Licença | Autor | Crédito obrigatório |
 |---|---|---|---|---|---|

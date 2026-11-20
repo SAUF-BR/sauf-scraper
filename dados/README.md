@@ -274,7 +274,9 @@ ao Supabase só durante o envio:
 Depois que a TR-343 estiver na `main` e publicada, basta apontar `SAUF_API_BASE_URL` para a API
 publicada e rodar só o passo 3.
 
-Pendente: as 18 imagens da seção 3.1 do `docs/CHECKLIST_SCRAPERS.md`. Quando entrarem no TOML,
+Pendente: enviar ao Supabase as 18 imagens que entraram depois (capas de UEL, UTFPR, UFSC e UFSM,
+logos de UTFPR, UFSC e UFSM e as 11 áreas; `docs/CHECKLIST_SCRAPERS.md`, seção 3.1). É só rodar
+`ies` e `areas` de novo pelo procedimento acima: o que já foi enviado volta "sem mudanças". Quando entrarem no TOML,
 basta rodar `ies` e `areas` de novo: só o que é novo muda.
 
 ---

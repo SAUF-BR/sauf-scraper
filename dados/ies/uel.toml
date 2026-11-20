@@ -37,6 +37,9 @@ autor = "UEL"
 licenca = "Public domain"
 fonte_url = "https://commons.wikimedia.org/wiki/File:Uel.png"
 
-# [capa] pendente (TR-343): imagem escolhida, ainda não baixada.
-# Arquivo: img/uel-capa.jpg
-# Commons: https://commons.wikimedia.org/wiki/File:Londrina_-_UEL.jpg
+[capa]
+arquivo = "img/uel-capa.jpg"
+autor = "Luís Guilherme Fernandes Pereira"
+licenca = "CC BY 2.0"
+licenca_url = "https://creativecommons.org/licenses/by/2.0"
+fonte_url = "https://commons.wikimedia.org/wiki/File:Londrina_-_UEL.jpg"

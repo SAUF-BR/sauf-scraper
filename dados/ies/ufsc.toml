@@ -29,10 +29,15 @@ sobre = [
   "https://65anos.ufsc.br/decada-de-1960/",
 ]
 
-# [logo] pendente (TR-343): imagem escolhida, ainda não baixada.
-# Arquivo: img/ufsc-logo.png
-# Commons: https://commons.wikimedia.org/wiki/File:Brasao_UFSC_vertical_extenso.svg
+[logo]
+arquivo = "img/ufsc-logo.png"
+autor = "Universidade Federal de Santa Catarina"
+licenca = "Public domain"
+fonte_url = "https://commons.wikimedia.org/wiki/File:Brasao_UFSC_vertical_extenso.svg"
 
-# [capa] pendente (TR-343): imagem escolhida, ainda não baixada.
-# Arquivo: img/ufsc-capa.jpg
-# Commons: https://commons.wikimedia.org/wiki/File:Pr%C3%A9dio_da_Reitoria_-_Universidade_Federal_de_Santa_Catarina_(UFSC).JPG
+[capa]
+arquivo = "img/ufsc-capa.jpg"
+autor = "Airtonjordani"
+licenca = "CC BY-SA 4.0"
+licenca_url = "https://creativecommons.org/licenses/by-sa/4.0"
+fonte_url = "https://commons.wikimedia.org/wiki/File:Pr%C3%A9dio_da_Reitoria_-_Universidade_Federal_de_Santa_Catarina_(UFSC).JPG"

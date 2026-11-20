@@ -29,10 +29,15 @@ sobre = [
   "https://www.ufsm.br/historia",
 ]
 
-# [logo] pendente (TR-343): imagem escolhida, ainda não baixada.
-# Arquivo: img/ufsm-logo.jpg
-# Commons: https://commons.wikimedia.org/wiki/File:Brasao_UFSM_Color_300dpi.jpg
+[logo]
+arquivo = "img/ufsm-logo.jpg"
+autor = "Universidade Federal de Santa Maria"
+licenca = "Public domain"
+fonte_url = "https://commons.wikimedia.org/wiki/File:Brasao_UFSM_Color_300dpi.jpg"
 
-# [capa] pendente (TR-343): imagem escolhida, ainda não baixada.
-# Arquivo: img/ufsm-capa.jpg
-# Commons: https://commons.wikimedia.org/wiki/File:Entrada_da_UFSM.jpg
+[capa]
+arquivo = "img/ufsm-capa.jpg"
+autor = "Imagens SM"
+licenca = "CC BY-SA 3.0"
+licenca_url = "https://creativecommons.org/licenses/by-sa/3.0"
+fonte_url = "https://commons.wikimedia.org/wiki/File:Entrada_da_UFSM.jpg"

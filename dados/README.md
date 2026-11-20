@@ -391,5 +391,14 @@ Conferir: `GET /api/v1/calendario/eventos?ano=2026`, `GET /api/v1/calendario/pro
 
 ### Envios ao Supabase
 
-Nenhum ainda. Precisa da migration `V2026_11_20_1500__calendario_admin.sql` da API (branch
-`TR-343-calendario-admin`) aplicada antes; o procedimento é o da seção 7.
+| Data | O que foi | Quem | Conferência |
+|---|---|---|---|
+| 20/11/2026 | Migration `V2026_11_20_1500__calendario_admin.sql` (API da branch `TR-343-calendario-admin`, na 8082, ignorando só as migrations `missing` 2026.11.16.0215 e 2026.11.20.1200) e os 31 eventos do `calendario.toml` | Carlos | 31 "criado"; GETs: 26 eventos em 2026 e 5 em 2027, próximos prazos e `proximoPrazo` das 5 IES certos, admin sem chave = 401; segundo envio: 31 "sem mudanças"; API derrubada |
+
+**Atenção:** a migration do calendário está no Supabase, mas ainda não na `main` da API
+(decisão da equipe em 20/11/2026, por causa do prazo). Até os PRs `TR-343-calendario-admin` e
+`TR-343-dados-manuais-ies` entrarem, quem subir a API da `main` contra o Supabase precisa de
+`SPRING_FLYWAY_IGNORE_MIGRATION_PATTERNS='*:missing'` só nesse processo, senão o Flyway recusa.
+
+O procedimento é o da seção 7. Depois que a API estiver na `main` e publicada, basta rodar
+`uv run sauf-scraper calendario` apontando `SAUF_API_BASE_URL` para ela.

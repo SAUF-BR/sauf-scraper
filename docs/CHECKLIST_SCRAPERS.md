@@ -171,7 +171,7 @@ fica de fora da tabela de casamento.
 ### 3.2. Calendário (TR-343)
 
 Cadastro em `dados/calendario.toml` (regras e envio em [dados/README.md](../dados/README.md),
-seção 11). Conferido em 20/11/2026; enviado só para testes locais (Supabase: ainda não).
+seção 11). Conferido em 20/11/2026; **enviado ao Supabase em 20/11/2026 (Carlos)**: 31 eventos criados, segundo envio 31 "sem mudanças", GETs conferidos (26 eventos em 2026, 5 em 2027). A migration do calendário está no Supabase mas ainda não na `main` da API: até os PRs entrarem, subir a API da `main` contra o Supabase exige `SPRING_FLYWAY_IGNORE_MIGRATION_PATTERNS='*:missing'` (dados/README.md, seção 11).
 
 | Fonte | O que entrou | A divulgar / a confirmar |
 |---|---|---|

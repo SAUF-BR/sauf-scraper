@@ -253,6 +253,7 @@ responde **422** "não está cadastrada".
 | Data | O que foi | Quem | Conferência |
 |---|---|---|---|
 | 20/11/2026 | Migration `V2026_11_20_1200__dados_manuais_ies.sql` (API da branch TR-343, porta própria, ignorando só a migration `2026.11.16.0215` da TR-325, que estava no Supabase e não na main). `ies`: as 5 universidades com ano, "sobre" e site; imagens só logo da UEM (CC BY-SA 4.0), capa da UEM (CC0) e logo da UEL (domínio público). `areas`: nada (nenhuma imagem baixada ainda). | Carlos | GETs públicos conferiram ano, 3 parágrafos, logo, capa e créditos de cada IES; o segundo envio voltou "sem mudanças" nas 5. |
+| 20/11/2026 (2ª rodada) | `ies`: capas de UEL, UTFPR, UFSC e UFSM e logos de UTFPR, UFSC e UFSM (a UEM voltou "sem mudanças"). `areas`: as 11 imagens (CC0). | Carlos | GETs públicos: logo e capa das 5 IES respondem 200 com os créditos certos; `imagemUrl` dos cursos preenchido; o segundo envio voltou "sem mudanças" em tudo. |
 
 ### Como foi feito o envio de 20/11/2026 (para repetir)
 
@@ -274,10 +275,7 @@ ao Supabase só durante o envio:
 Depois que a TR-343 estiver na `main` e publicada, basta apontar `SAUF_API_BASE_URL` para a API
 publicada e rodar só o passo 3.
 
-Pendente: enviar ao Supabase as 18 imagens que entraram depois (capas de UEL, UTFPR, UFSC e UFSM,
-logos de UTFPR, UFSC e UFSM e as 11 áreas; `docs/CHECKLIST_SCRAPERS.md`, seção 3.1). É só rodar
-`ies` e `areas` de novo pelo procedimento acima: o que já foi enviado volta "sem mudanças". Quando entrarem no TOML,
-basta rodar `ies` e `areas` de novo: só o que é novo muda.
+Tudo o que está em `dados/` em 20/11/2026 já está no Supabase.
 
 ---
 

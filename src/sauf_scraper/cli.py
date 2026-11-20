@@ -19,7 +19,7 @@ from sauf_scraper.core.config import Settings, resolver_pasta_censo
 from sauf_scraper.core.logging import configurar_logging
 from sauf_scraper.core.models import LoteIngestao
 from sauf_scraper.core.pipeline import executar
-from sauf_scraper.geral import enem, igc, sisu
+from sauf_scraper.geral import enem, igc, manuais, sisu
 from sauf_scraper.geral.base import entregar
 from sauf_scraper.spiders import SPIDERS, codigos_emec
 
@@ -38,6 +38,10 @@ def main(argv: list[str] | None = None) -> int:
         return main_sisu(argv[1:])
     if argv[:1] == ["questoes"]:
         return main_questoes(argv[1:])
+    if argv[:1] == ["ies"]:
+        return main_ies(argv[1:])
+    if argv[:1] == ["areas"]:
+        return main_areas(argv[1:])
 
     parser = argparse.ArgumentParser(
         prog="sauf-scraper", epilog="Import do Censo: sauf-scraper censo --help"
@@ -285,6 +289,82 @@ def main_questoes(argv: list[str]) -> int:
                     }
                 },
             )
+    return 0
+
+
+def main_ies(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(
+        prog="sauf-scraper ies",
+        description=(
+            "Envia os dados manuais das universidades (dados/ies/<sigla>.toml): ano de fundação, "
+            "sobre, site, logo e capa. Como preencher: dados/README.md."
+        ),
+    )
+    parser.add_argument("--sigla", nargs="+", metavar="SIGLA", help="só estas (padrão: todas)")
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="só valida e grava output/ies-<sigla>.json, sem enviar",
+    )
+    args = parser.parse_args(argv)
+
+    configurar_logging()
+    settings = Settings()
+    try:
+        universidades = manuais.ler_universidades(args.sigla)
+    except manuais.DadoManualInvalidoError as erro:
+        print(f"ERRO: {erro}")
+        return 1
+    if not universidades:
+        print(f"Nenhum arquivo .toml em {manuais.PASTA_IES}")
+        return 1
+
+    api = None if args.dry_run else ApiSauf(settings)
+    for universidade, caminho in universidades:
+        envio = manuais.envio_universidade(universidade, caminho.parent)
+        print(manuais.resumo_universidade(universidade))
+        if api is None:
+            ArquivoJson(settings.output_dir).gravar(f"ies-{universidade.sigla.lower()}.json", envio)
+            continue
+        endpoint = manuais.ENDPOINT_UNIVERSIDADE.format(codigo_emec=universidade.codigo_emec)
+        resposta = api.substituir(endpoint, envio)
+        print(f"  enviado: {'atualizado' if resposta.atualizados else 'sem mudanças'}")
+    return 0
+
+
+def main_areas(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(
+        prog="sauf-scraper areas",
+        description=(
+            "Envia a imagem de cada área Cine (dados/areas.toml), usada nos cards dos cursos "
+            "da área. Como preencher: dados/README.md."
+        ),
+    )
+    parser.add_argument("--codigo", nargs="+", metavar="CINE", help="só estas áreas, ex.: 07")
+    parser.add_argument(
+        "--dry-run", action="store_true", help="só valida e lista as áreas, sem enviar"
+    )
+    args = parser.parse_args(argv)
+
+    configurar_logging()
+    try:
+        areas = manuais.ler_areas(codigos=args.codigo)
+    except manuais.DadoManualInvalidoError as erro:
+        print(f"ERRO: {erro}")
+        return 1
+
+    api = None if args.dry_run else ApiSauf(Settings())
+    for area in areas:
+        if area.imagem is None:
+            print(f"{area.codigo_cine} {area.nome}: sem imagem, não enviada")
+            continue
+        print(f"{area.codigo_cine} {area.nome}: {area.imagem.arquivo} ({area.imagem.licenca})")
+        if api is None:
+            continue
+        imagem = manuais.imagem_envio(area.imagem, manuais.ARQUIVO_AREAS.parent)
+        endpoint = manuais.ENDPOINT_AREA.format(codigo_cine=area.codigo_cine)
+        resposta = api.substituir(endpoint, imagem)
+        print(f"  enviado: {'atualizado' if resposta.atualizados else 'sem mudanças'}")
     return 0
 
 

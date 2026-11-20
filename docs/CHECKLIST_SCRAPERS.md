@@ -161,9 +161,38 @@ fica de fora da tabela de casamento.
 
 | Item | Onde aparece | Estado |
 |---|---|---|
-| Logo, foto e "sobre" da IES (e ano de fundação) | Lista e página da universidade | ❌ (forma de cadastro a definir) |
+| Logo, foto de capa, "sobre", site e ano de fundação da IES | Lista e página da universidade, favoritos | ✅ `dados/ies/<sigla>.toml` + `uv run sauf-scraper ies` (TR-343; passo a passo em [dados/README.md](../dados/README.md); D-98 a D-103 da API, ADR-BE-017) |
+| Imagem dos cursos (uma por área Cine) | Cards e página dos cursos | ✅ `dados/areas.toml` + `uv run sauf-scraper areas` (D-101). A tela de cursos do front ainda não mostra (vai ser refeita) |
 | Conteúdo das formas de ingresso (PROUni, SISU, FIES, ENEM) | Tela "Formas de ingresso" | ❌ |
 | Eventos e calendário | Calendário e notificações | ⏸️ Adiado (P-33) |
+
+### 3.1. Imagens escolhidas e ainda não baixadas (TR-343)
+
+O Wikimedia Commons limitou as requisições (HTTP 429) em 20/11/2026. Estas imagens já foram
+escolhidas e a licença conferida; no TOML elas estão como comentário `# [...] pendente`.
+Quando baixar: troque o comentário pela seção completa (dados/README.md, seções 4 e 5),
+rode `uv run sauf-scraper ies` / `areas` e risque a linha.
+
+| Arquivo de destino | Página no Commons |
+|---|---|
+| `dados/ies/img/uel-capa.jpg` | https://commons.wikimedia.org/wiki/File:Londrina_-_UEL.jpg |
+| `dados/ies/img/utfpr-logo.png` | https://commons.wikimedia.org/wiki/File:UTFPR_logo.svg |
+| `dados/ies/img/utfpr-capa.jpg` | https://commons.wikimedia.org/wiki/File:C%C3%A2mpus_Curitiba.jpg |
+| `dados/ies/img/ufsc-logo.png` | https://commons.wikimedia.org/wiki/File:Brasao_UFSC_vertical_extenso.svg |
+| `dados/ies/img/ufsc-capa.jpg` | https://commons.wikimedia.org/wiki/File:Pr%C3%A9dio_da_Reitoria_-_Universidade_Federal_de_Santa_Catarina_(UFSC).JPG |
+| `dados/ies/img/ufsm-logo.jpg` | https://commons.wikimedia.org/wiki/File:Brasao_UFSM_Color_300dpi.jpg |
+| `dados/ies/img/ufsm-capa.jpg` | https://commons.wikimedia.org/wiki/File:Entrada_da_UFSM.jpg |
+| `dados/areas/img/00-programas-basicos.jpg` | https://commons.wikimedia.org/wiki/File:Lecture_Room_Stairs_(Unsplash).jpg |
+| `dados/areas/img/01-educacao.jpg` | https://commons.wikimedia.org/wiki/File:Students_learning_together_(Unsplash).jpg |
+| `dados/areas/img/02-artes-e-humanidades.jpg` | https://commons.wikimedia.org/wiki/File:Old_books_on_bookshelf._(Unsplash).jpg |
+| `dados/areas/img/03-ciencias-sociais.jpg` | https://commons.wikimedia.org/wiki/File:Microphone_(Unsplash).jpg |
+| `dados/areas/img/04-negocios.jpg` | https://commons.wikimedia.org/wiki/File:Working_in_open_office_space_(Unsplash).jpg |
+| `dados/areas/img/05-ciencias-naturais.jpg` | https://commons.wikimedia.org/wiki/File:Plants_in_beakers_(Unsplash).jpg |
+| `dados/areas/img/06-computacao.jpg` | https://commons.wikimedia.org/wiki/File:Code_on_computer_monitor_(Unsplash).jpg |
+| `dados/areas/img/07-engenharia.jpg` | https://commons.wikimedia.org/wiki/File:View_Above_Construction_Site_(Unsplash).jpg |
+| `dados/areas/img/08-agricultura.jpg` | https://commons.wikimedia.org/wiki/File:Farm_Field_(Unsplash).jpg |
+| `dados/areas/img/09-saude.jpg` | https://commons.wikimedia.org/wiki/File:Stethoscope_No.120.JPG |
+| `dados/areas/img/10-servicos.jpg` | https://commons.wikimedia.org/wiki/File:Michael_(Unsplash).jpg |
 
 ---
 

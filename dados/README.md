@@ -6,11 +6,13 @@ Esta pasta guarda o que **nenhuma fonte oficial entrega pronto** e, por isso, o 
 |---|---|---|
 | Ano de fundação, "sobre", site, logo e foto de capa de cada universidade | `ies/<sigla>.toml` + imagens em `ies/img/` | Lista e detalhe de universidades, favoritos |
 | Uma imagem por área Cine | `areas.toml` + imagens em `areas/img/` | Card e página de cada curso da área |
+| Datas de ENEM, vestibulares e ProUni | `calendario.toml` | Calendário, prazos da Home, próximo prazo da universidade |
 
 Tudo é versionado no Git: quem mudou, quando e por quê fica no histórico. O scraper valida os
 arquivos e envia para a API por uma rota de ingestão, do mesmo jeito que o Censo, o IGC e o Sisu.
 
-> Decisões: D-98 a D-103 em `sauf-api/docs/DECISOES.md` e a ADR-BE-017 em `sauf-docs`.
+> Decisões: D-98 a D-103 (dados das universidades e imagens) e D-104 a D-107 (calendário) em
+> `sauf-api/docs/DECISOES.md`, e a ADR-BE-017 em `sauf-docs`.
 
 ---
 
@@ -328,3 +330,66 @@ imagem. Para remover o "sobre" inteiro não há atalho: o campo é obrigatório 
 | API **401** | `SAUF_API_KEY` ausente ou errada no `.env`. |
 | API **422** "não está cadastrada" | Rode o `censo` antes. |
 | API **400** | A mensagem diz o campo; normalmente o scraper já pega antes. |
+
+---
+
+## 11. Calendário: `calendario.toml`
+
+As datas de ENEM, vestibulares das 5 universidades com scraper e ProUni (D-104 a D-106 da API).
+Um bloco `[[evento]]` por evento:
+
+```toml
+[[evento]]
+chave = "uem-verao-2026-inscricao"      # nome estável: minúsculas, números e hífen
+titulo = "Inscrições do Vestibular de Verão 2026 da UEM"
+tipo = "inscricao"                      # inscricao, prova, resultado, feira ou outro
+inicio = 2026-08-17                     # data do TOML, sem aspas
+fim = 2026-09-23                        # só em período; sem fim = um dia
+sigla = "UEM"                           # arquivo de dados/ies/; sem sigla = nacional
+descricao = "Pagamento da taxa até 25/09/2026."   # opcional
+fonte_url = "https://www.cvu.uem.br/programacao.html"
+ano = 2026                              # ano da edição ("Vestibular 2027" = 2027)
+```
+
+### Regras
+
+- **Só data publicada em fonte oficial** (edital, cronograma ou notícia da própria instituição,
+  do INEP ou do MEC). Site de terceiros (cursinho, portal de notícias) não serve como fonte.
+- **"A divulgar" não entra**: fica como comentário no arquivo, no bloco da instituição, dizendo o
+  que falta e onde procurar. Quando sair, vira `[[evento]]`.
+- Data que parece errada na fonte (ex.: ano trocado) **não é corrigida por nós**: fica comentada
+  como "a confirmar" até a instituição corrigir.
+- Não precisa cadastrar todos os passos do edital: inscrição, prova, gabarito, resultado e
+  chamada são o principal; recursos e homologações ficam de fora.
+- **A chave não muda depois de enviada.** Trocar a chave cria outro evento; o antigo continua na
+  API até ser removido com `--remover`.
+- Cada evento vai com a `fonte_url` e a página entra no `docs/FONTES.md`.
+
+### Validar e enviar
+
+```
+uv run sauf-scraper calendario --dry-run           # valida e lista, sem enviar
+uv run sauf-scraper calendario                     # envia tudo (PUT por chave)
+uv run sauf-scraper calendario --chave uel-2027-resultado   # só estes eventos
+uv run sauf-scraper calendario --remover chave-antiga       # apaga da API
+```
+
+Cada evento responde `criado`, `atualizado` ou `sem mudanças`; reenviar o arquivo não duplica
+nada. A rota é a de admin (`/api/v1/admin/calendario/eventos/{chave}`), com a mesma
+`SAUF_API_KEY` dos outros envios.
+
+Conferir: `GET /api/v1/calendario/eventos?ano=2026`, `GET /api/v1/calendario/proximos-prazos` e o
+`proximoPrazo` de `GET /api/v1/universidades/{id}`.
+
+### Pendentes em 20/11/2026
+
+- ProUni 2027/1: edital ainda não publicado.
+- ENEM 2026: inscrições não conferidas na fonte oficial (já passaram).
+- UFSC/IFC 2027, UFSM 2027 e PSS 2027: data do resultado a divulgar.
+- UTFPR 2027: o cronograma diz resultado final em "12 de janeiro de 2026" (ano provavelmente
+  errado); a confirmar com a UTFPR.
+
+### Envios ao Supabase
+
+Nenhum ainda. Precisa da migration `V2026_11_20_1500__calendario_admin.sql` da API (branch
+`TR-343-calendario-admin`) aplicada antes; o procedimento é o da seção 7.

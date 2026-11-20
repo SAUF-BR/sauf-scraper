@@ -164,9 +164,24 @@ fica de fora da tabela de casamento.
 | Logo, foto de capa, "sobre", site e ano de fundação da IES | Lista e página da universidade, favoritos | ✅ `dados/ies/<sigla>.toml` + `uv run sauf-scraper ies` (TR-343; passo a passo em [dados/README.md](../dados/README.md); D-98 a D-103 da API, ADR-BE-017) |
 | Imagem dos cursos (uma por área Cine) | Cards e página dos cursos | ✅ `dados/areas.toml` + `uv run sauf-scraper areas` (D-101). A tela de cursos do front ainda não mostra (vai ser refeita) |
 | Conteúdo das formas de ingresso (PROUni, SISU, FIES, ENEM) | Tela "Formas de ingresso" | ❌ |
-| Eventos e calendário | Calendário e notificações | ⏸️ Adiado (P-33) |
+| Eventos e calendário | Calendário, prazos da Home e próximo prazo da universidade | ✅ `dados/calendario.toml` + `uv run sauf-scraper calendario` (TR-343, D-104 a D-107; seção 3.2). Notificações: com um colega. Front: decisão do Carlos |
 
 **Enviado ao Supabase em 20/11/2026 (Carlos):** migration do TR-343, ano, "sobre" e site das 5 IES, logo e capa das 5 e as 11 imagens das áreas. Detalhes em [dados/README.md](../dados/README.md), seção 7.
+
+### 3.2. Calendário (TR-343)
+
+Cadastro em `dados/calendario.toml` (regras e envio em [dados/README.md](../dados/README.md),
+seção 11). Conferido em 20/11/2026; enviado só para testes locais (Supabase: ainda não).
+
+| Fonte | O que entrou | A divulgar / a confirmar |
+|---|---|---|
+| ENEM 2026 (INEP) | provas 08/11 e 15/11, gabaritos 18/11, reaplicação 15 e 16/12/2026, resultado 18/01/2027 | inscrições (não conferidas na fonte oficial) |
+| ProUni 2027/1 (MEC) | nada | edital não publicado |
+| UEM | Inverno 2026, Verão 2026 e PAS 2026: inscrição, prova e resultado | — |
+| UEL 2027 | inscrição (prorrogada até 17/08), PHE, 1ª e 2ª fase, resultado 08/12/2026 | — |
+| UTFPR 2027 | inscrição, prova 22/11, gabaritos, 1ª chamada 13/01/2027, confirmação 15 a 21/02/2027 | resultado final ("12/01/2026" na página) |
+| UFSC/IFC 2027 | inscrição (até 23/09, retificada), provas 05 e 06/12/2026 | resultado |
+| UFSM 2027 e PSS 2027 | inscrições e provas 09 e 10/01/2027 | resultados |
 
 ### 3.1. Imagens do TR-343
 

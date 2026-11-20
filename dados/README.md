@@ -254,6 +254,26 @@ responde **422** "não está cadastrada".
 |---|---|---|---|
 | 20/11/2026 | Migration `V2026_11_20_1200__dados_manuais_ies.sql` (API da branch TR-343, porta própria, ignorando só a migration `2026.11.16.0215` da TR-325, que estava no Supabase e não na main). `ies`: as 5 universidades com ano, "sobre" e site; imagens só logo da UEM (CC BY-SA 4.0), capa da UEM (CC0) e logo da UEL (domínio público). `areas`: nada (nenhuma imagem baixada ainda). | Carlos | GETs públicos conferiram ano, 3 parágrafos, logo, capa e créditos de cada IES; o segundo envio voltou "sem mudanças" nas 5. |
 
+### Como foi feito o envio de 20/11/2026 (para repetir)
+
+A rota de ingestão nova ainda não está na API publicada, então o envio usou uma API local ligada
+ao Supabase só durante o envio:
+
+1. Conferir, só lendo o `flyway_schema_history` do Supabase, que a única migration pendente é a
+   nova. Se houver migration que existe no Supabase e não no repositório, parar e decidir antes
+   (em 20/11/2026 era a `2026.11.16.0215`, da TR-325, e o Carlos escolheu ignorá-la só nesse envio).
+2. Gerar o jar da branch (`./mvnw -DskipTests package`) e subir **fora do repositório**, numa porta
+   própria (8082), com as variáveis do `.env` da API, um `SAUF_JWT_SECRET` aleatório e, se for o
+   caso do passo 1, `SPRING_FLYWAY_IGNORE_MIGRATION_PATTERNS='*:missing'` só nesse processo.
+   Esperar a API responder em `/api/v1/areas` (no Windows o log sai no console, não no arquivo).
+3. Com `SAUF_API_BASE_URL=http://localhost:8082`: `ies --dry-run`, `areas --dry-run`, `ies`, `areas`.
+4. Conferir pelos GETs públicos (detalhe de cada universidade, logo, capa, créditos, `imagemUrl`
+   dos cursos) e enviar de novo: tem que voltar "sem mudanças".
+5. **Derrubar a API da 8082.** Nada fica rodando ligado ao Supabase.
+
+Depois que a TR-343 estiver na `main` e publicada, basta apontar `SAUF_API_BASE_URL` para a API
+publicada e rodar só o passo 3.
+
 Pendente: as 18 imagens da seção 3.1 do `docs/CHECKLIST_SCRAPERS.md`. Quando entrarem no TOML,
 basta rodar `ies` e `areas` de novo: só o que é novo muda.
 

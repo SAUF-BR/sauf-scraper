@@ -47,8 +47,16 @@ class ApiSauf:
         return self.postar(ENDPOINT_CENSO, lote)
 
     def postar(self, endpoint: str, corpo: SaufModel) -> RespostaIngestao:
+        return self._enviar("POST", endpoint, corpo)
+
+    def substituir(self, endpoint: str, corpo: SaufModel) -> RespostaIngestao:
+        """PUT: o corpo substitui tudo o que a API tinha (dados manuais, D-98)."""
+        return self._enviar("PUT", endpoint, corpo)
+
+    def _enviar(self, metodo: str, endpoint: str, corpo: SaufModel) -> RespostaIngestao:
         url = self._settings.api_base_url.rstrip("/") + endpoint
-        resposta = self._session.post(
+        resposta = self._session.request(
+            metodo,
             url,
             json=corpo.model_dump(mode="json", by_alias=True),
             timeout=self._settings.api_timeout_seconds,

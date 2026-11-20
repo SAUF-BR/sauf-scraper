@@ -53,6 +53,13 @@ class ApiSauf:
         """PUT: o corpo substitui tudo o que a API tinha (dados manuais, D-98)."""
         return self._enviar("PUT", endpoint, corpo)
 
+    def remover(self, endpoint: str) -> None:
+        """DELETE: tira o registro da API (evento do calendário que saiu do arquivo)."""
+        url = self._settings.api_base_url.rstrip("/") + endpoint
+        resposta = self._session.delete(url, timeout=self._settings.api_timeout_seconds)
+        if not resposta.ok:
+            raise ApiRecusouLoteError(resposta.status_code, resposta.text)
+
     def _enviar(self, metodo: str, endpoint: str, corpo: SaufModel) -> RespostaIngestao:
         url = self._settings.api_base_url.rstrip("/") + endpoint
         resposta = self._session.request(

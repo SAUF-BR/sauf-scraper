@@ -1,0 +1,335 @@
+# Calendário de vestibulares (D-104 a D-106 da API). Como preencher e enviar: dados/README.md,
+# seção "Calendário". Um bloco [[evento]] por evento, sempre com a página oficial da data.
+# Data que a fonte ainda não publicou ("a divulgar") não entra: fica comentada até sair.
+# Conferido em 2026-11-20.
+#
+# tipo: inscricao, prova, resultado, feira ou outro. inicio/fim: datas do TOML (AAAA-MM-DD),
+# sem aspas; sem fim = evento de um dia. sigla = arquivo de dados/ies/; sem sigla = nacional.
+# ano = ano da edição (o "2027" de "Vestibular 2027").
+
+# ---------- ENEM 2026 (INEP) ----------
+# Inscrições do ENEM 2026: não conferidas na fonte oficial (o cronograma do INEP só abre com
+# JavaScript). Já passaram; entram se alguém conferir no edital.
+
+[[evento]]
+chave = "enem-2026-prova-1"
+titulo = "ENEM 2026: 1º dia de provas"
+tipo = "prova"
+inicio = 2026-11-08
+fonte_url = "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/resultados-do-enem-serao-divulgados-em-18-de-janeiro"
+ano = 2026
+
+[[evento]]
+chave = "enem-2026-prova-2"
+titulo = "ENEM 2026: 2º dia de provas"
+tipo = "prova"
+inicio = 2026-11-15
+fonte_url = "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-2026-segundo-dia-de-prova-chega-ao-fim-neste-domingo-15-1"
+ano = 2026
+
+[[evento]]
+chave = "enem-2026-gabaritos"
+titulo = "ENEM 2026: gabaritos e cadernos de questões"
+tipo = "outro"
+inicio = 2026-11-18
+fonte_url = "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-2026-inep-libera-para-consulta-gabaritos-e-cadernos-de-questoes-do-exame"
+ano = 2026
+
+[[evento]]
+chave = "enem-2026-reaplicacao"
+titulo = "ENEM 2026: reaplicação"
+tipo = "prova"
+inicio = 2026-12-15
+fim = 2026-12-16
+descricao = "Só para quem teve o pedido de reaplicação aceito (pedidos até 20/11/2026)."
+fonte_url = "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-2026-prazo-para-solicitar-reaplicacao-termina-nesta-sexta-20"
+ano = 2026
+
+[[evento]]
+chave = "enem-2026-resultado"
+titulo = "ENEM 2026: resultado individual"
+tipo = "resultado"
+inicio = 2027-01-18
+fonte_url = "https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/resultados-do-enem-serao-divulgados-em-18-de-janeiro"
+ano = 2026
+
+# ---------- ProUni 2027/1 (MEC) ----------
+# A divulgar: edital ainda não publicado em https://acessounico.mec.gov.br/prouni (20/11/2026).
+# Quando sair: inscrição (inicio e fim) como "inscricao", sem sigla, ano = 2027.
+
+# ---------- UEM (https://www.cvu.uem.br/programacao.html) ----------
+
+[[evento]]
+chave = "uem-inverno-2026-inscricao"
+titulo = "Inscrições do Vestibular de Inverno 2026 da UEM"
+tipo = "inscricao"
+inicio = 2026-04-06
+fim = 2026-05-18
+sigla = "UEM"
+descricao = "Pagamento da taxa até 20/05/2026."
+fonte_url = "https://www.cvu.uem.br/programacao.html"
+ano = 2026
+
+[[evento]]
+chave = "uem-inverno-2026-prova"
+titulo = "Prova do Vestibular de Inverno 2026 da UEM"
+tipo = "prova"
+inicio = 2026-07-12
+sigla = "UEM"
+fonte_url = "https://www.cvu.uem.br/programacao.html"
+ano = 2026
+
+[[evento]]
+chave = "uem-inverno-2026-resultado"
+titulo = "Resultado do Vestibular de Inverno 2026 da UEM"
+tipo = "resultado"
+inicio = 2026-08-07
+sigla = "UEM"
+fonte_url = "https://www.cvu.uem.br/programacao.html"
+ano = 2026
+
+[[evento]]
+chave = "uem-verao-2026-inscricao"
+titulo = "Inscrições do Vestibular de Verão 2026 da UEM"
+tipo = "inscricao"
+inicio = 2026-08-17
+fim = 2026-09-23
+sigla = "UEM"
+descricao = "Ingresso em 2027. Pagamento da taxa até 25/09/2026."
+fonte_url = "https://www.cvu.uem.br/programacao.html"
+ano = 2026
+
+[[evento]]
+chave = "uem-verao-2026-prova"
+titulo = "Prova do Vestibular de Verão 2026 da UEM"
+tipo = "prova"
+inicio = 2026-12-06
+sigla = "UEM"
+fonte_url = "https://www.cvu.uem.br/programacao.html"
+ano = 2026
+
+[[evento]]
+chave = "uem-verao-2026-resultado"
+titulo = "Resultado do Vestibular de Verão 2026 da UEM"
+tipo = "resultado"
+inicio = 2026-12-22
+sigla = "UEM"
+fonte_url = "https://www.cvu.uem.br/programacao.html"
+ano = 2026
+
+[[evento]]
+chave = "uem-pas-2026-inscricao"
+titulo = "Inscrições do PAS-UEM 2026"
+tipo = "inscricao"
+inicio = 2026-08-17
+fim = 2026-09-23
+sigla = "UEM"
+descricao = "Pagamento da taxa até 25/09/2026."
+fonte_url = "https://www.cvu.uem.br/programacao.html"
+ano = 2026
+
+[[evento]]
+chave = "uem-pas-2026-prova"
+titulo = "Provas do PAS-UEM 2026"
+tipo = "prova"
+inicio = 2026-11-01
+sigla = "UEM"
+fonte_url = "https://www.cvu.uem.br/programacao.html"
+ano = 2026
+
+[[evento]]
+chave = "uem-pas-2026-resultado"
+titulo = "Resultado do PAS-UEM 2026"
+tipo = "resultado"
+inicio = 2026-12-22
+sigla = "UEM"
+descricao = "Os aprovados na Etapa 3 ingressam em 2027."
+fonte_url = "https://www.cvu.uem.br/programacao.html"
+ano = 2026
+
+# ---------- UEL Vestibular 2027 ----------
+
+[[evento]]
+chave = "uel-2027-inscricao"
+titulo = "Inscrições do Vestibular 2027 da UEL"
+tipo = "inscricao"
+inicio = 2026-07-01
+fim = 2026-08-17
+sigla = "UEL"
+descricao = "Prazo original até 10/08/2026, prorrogado até 17/08/2026 (Ato Executivo nº 124/2026)."
+fonte_url = "https://sites.uel.br/vestibular/inscricao/"
+ano = 2027
+
+[[evento]]
+chave = "uel-2027-phe"
+titulo = "Prova de Habilidades Específicas (PHE) da UEL 2027"
+tipo = "prova"
+inicio = 2026-09-06
+sigla = "UEL"
+descricao = "Só para Artes Visuais, Arquitetura e Urbanismo, Design Gráfico, Design de Moda e Música."
+fonte_url = "https://operobal.uel.br/educacao/2026/06/30/vestibular-2027-abre-inscricoes-dia-1o-de-julho-com-oferta-de-2-012-vagas/"
+ano = 2027
+
+[[evento]]
+chave = "uel-2027-prova-1"
+titulo = "UEL 2027: 1ª fase (Conhecimentos Gerais e Redação)"
+tipo = "prova"
+inicio = 2026-10-18
+sigla = "UEL"
+fonte_url = "https://operobal.uel.br/educacao/2026/06/30/vestibular-2027-abre-inscricoes-dia-1o-de-julho-com-oferta-de-2-012-vagas/"
+ano = 2027
+
+[[evento]]
+chave = "uel-2027-prova-2"
+titulo = "UEL 2027: 2ª fase (Conhecimentos Específicos)"
+tipo = "prova"
+inicio = 2026-10-19
+sigla = "UEL"
+descricao = "Para os cursos com 10 ou mais candidatos por vaga."
+fonte_url = "https://operobal.uel.br/educacao/2026/06/30/vestibular-2027-abre-inscricoes-dia-1o-de-julho-com-oferta-de-2-012-vagas/"
+ano = 2027
+
+[[evento]]
+chave = "uel-2027-resultado"
+titulo = "Resultado do Vestibular 2027 da UEL"
+tipo = "resultado"
+inicio = 2026-12-08
+sigla = "UEL"
+descricao = "Às 12h, em www.cops.uel.br."
+fonte_url = "https://operobal.uel.br/educacao/2026/06/30/vestibular-2027-abre-inscricoes-dia-1o-de-julho-com-oferta-de-2-012-vagas/"
+ano = 2027
+
+# ---------- UTFPR Vestibular 2027 ----------
+# Cronograma oficial copiado pelo Carlos em 20/11/2026 (a página estava fora do ar para o bot).
+# Resultado final: a página diz "12 de janeiro de 2026", que parece erro de digitação (2027?).
+# A confirmar com a UTFPR; não entra até corrigirem. A convocação da 1ª chamada já é o resultado.
+
+[[evento]]
+chave = "utfpr-2027-inscricao"
+titulo = "Inscrições do Vestibular 2027 da UTFPR"
+tipo = "inscricao"
+inicio = 2026-08-03
+fim = 2026-10-13
+sigla = "UTFPR"
+descricao = "Pagamento até 14/10/2026."
+fonte_url = "https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/cronograma-1"
+ano = 2027
+
+[[evento]]
+chave = "utfpr-2027-prova"
+titulo = "Prova do Vestibular 2027 da UTFPR"
+tipo = "prova"
+inicio = 2026-11-22
+sigla = "UTFPR"
+descricao = "Locais de prova (ensalamento) divulgados em 16/11/2026."
+fonte_url = "https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/cronograma-1"
+ano = 2027
+
+[[evento]]
+chave = "utfpr-2027-gabarito-preliminar"
+titulo = "UTFPR 2027: gabarito preliminar"
+tipo = "outro"
+inicio = 2026-11-23
+sigla = "UTFPR"
+fonte_url = "https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/cronograma-1"
+ano = 2027
+
+[[evento]]
+chave = "utfpr-2027-gabarito-definitivo"
+titulo = "UTFPR 2027: gabarito definitivo"
+tipo = "outro"
+inicio = 2026-12-02
+sigla = "UTFPR"
+fonte_url = "https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/cronograma-1"
+ano = 2027
+
+[[evento]]
+chave = "utfpr-2027-primeira-chamada"
+titulo = "UTFPR 2027: resultado final e convocação da 1ª chamada"
+tipo = "resultado"
+inicio = 2027-01-13
+sigla = "UTFPR"
+descricao = "Lista de espera em 15/01/2027."
+fonte_url = "https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/cronograma-1"
+ano = 2027
+
+[[evento]]
+chave = "utfpr-2027-confirmacao"
+titulo = "UTFPR 2027: confirmação da vaga (Etapa 2)"
+tipo = "outro"
+inicio = 2027-02-15
+fim = 2027-02-21
+sigla = "UTFPR"
+descricao = "Para os aprovados na Etapa 1 (envio da documentação)."
+fonte_url = "https://www.utfpr.edu.br/cursos/estudenautfpr/vestibular/cronograma-1"
+ano = 2027
+
+# ---------- UFSC: Vestibular Unificado UFSC/IFC 2027 ----------
+# Edital nº 10/2026/Coperve, retificado pelo Edital Complementar nº 17/2026/Coperve.
+# Resultado: a divulgar (o edital não traz a data).
+
+[[evento]]
+chave = "ufsc-2027-inscricao"
+titulo = "Inscrições do Vestibular Unificado UFSC/IFC 2027"
+tipo = "inscricao"
+inicio = 2026-08-12
+fim = 2026-09-23
+sigla = "UFSC"
+descricao = "O fim passou de 17/09 para 23/09/2026 no Edital Complementar nº 17/2026/Coperve."
+fonte_url = "https://vestibularunificado2027.ufsc.br/files/2026/09/Edital-Vestibular-2027-retificado.pdf"
+ano = 2027
+
+[[evento]]
+chave = "ufsc-2027-provas"
+titulo = "Provas do Vestibular Unificado UFSC/IFC 2027"
+tipo = "prova"
+inicio = 2026-12-05
+fim = 2026-12-06
+sigla = "UFSC"
+fonte_url = "https://vestibularunificado2027.ufsc.br/files/2026/09/Edital-Vestibular-2027-retificado.pdf"
+ano = 2027
+
+# ---------- UFSM: Vestibular 2027 e PSS 2027 ----------
+# Resultados: a divulgar (as notícias não trazem a data).
+
+[[evento]]
+chave = "ufsm-2027-inscricao"
+titulo = "Inscrições do Vestibular 2027 da UFSM"
+tipo = "inscricao"
+inicio = 2026-10-02
+fim = 2026-11-16
+sigla = "UFSM"
+descricao = "Pagamento da taxa até 17/11/2026."
+fonte_url = "https://www.ufsm.br/2026/10/02/inscricoes-para-o-vestibular-2027-da-ufsm-vao-ate-16-de-novembro"
+ano = 2027
+
+[[evento]]
+chave = "ufsm-2027-provas"
+titulo = "Provas do Vestibular 2027 da UFSM"
+tipo = "prova"
+inicio = 2027-01-09
+fim = 2027-01-10
+sigla = "UFSM"
+fonte_url = "https://www.ufsm.br/2026/10/02/inscricoes-para-o-vestibular-2027-da-ufsm-vao-ate-16-de-novembro"
+ano = 2027
+
+[[evento]]
+chave = "ufsm-pss-2027-inscricao"
+titulo = "Inscrições do Processo Seletivo Seriado (PSS) 2027 da UFSM"
+tipo = "inscricao"
+inicio = 2026-10-02
+fim = 2026-11-16
+sigla = "UFSM"
+descricao = "Pagamento da taxa até 17/11/2026."
+fonte_url = "https://www.ufsm.br/2026/10/02/ufsm-abre-inscricoes-para-o-processo-seletivo-seriado-2027"
+ano = 2027
+
+[[evento]]
+chave = "ufsm-pss-2027-provas"
+titulo = "Provas do Processo Seletivo Seriado (PSS) 2027 da UFSM"
+tipo = "prova"
+inicio = 2027-01-09
+fim = 2027-01-10
+sigla = "UFSM"
+fonte_url = "https://www.ufsm.br/2026/10/02/ufsm-abre-inscricoes-para-o-processo-seletivo-seriado-2027"
+ano = 2027

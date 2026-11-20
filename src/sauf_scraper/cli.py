@@ -13,13 +13,13 @@ from sauf_scraper.censo.casamento import (
     gravar_tabela,
 )
 from sauf_scraper.censo.leitor import ler_censo
-from sauf_scraper.client.destinos import ApiSauf, ArquivoJson, Terminal
+from sauf_scraper.client.destinos import ApiRecusouLoteError, ApiSauf, ArquivoJson, Terminal
 from sauf_scraper.client.http import HttpEducado
 from sauf_scraper.core.config import Settings, resolver_pasta_censo
 from sauf_scraper.core.logging import configurar_logging
 from sauf_scraper.core.models import LoteIngestao
 from sauf_scraper.core.pipeline import executar
-from sauf_scraper.geral import enem, igc, manuais, sisu
+from sauf_scraper.geral import calendario, enem, igc, manuais, sisu
 from sauf_scraper.geral.base import entregar
 from sauf_scraper.spiders import SPIDERS, codigos_emec
 
@@ -42,6 +42,8 @@ def main(argv: list[str] | None = None) -> int:
         return main_ies(argv[1:])
     if argv[:1] == ["areas"]:
         return main_areas(argv[1:])
+    if argv[:1] == ["calendario"]:
+        return main_calendario(argv[1:])
 
     parser = argparse.ArgumentParser(
         prog="sauf-scraper", epilog="Import do Censo: sauf-scraper censo --help"
@@ -365,6 +367,62 @@ def main_areas(argv: list[str]) -> int:
         endpoint = manuais.ENDPOINT_AREA.format(codigo_cine=area.codigo_cine)
         resposta = api.substituir(endpoint, imagem)
         print(f"  enviado: {'atualizado' if resposta.atualizados else 'sem mudanças'}")
+    return 0
+
+
+def main_calendario(argv: list[str]) -> int:
+    parser = argparse.ArgumentParser(
+        prog="sauf-scraper calendario",
+        description=(
+            "Envia as datas de dados/calendario.toml (ENEM, vestibulares, ProUni) para o "
+            "calendário da API. Reenviar não duplica. Como preencher: dados/README.md."
+        ),
+    )
+    parser.add_argument("--chave", nargs="+", metavar="CHAVE", help="só estes eventos")
+    parser.add_argument(
+        "--remover",
+        nargs="+",
+        metavar="CHAVE",
+        help="apaga estes eventos da API (chave errada ou evento cancelado) e sai",
+    )
+    parser.add_argument(
+        "--dry-run", action="store_true", help="só valida e lista os eventos, sem enviar"
+    )
+    args = parser.parse_args(argv)
+
+    configurar_logging()
+    if args.remover:
+        if args.dry_run:
+            print("--remover não tem --dry-run: confira as chaves e rode sem ele")
+            return 1
+        api = ApiSauf(Settings())
+        for chave in args.remover:
+            try:
+                api.remover(calendario.ENDPOINT_EVENTO.format(chave=chave))
+                print(f"{chave}: removido")
+            except ApiRecusouLoteError as erro:
+                if erro.status != 404:
+                    raise
+                print(f"{chave}: não existe na API")
+        return 0
+
+    try:
+        eventos = calendario.ler_eventos(chaves=args.chave)
+    except manuais.DadoManualInvalidoError as erro:
+        print(f"ERRO: {erro}")
+        return 1
+
+    api = None if args.dry_run else ApiSauf(Settings())
+    for evento, envio in eventos:
+        print(calendario.resumo(evento))
+        if api is None:
+            continue
+        resposta = api.substituir(calendario.ENDPOINT_EVENTO.format(chave=evento.chave), envio)
+        if resposta.criados:
+            print("  enviado: criado")
+        else:
+            print(f"  enviado: {'atualizado' if resposta.atualizados else 'sem mudanças'}")
+    print(f"{len(eventos)} evento(s){' validados, nada enviado' if api is None else ''}")
     return 0
 
 

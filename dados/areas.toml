@@ -1,0 +1,90 @@
+# Uma imagem por área Cine (D-101): vira a imagem dos cards dos cursos da área.
+# Como trocar uma imagem: dados/README.md, seção "Imagem de uma área".
+
+[[area]]
+codigo_cine = "00"
+nome = "Programas básicos"
+
+# [area.imagem] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: areas/img/00-programas-basicos.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:Lecture_Room_Stairs_(Unsplash).jpg
+
+[[area]]
+codigo_cine = "01"
+nome = "Educação"
+
+# [area.imagem] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: areas/img/01-educacao.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:Students_learning_together_(Unsplash).jpg
+
+[[area]]
+codigo_cine = "02"
+nome = "Artes e humanidades"
+
+# [area.imagem] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: areas/img/02-artes-e-humanidades.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:Old_books_on_bookshelf._(Unsplash).jpg
+
+[[area]]
+codigo_cine = "03"
+nome = "Ciências sociais, comunicação e informação"
+
+# [area.imagem] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: areas/img/03-ciencias-sociais.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:Microphone_(Unsplash).jpg
+
+[[area]]
+codigo_cine = "04"
+nome = "Negócios, administração e direito"
+
+# [area.imagem] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: areas/img/04-negocios.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:Working_in_open_office_space_(Unsplash).jpg
+
+[[area]]
+codigo_cine = "05"
+nome = "Ciências naturais, matemática e estatística"
+
+# [area.imagem] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: areas/img/05-ciencias-naturais.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:Plants_in_beakers_(Unsplash).jpg
+
+[[area]]
+codigo_cine = "06"
+nome = "Computação e Tecnologias da Informação e Comunicação (TIC)"
+
+# [area.imagem] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: areas/img/06-computacao.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:Code_on_computer_monitor_(Unsplash).jpg
+
+[[area]]
+codigo_cine = "07"
+nome = "Engenharia, produção e construção"
+
+# [area.imagem] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: areas/img/07-engenharia.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:View_Above_Construction_Site_(Unsplash).jpg
+
+[[area]]
+codigo_cine = "08"
+nome = "Agricultura, silvicultura, pesca e veterinária"
+
+# [area.imagem] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: areas/img/08-agricultura.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:Farm_Field_(Unsplash).jpg
+
+[[area]]
+codigo_cine = "09"
+nome = "Saúde e bem-estar"
+
+# [area.imagem] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: areas/img/09-saude.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:Stethoscope_No.120.JPG
+
+[[area]]
+codigo_cine = "10"
+nome = "Serviços"
+
+# [area.imagem] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: areas/img/10-servicos.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:Michael_(Unsplash).jpg

@@ -1,0 +1,38 @@
+# Dados manuais da UFSC. Como preencher e enviar: dados/README.md
+# Conferido em 2026-11-20 nas fontes de [fontes]. Ano de fundação = criação legal (D-102):
+# Lei Federal nº 3.849, de 18 de dezembro de 1960.
+
+sigla = "UFSC"
+codigo_emec = 585
+nome = "Universidade Federal de Santa Catarina"
+ano_fundacao = 1960
+site_url = "https://ufsc.br"
+
+# Um item da lista = um parágrafo. Quebrar a linha dentro do parágrafo é só para caber na tela.
+sobre = [
+  """A Universidade Federal de Santa Catarina (UFSC) foi criada pela Lei Federal nº 3.849,
+de 18 de dezembro de 1960, com o nome de Universidade de Santa Catarina; o "Federal" entrou
+no nome em 1965. Ela nasceu da união de sete faculdades de Florianópolis (Direito, Medicina,
+Farmácia, Odontologia, Filosofia, Ciências Econômicas e Serviço Social) e da criação da
+Escola de Engenharia Industrial.""",
+  """O primeiro reitor, João David Ferreira Lima, presidiu a sessão inaugural em março de
+1962. A Cidade Universitária foi construída no bairro da Trindade, numa antiga fazenda do
+governo do estado, e o campus leva hoje o nome do primeiro reitor.""",
+  """Além do campus de Florianópolis, a UFSC tem campi em outras quatro cidades do estado
+e oferece graduação, pós-graduação, pesquisa e extensão em todas as grandes áreas do
+conhecimento.""",
+]
+
+[fontes]
+ano_fundacao = "https://65anos.ufsc.br/decada-de-1960/"
+sobre = [
+  "https://65anos.ufsc.br/decada-de-1960/",
+]
+
+# [logo] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: img/ufsc-logo.png
+# Commons: https://commons.wikimedia.org/wiki/File:Brasao_UFSC_vertical_extenso.svg
+
+# [capa] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: img/ufsc-capa.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:Pr%C3%A9dio_da_Reitoria_-_Universidade_Federal_de_Santa_Catarina_(UFSC).JPG

@@ -1,0 +1,42 @@
+# Dados manuais da UEL. Como preencher e enviar: dados/README.md
+# Conferido em 2026-11-20 nas fontes de [fontes]. Ano de fundação = criação legal (D-102):
+# Decreto Estadual nº 18.110, de 28 de janeiro de 1970.
+
+sigla = "UEL"
+codigo_emec = 9
+nome = "Universidade Estadual de Londrina"
+ano_fundacao = 1970
+site_url = "https://portal.uel.br"
+
+# Um item da lista = um parágrafo. Quebrar a linha dentro do parágrafo é só para caber na tela.
+sobre = [
+  """A Universidade Estadual de Londrina (UEL) foi criada pelo Decreto Estadual nº 18.110,
+de 28 de janeiro de 1970, na forma de fundação, junto com as universidades estaduais de
+Maringá e de Ponta Grossa. Ela nasceu da união das cinco faculdades isoladas que existiam
+em Londrina: Filosofia, Ciências e Letras, Direito, Odontologia, Medicina do Norte do Paraná
+e Ciências Contábeis, que juntas ofereciam 14 cursos.""",
+  """O campus foi instalado na antiga Fazenda Perobal, adquirida no fim da década de 1960
+pelo governador Paulo Pimentel, que assinou o decreto de criação. O reconhecimento federal veio em 7 de outubro de 1971, pelo Decreto
+nº 69.324, data em que a universidade comemora o seu aniversário.""",
+  """A UEL cresceu junto com Londrina e o norte do Paraná: além da graduação, oferece
+pós-graduação, residências e especializações, e é uma das maiores prestadoras de serviços
+da região, principalmente na área da saúde.""",
+]
+
+[fontes]
+ano_fundacao = "https://operobal.uel.br/institucional/2026/01/28/uel-celebra-56-anos-de-criacao-com-avancos-na-qualidade-academica-e-na-infraestrutura/"
+sobre = [
+  "https://sites.uel.br/pdi/quando-e-como-tudo-comecou/",
+  "https://sites.uel.br/pdi/apresentacao-institucional-contextualizada-e-introducao-ao-pdi-uel-2023-2027/",
+  "https://operobal.uel.br/educacao/2021/10/01/uel-50-anos-programacao/",
+]
+
+[logo]
+arquivo = "img/uel-logo.png"
+autor = "UEL"
+licenca = "Public domain"
+fonte_url = "https://commons.wikimedia.org/wiki/File:Uel.png"
+
+# [capa] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: img/uel-capa.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:Londrina_-_UEL.jpg

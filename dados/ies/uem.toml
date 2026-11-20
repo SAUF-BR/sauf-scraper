@@ -1,0 +1,46 @@
+# Dados manuais da UEM. Como preencher e enviar: dados/README.md
+# Conferido em 2026-11-20 nas fontes de [fontes]. Ano de fundação = criação legal (D-102):
+# Lei Estadual nº 6.034, de 6 de novembro de 1969.
+
+sigla = "UEM"
+codigo_emec = 57
+nome = "Universidade Estadual de Maringá"
+ano_fundacao = 1969
+site_url = "https://www.uem.br"
+
+# Um item da lista = um parágrafo. Quebrar a linha dentro do parágrafo é só para caber na tela.
+sobre = [
+  """A Universidade Estadual de Maringá (UEM) foi criada em 1969, quando a Lei Estadual
+nº 6.034 autorizou a universidade e reuniu as três faculdades estaduais que já funcionavam
+em Maringá: a de Ciências Econômicas, de 1959, e as de Direito e de Filosofia, Ciências e
+Letras, de 1967. Em 1970 ela passou a ser uma fundação pública e, em 1976, foi reconhecida
+pelo governo federal.""",
+  """Nos primeiros anos, a UEM ocupou aos poucos o campus definitivo e abriu cursos como
+Matemática, Química, Administração e as engenharias Química e Civil. A partir da década de
+1980, levou o ensino superior a outras cidades da região, com a extensão de Cianorte (1986)
+e o campus regional de Goioerê (1991), e criou em 1988 os cursos de Medicina, Odontologia e
+Ciência da Computação.""",
+  """Desde 1991 a UEM é uma autarquia estadual. Além da graduação, mantém programas de
+mestrado e doutorado, grupos de pesquisa e um complexo de saúde com hospital universitário,
+clínica odontológica e hemocentro.""",
+]
+
+[fontes]
+ano_fundacao = "https://www.uem.br/a-uem/historico"
+sobre = [
+  "https://www.uem.br/a-uem/historico",
+]
+
+[logo]
+arquivo = "img/uem-logo.png"
+autor = "Leonardossrocha"
+licenca = "CC BY-SA 4.0"
+licenca_url = "https://creativecommons.org/licenses/by-sa/4.0"
+fonte_url = "https://commons.wikimedia.org/wiki/File:Logo_UEM_-_Universidade_Estadual_de_Maring%C3%A1.svg"
+
+[capa]
+arquivo = "img/uem-capa.webp"
+autor = "Sobreira 10"
+licenca = "CC0"
+licenca_url = "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+fonte_url = "https://commons.wikimedia.org/wiki/File:Bloco_D67.webp"

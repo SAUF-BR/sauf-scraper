@@ -1,0 +1,37 @@
+# Dados manuais da UTFPR. Como preencher e enviar: dados/README.md
+# Conferido em 2026-11-20 nas fontes de [fontes]. Ano de fundação = criação legal (D-102):
+# Lei Federal nº 11.184, de 7 de outubro de 2005.
+
+sigla = "UTFPR"
+codigo_emec = 588
+nome = "Universidade Tecnológica Federal do Paraná"
+ano_fundacao = 2005
+site_url = "https://www.utfpr.edu.br"
+
+# Um item da lista = um parágrafo. Quebrar a linha dentro do parágrafo é só para caber na tela.
+sobre = [
+  """A Universidade Tecnológica Federal do Paraná (UTFPR) foi criada como universidade em
+7 de outubro de 2005, pela Lei Federal nº 11.184, que transformou o Centro Federal de
+Educação Tecnológica do Paraná (Cefet-PR) na primeira universidade tecnológica do país.""",
+  """A história da instituição, porém, começa bem antes: em 1909, com a Escola de
+Aprendizes Artífices do Paraná, que ensinava ofícios a meninos de famílias pobres. A escola
+virou Liceu Industrial do Paraná em 1937, Escola Técnica de Curitiba em 1942, Escola Técnica
+Federal do Paraná em 1959 e Cefet-PR em 1978, quando passou a oferecer cursos de graduação.""",
+  """Hoje a UTFPR tem câmpus em 13 cidades do Paraná, mais de 115 cursos de graduação e
+mais de 80 de mestrado e doutorado, e é referência em ensino, pesquisa, extensão e
+inovação.""",
+]
+
+[fontes]
+ano_fundacao = "https://www.utfpr.edu.br/noticias/geral/utfpr-uma-historia-de-116-anos-ofertando-educacao-e-20-anos-como-universidade"
+sobre = [
+  "https://www.utfpr.edu.br/noticias/geral/utfpr-uma-historia-de-116-anos-ofertando-educacao-e-20-anos-como-universidade",
+]
+
+# [logo] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: img/utfpr-logo.png
+# Commons: https://commons.wikimedia.org/wiki/File:UTFPR_logo.svg
+
+# [capa] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: img/utfpr-capa.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:C%C3%A2mpus_Curitiba.jpg

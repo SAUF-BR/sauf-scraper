@@ -1,0 +1,38 @@
+# Dados manuais da UFSM. Como preencher e enviar: dados/README.md
+# Conferido em 2026-11-20 nas fontes de [fontes]. Ano de fundação = criação legal (D-102):
+# Lei Federal nº 3.834-C, de 14 de dezembro de 1960.
+
+sigla = "UFSM"
+codigo_emec = 582
+nome = "Universidade Federal de Santa Maria"
+ano_fundacao = 1960
+site_url = "https://www.ufsm.br"
+
+# Um item da lista = um parágrafo. Quebrar a linha dentro do parágrafo é só para caber na tela.
+sobre = [
+  """A Universidade Federal de Santa Maria (UFSM) foi criada pela Lei Federal nº 3.834-C,
+de 14 de dezembro de 1960, com o nome de Universidade de Santa Maria, por iniciativa do
+professor José Mariano da Rocha Filho, que foi o seu primeiro reitor. A instalação em Santa
+Maria aconteceu em março de 1961 e a universidade foi federalizada em 1965, quando ganhou o
+nome atual.""",
+  """Foi a primeira universidade federal criada no interior do Brasil, fora de uma capital,
+um marco na interiorização do ensino superior público, e fez do Rio Grande do Sul o primeiro
+estado a ter duas universidades federais.""",
+  """Hoje a UFSM tem campi em Santa Maria, Frederico Westphalen, Palmeira das Missões e
+Cachoeira do Sul, oferece cursos presenciais e a distância e mantém o Hospital Universitário
+de Santa Maria, referência em saúde para a região central do estado.""",
+]
+
+[fontes]
+ano_fundacao = "https://www.ufsm.br/historia"
+sobre = [
+  "https://www.ufsm.br/historia",
+]
+
+# [logo] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: img/ufsm-logo.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:Brasao_UFSM_Color_300dpi.jpg
+
+# [capa] pendente (TR-343): imagem escolhida, ainda não baixada.
+# Arquivo: img/ufsm-capa.jpg
+# Commons: https://commons.wikimedia.org/wiki/File:Entrada_da_UFSM.jpg

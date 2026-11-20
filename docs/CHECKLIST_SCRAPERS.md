@@ -170,31 +170,34 @@ fica de fora da tabela de casamento.
 
 ### 3.1. Imagens escolhidas e ainda não baixadas (TR-343)
 
-O Wikimedia Commons limitou as requisições (HTTP 429) em 20/11/2026. Estas imagens já foram
-escolhidas e a licença conferida; no TOML elas estão como comentário `# [...] pendente`.
-Quando baixar: troque o comentário pela seção completa (dados/README.md, seções 4 e 5),
-rode `uv run sauf-scraper ies` / `areas` e risque a linha.
+O servidor de arquivos do Wikimedia (upload.wikimedia.org) bloqueia programas sem contato no
+User-Agent (HTTP 429 desde 20/11/2026); o navegador não é bloqueado. Para baixar à mão: abrir a
+página, clicar em **Baixar** (Download) e escolher o tamanho indicado; salvar no destino com o
+nome exato. Logo: PNG com cerca de 500 px de largura (o Commons gera o PNG do SVG); capa e área:
+cerca de 1280 px de largura, JPG. Licença e autor já conferidos na API do Commons em 20/11/2026.
+Depois: trocar o comentário `# [...] pendente` do TOML pela seção completa (dados/README.md,
+seções 4 e 5), `--dry-run`, enviar e riscar a linha.
 
-| Arquivo de destino | Página no Commons |
-|---|---|
-| `dados/ies/img/uel-capa.jpg` | https://commons.wikimedia.org/wiki/File:Londrina_-_UEL.jpg |
-| `dados/ies/img/utfpr-logo.png` | https://commons.wikimedia.org/wiki/File:UTFPR_logo.svg |
-| `dados/ies/img/utfpr-capa.jpg` | https://commons.wikimedia.org/wiki/File:C%C3%A2mpus_Curitiba.jpg |
-| `dados/ies/img/ufsc-logo.png` | https://commons.wikimedia.org/wiki/File:Brasao_UFSC_vertical_extenso.svg |
-| `dados/ies/img/ufsc-capa.jpg` | https://commons.wikimedia.org/wiki/File:Pr%C3%A9dio_da_Reitoria_-_Universidade_Federal_de_Santa_Catarina_(UFSC).JPG |
-| `dados/ies/img/ufsm-logo.jpg` | https://commons.wikimedia.org/wiki/File:Brasao_UFSM_Color_300dpi.jpg |
-| `dados/ies/img/ufsm-capa.jpg` | https://commons.wikimedia.org/wiki/File:Entrada_da_UFSM.jpg |
-| `dados/areas/img/00-programas-basicos.jpg` | https://commons.wikimedia.org/wiki/File:Lecture_Room_Stairs_(Unsplash).jpg |
-| `dados/areas/img/01-educacao.jpg` | https://commons.wikimedia.org/wiki/File:Students_learning_together_(Unsplash).jpg |
-| `dados/areas/img/02-artes-e-humanidades.jpg` | https://commons.wikimedia.org/wiki/File:Old_books_on_bookshelf._(Unsplash).jpg |
-| `dados/areas/img/03-ciencias-sociais.jpg` | https://commons.wikimedia.org/wiki/File:Microphone_(Unsplash).jpg |
-| `dados/areas/img/04-negocios.jpg` | https://commons.wikimedia.org/wiki/File:Working_in_open_office_space_(Unsplash).jpg |
-| `dados/areas/img/05-ciencias-naturais.jpg` | https://commons.wikimedia.org/wiki/File:Plants_in_beakers_(Unsplash).jpg |
-| `dados/areas/img/06-computacao.jpg` | https://commons.wikimedia.org/wiki/File:Code_on_computer_monitor_(Unsplash).jpg |
-| `dados/areas/img/07-engenharia.jpg` | https://commons.wikimedia.org/wiki/File:View_Above_Construction_Site_(Unsplash).jpg |
-| `dados/areas/img/08-agricultura.jpg` | https://commons.wikimedia.org/wiki/File:Farm_Field_(Unsplash).jpg |
-| `dados/areas/img/09-saude.jpg` | https://commons.wikimedia.org/wiki/File:Stethoscope_No.120.JPG |
-| `dados/areas/img/10-servicos.jpg` | https://commons.wikimedia.org/wiki/File:Michael_(Unsplash).jpg |
+| Destino | Baixar | Página no Commons | Licença | Autor | Crédito obrigatório |
+|---|---|---|---|---|---|
+| `dados/ies/img/uel-capa.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:Londrina_-_UEL.jpg | CC BY 2.0 | Luís Guilherme Fernandes Pereira | sim |
+| `dados/ies/img/utfpr-logo.png` | PNG ~500 px | https://commons.wikimedia.org/wiki/File:UTFPR_logo.svg | CC BY 4.0 | Universidade Tecnológica Federal do Paraná | sim |
+| `dados/ies/img/utfpr-capa.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:C%C3%A2mpus_Curitiba.jpg | CC BY 2.0 | UTFPR em Imagens | sim |
+| `dados/ies/img/ufsc-logo.png` | PNG ~500 px | https://commons.wikimedia.org/wiki/File:Brasao_UFSC_vertical_extenso.svg | Public domain | Universidade Federal de Santa Catarina | não |
+| `dados/ies/img/ufsc-capa.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:Pr%C3%A9dio_da_Reitoria_-_Universidade_Federal_de_Santa_Catarina_(UFSC).JPG | CC BY-SA 4.0 | Airtonjordani | sim |
+| `dados/ies/img/ufsm-logo.jpg` | JPG ~500 px | https://commons.wikimedia.org/wiki/File:Brasao_UFSM_Color_300dpi.jpg | Public domain | Universidade Federal de Santa Maria | não |
+| `dados/ies/img/ufsm-capa.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:Entrada_da_UFSM.jpg | CC BY-SA 3.0 | Imagens SM | sim |
+| `dados/areas/img/00-programas-basicos.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:Lecture_Room_Stairs_(Unsplash).jpg | CC0 | Markus Birner | não |
+| `dados/areas/img/01-educacao.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:Students_learning_together_(Unsplash).jpg | CC0 | Alexis Brown | não |
+| `dados/areas/img/02-artes-e-humanidades.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:Old_books_on_bookshelf._(Unsplash).jpg | CC0 | Clem Onojeghuo | não |
+| `dados/areas/img/03-ciencias-sociais.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:Microphone_(Unsplash).jpg | CC0 | Kai Oberhäuser | não |
+| `dados/areas/img/04-negocios.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:Working_in_open_office_space_(Unsplash).jpg | CC0 | Crew crew | não |
+| `dados/areas/img/05-ciencias-naturais.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:Plants_in_beakers_(Unsplash).jpg | CC0 | chuttersnap chuttersnap | não |
+| `dados/areas/img/06-computacao.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:Code_on_computer_monitor_(Unsplash).jpg | CC0 | Markus Spiske | não |
+| `dados/areas/img/07-engenharia.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:View_Above_Construction_Site_(Unsplash).jpg | CC0 | chuttersnap chuttersnap | não |
+| `dados/areas/img/08-agricultura.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:Farm_Field_(Unsplash).jpg | CC0 | Arkadiusz Zet | não |
+| `dados/areas/img/09-saude.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:Stethoscope_No.120.JPG | CC0 | Tama998 | não |
+| `dados/areas/img/10-servicos.jpg` | JPG ~1280 px | https://commons.wikimedia.org/wiki/File:Michael_(Unsplash).jpg | CC0 | Toa Heftiba | não |
 
 ---
 
